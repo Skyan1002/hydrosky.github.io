@@ -1,11 +1,359 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HydroSky</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HydroSky LLC — AI‑Powered Flood & Drought Modeling</title>
+  <meta name="description" content="HydroSky LLC delivers AI‑powered flood and drought modeling, early warning dashboards, and custom hydrologic analytics for governments, utilities, and enterprises." />
+  <meta property="og:title" content="HydroSky LLC — AI‑Powered Flood & Drought Modeling" />
+  <meta property="og:description" content="AI‑powered hydrologic modeling, flood & drought analytics, and rapid early‑warning dashboards." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hydrosky.org" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💧</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#050816;
+      --panel:rgba(255,255,255,0.08);
+      --border:rgba(255,255,255,0.12);
+      --txt:#e6f4ff;
+      --muted:#a9c0d6;
+      --accent1:#22d3ee; /* cyan */
+      --accent2:#7c3aed; /* violet */
+      --accent3:#0ea5e9; /* sky */
+      --shine:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3));
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
+
+    /* ======= Fancy animated background ======= */
+    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(60px);opacity:.5}
+    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:screen}
+    .b1{width:40vmax;height:40vmax;background:#0ea5e9;left:8%;top:5%;animation:float 10s ease-in-out infinite}
+    .b2{width:45vmax;height:45vmax;background:#7c3aed;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
+    .b3{width:35vmax;height:35vmax;background:#22d3ee;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-4%) scale(1.03)}100%{transform:translateY(0)}}
+
+    /* ======= Layout ======= */
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(5,8,22,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .logo{width:36px;height:36px;border-radius:10px;background:var(--shine);border:1px solid var(--border);box-shadow:0 10px 30px rgba(34,211,238,.2)}
+    .brand small{color:var(--muted);font-weight:400}
+    .nav-links{display:flex;gap:22px}
+    .nav-links a{color:var(--txt);text-decoration:none;font-weight:500;opacity:.9}
+    .nav-links a:hover{opacity:1}
+
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--border);color:var(--txt);text-decoration:none}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(34,211,238,.15)}
+    .btn.primary{background:var(--shine);border:0;color:white}
+
+    /* ======= Hero ======= */
+    .hero{position:relative;padding:96px 0 56px;border-bottom:1px solid var(--border)}
+    .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0;background:var(--shine);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.3);color:#b3ecff;font-size:13px}
+    .hero p{color:var(--muted);max-width:820px;font-size:18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .badge{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.06);font-size:12px;color:#cfe7ff}
+
+    .hero-visual{position:relative;margin-top:36px;border-radius:24px;border:1px solid var(--border);background:radial-gradient(1200px 400px at 50% -30%, rgba(34,211,238,.25), transparent 60%), rgba(255,255,255,.03);overflow:hidden}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+    .stat{grid-column:span 3;min-height:140px;border-radius:20px;background:var(--panel);border:1px solid var(--border);padding:18px}
+    .stat h3{margin:0;font-size:36px}
+    .stat p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    /* ======= Sections ======= */
+    section{padding:80px 0;border-bottom:1px solid var(--border)}
+    h2{font-size:clamp(28px,3.5vw,40px);margin:0 0 12px}
+    .sub{color:var(--muted);margin:0 0 26px}
+
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{border-radius:20px;background:var(--panel);border:1px solid var(--border);padding:20px;position:relative;overflow:hidden}
+    .card:before{content:"";position:absolute;inset:-1px -1px auto -1px;height:4px;background:var(--shine);opacity:.6}
+    .card h3{margin:8px 0}
+    .card p{color:var(--muted)}
+
+    /* Case studies */
+    .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .case{border-radius:22px;border:1px solid var(--border);overflow:hidden;background:rgba(255,255,255,.04)}
+    .case .top{height:180px;background:conic-gradient(from 180deg, var(--accent2), var(--accent3), var(--accent1));filter:saturate(130%);position:relative}
+    .case .top:after{content:'';position:absolute;inset:0;background:radial-gradient(400px 120px at 70% 30%,rgba(255,255,255,.25),transparent 60%)}
+    .case .body{padding:18px}
+    .case h4{margin:0}
+    .case p{color:var(--muted)}
+
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;counter-reset:step}
+    .step{border:1px dashed rgba(255,255,255,.18);border-radius:18px;padding:18px;background:rgba(255,255,255,.03);position:relative}
+    .step:before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:-14px;width:40px;height:40px;border-radius:12px;background:var(--shine);display:grid;place-items:center;color:white;font-weight:800;border:1px solid var(--border)}
+
+    /* CTA */
+    .cta{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+    .cta .panel{border:1px solid var(--border);border-radius:22px;padding:22px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02))}
+    .cta .panel h3{margin:0 0 8px}
+    .cta input,.cta textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:12px;color:var(--txt);padding:12px;font:inherit;outline:none}
+    .cta textarea{min-height:120px;resize:vertical}
+
+    footer{padding:36px 0;color:#b8c9da}
+    footer a{color:#cfe7ff;text-decoration:none}
+
+    /* Utilities */
+    .row{display:flex;gap:14px;flex-wrap:wrap}
+    .center{display:flex;align-items:center;gap:12px}
+    .right{margin-left:auto}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .cta{grid-template-columns:1fr}
+      .stat{grid-column:span 6}
+    }
+    @media (max-width:600px){
+      nav .nav-links{display:none}
+      .hero{padding-top:72px}
+      .stat{grid-column:span 12}
+    }
+
+    /* Reveal animations */
+    .reveal{opacity:0;transform:translateY(16px);transition:all .7s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
 </head>
 <body>
-  <h1>Welcome to HydroSky!</h1>
-  <p>This is my first homepage.</p>
+  <!-- Animated BG blobs -->
+  <div class="bg-wrap" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            HydroSky <small>LLC · Hydros Lab @ University of Oklahoma</small>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#solutions">Solutions</a>
+          <a href="#tech">Technology</a>
+          <a href="#cases">Case Studies</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+          <a class="btn primary" href="#contact">Schedule a Demo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="kicker">AI‑Powered Hydrologic Intelligence · 洪涝干旱智能建模</span>
+      <h1>Flood & Drought Modeling—<br/>from Raw Data to Decisions in Hours</h1>
+      <p>HydroSky delivers end‑to‑end flood and drought modeling: ingest MRMS/HRRR/GFS/GraphCast, infer parameters for CREST/EF5, run fast simulations and scenario analyses, and publish clear early‑warning dashboards and reports. We turn complex basin hydrology into <b>explainable</b>, <b>deployable</b> decisions.</p> class="badges">
+        <span class="badge">CREST • EF5 • CaMaFlood</span>
+        <span class="badge">GraphCast • HRRR • MRMS</span>
+        <span class="badge">PyTorch • TensorFlow</span>
+        <span class="badge">CI/CD • GitHub Pages</span>
+      </div>
+
+      <div class="hero-visual container" style="margin-top:28px">
+        <div class="grid" style="padding:20px">
+          <div class="stat reveal">
+            <h3><span data-count="25">0</span>+</h3>
+            <p>Basins Modeled (HUC8)</p>
+          </div>
+          <div class="stat reveal">
+            <h3><span data-count="92">0</span>%</h3>
+            <p>Event Match for Top‑3 Peaks</p>
+          </div>
+          <div class="stat reveal">
+            <h3><span data-count="48">0</span>h</h3>
+            <p>Lead Time for Early Warning</p>
+          </div>
+          <div class="stat reveal">
+            <h3><span data-count="7">0</span>x</h3>
+            <p>Faster Scenario Exploration</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:18px">
+        <a class="btn primary" href="#contact">Get a Quote</a>
+        <a class="btn" href="#tech">See How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions">
+    <div class="container">
+      <h2>Solutions</h2>
+      <p class="sub">From real‑time warnings to long‑term planning, HydroSky adapts to your data and decisions.</p>
+
+      <div class="cards">
+        <div class="card reveal">
+          <h3>Flood Early‑Warning</h3>
+          <p>High‑resolution rainfall ingestion (MRMS/HRRR), hydrologic routing with CREST/EF5, probabilistic peaks, and push alerts with explainable drivers.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Drought Intelligence</h3>
+          <p>Soil‑moisture deficits, runoff efficiency, and snowmelt diagnostics for seasonal allocation, resilience, and supply risk planning.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Scenario Lab</h3>
+          <p>What‑if storm tracks, displacement correction, reservoir rules, and land‑use change—compare impacts in minutes, not weeks.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Custom Dashboards</h3>
+          <p>Map tiles, time‑series, exceedance curves, and API endpoints for enterprise integration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology -->
+  <section id="tech">
+    <div class="container">
+      <h2>Technology</h2>
+      <p class="sub">Hybrid physics‑ML stack: physical consistency meets data‑driven speed.</p>
+
+      <div class="cards">
+        <div class="card reveal">
+          <h3>Data Pipeline</h3>
+          <p>HRRR/MRMS/GraphCast/GFS ingestion, bias & displacement correction, and automated basin tiling.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Model Core</h3>
+          <p>CREST/EF5 routing with calibrated parameters; AI‑assisted guidance for robust generalization.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Explainability</h3>
+          <p>Attribution of peaks to upstream basins, snowmelt vs. rainfall shares, and sensitivity to storm shifts.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Delivery</h3>
+          <p>Zero‑ops static frontends (GitHub Pages) plus optional cloud backends for on‑demand heavy runs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section id="cases">
+    <div class="container">
+      <h2>Case Studies</h2>
+      <p class="sub">Illustrative results. Replace with your own projects and images when ready.</p>
+
+      <div class="cases">
+        <article class="case reveal">
+          <div class="top"></div>
+          <div class="body">
+            <h4>Texas Hill Country Flood</h4>
+            <p>Displacement‑corrected rainfall improved peak timing by 6–8 hours and RMSE by 23% across 4 gauges.</p>
+          </div>
+        </article>
+        <article class="case reveal">
+          <div class="top" style="filter:hue-rotate(50deg)"></div>
+          <div class="body">
+            <h4>Altiplano Drought Assessment</h4>
+            <p>Combined snowmelt diagnostics and runoff thresholds to quantify reservoir drawdown risks under El Niño.</p>
+          </div>
+        </article>
+        <article class="case reveal">
+          <div class="top" style="filter:hue-rotate(100deg)"></div>
+          <div class="body">
+            <h4>Mississippi Basin Extremes</h4>
+            <p>HUC8 contribution tree reveals upstream drivers of compound events and flash‑to‑flood transition windows.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <h2>How We Work</h2>
+      <p class="sub">Clear steps, measurable outcomes.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <h3>Discovery</h3>
+          <p>Use cases, basins, data access, KPIs. We align on scope and timeline.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Prototype</h3>
+          <p>Spin up a pilot basin with baseline datasets and dashboards.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Calibration</h3>
+          <p>Hybrid guidance + targeted runs for robust generalization—not just a single “best fit”.</p>
+        </div>
+        <div class="step reveal">
+          <h3>Deploy</h3>
+          <p>Web delivery, training, and integration. Optional SLA for ops and updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="sub">Tell us about your basins and decisions. We’ll tailor a demo to your data.</p>
+
+      <div class="cta">
+        <div class="panel reveal">
+          <h3>Request a Demo</h3>
+          <p style="color:var(--muted);margin-top:0">GitHub Pages is static—use the email link below or connect a form service later.</p>
+          <div class="row">
+            <a class="btn primary" href="mailto:hello@hydrosky.org?subject=Demo%20Request%20-%20HydroSky&body=Hi%20HydroSky%2C%0AWe'd%20like%20a%20demo%20for%20...">Email: hello@hydrosky.org</a>
+            <a class="btn" href="#">Download One‑Pager (PDF)</a>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <h3>Office<\/h3>\n          <p>Hydros Lab, University of Oklahoma<br/>Norman, OK · USA<\/p>
+          <p><a href="https://github.com/skyan1002" target="_blank" rel="noopener">GitHub</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container center">
+      <div>© <span id="year"></span> HydroSky LLC. All rights reserved.</div>
+      <div class="right"><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const ro = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');}})
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+    // Simple counters
+    const counters = document.querySelectorAll('[data-count]');
+    counters.forEach(el=>{
+      const end = +el.dataset.count; let cur = 0; const dur = 900; const start = performance.now();
+      const tick = (t)=>{ const p = Math.min(1,(t-start)/dur); cur = Math.floor(end * (0.2 + 0.8*p)); el.textContent = cur; if(p<1) requestAnimationFrame(tick) };
+      requestAnimationFrame(tick);
+    });
+  </script>
 </body>
 </html>
