@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Team — HydroSky LLC</title>
+  <meta name="description" content="Meet the passionate researchers and engineers behind HydroSky's innovative hydrologic solutions." />
+  <meta property="og:title" content="Our Team — HydroSky LLC" />
+  <meta property="og:description" content="Meet the passionate researchers and engineers behind HydroSky's innovative hydrologic solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hydrosky.org/team" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💧</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#050816;
+      --panel:rgba(255,255,255,0.08);
+      --border:rgba(255,255,255,0.12);
+      --txt:#e6f4ff;
+      --muted:#a9c0d6;
+      --accent1:#22d3ee; /* cyan */
+      --accent2:#7c3aed; /* violet */
+      --accent3:#0ea5e9; /* sky */
+      --shine:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3));
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
+
+    /* ======= Fancy animated background ======= */
+    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(60px);opacity:.5}
+    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:screen}
+    .b1{width:40vmax;height:40vmax;background:#0ea5e9;left:8%;top:5%;animation:float 10s ease-in-out infinite}
+    .b2{width:45vmax;height:45vmax;background:#7c3aed;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
+    .b3{width:35vmax;height:35vmax;background:#22d3ee;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-4%) scale(1.03)}100%{transform:translateY(0)}}
+
+    /* ======= Layout ======= */
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(5,8,22,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .logo{width:36px;height:36px;border-radius:10px;background:var(--shine);border:1px solid var(--border);box-shadow:0 10px 30px rgba(34,211,238,.2)}
+    .brand small{color:var(--muted);font-weight:400}
+    .nav-links{display:flex;flex-direction:column;gap:8px}
+    .nav-row{display:flex;gap:22px;align-items:center}
+    .nav-links a{color:var(--txt);text-decoration:none;font-weight:500;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .nav-external{color:var(--accent1) !important;opacity:1 !important;font-weight:600}
+    .nav-external:hover{color:var(--accent3) !important}
+
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--border);color:var(--txt);text-decoration:none}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(34,211,238,.15)}
+    .btn.primary{background:var(--shine);border:0;color:white}
+
+    /* ======= Hero ======= */
+    .hero{position:relative;padding:96px 0 56px;border-bottom:1px solid var(--border)}
+    .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0;background:var(--shine);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);max-width:820px;font-size:18px;margin-top:20px}
+
+    /* ======= Team Grid ======= */
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(500px,1fr));gap:40px;margin-top:60px}
+    .team-member{position:relative;border-radius:24px;overflow:hidden;background:var(--panel);border:1px solid var(--border);transition:transform .3s ease,box-shadow .3s ease;cursor:pointer}
+    .team-member:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(34,211,238,.2)}
+    .team-member::before{content:"🔍";position:absolute;top:15px;right:15px;background:rgba(5,8,22,.8);color:var(--accent1);padding:8px;border-radius:50%;font-size:16px;opacity:0;transition:opacity .3s ease;z-index:10}
+    .team-member:hover::before{opacity:1}
+    .team-member img{width:100%;height:450px;object-fit:contain;display:block;background:rgba(255,255,255,.05)}
+    .member-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(5,8,22,.95));padding:30px;color:white;pointer-events:none}
+    .member-info h3{margin:0 0 8px;font-size:24px;font-weight:600}
+    .member-info p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+    .member-badge{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(34,211,238,.2);border:1px solid rgba(34,211,238,.3);color:#b3ecff;font-size:12px;font-weight:500;margin-top:12px}
+
+    /* ======= Sections ======= */
+    section{padding:80px 0;border-bottom:1px solid var(--border)}
+    h2{font-size:clamp(28px,3.5vw,40px);margin:0 0 12px}
+    .sub{color:var(--muted);margin:0 0 26px}
+
+    footer{padding:36px 0;color:#b8c9da}
+    footer a{color:#cfe7ff;text-decoration:none}
+
+    /* Utilities */
+    .row{display:flex;gap:14px;flex-wrap:wrap}
+    .center{display:flex;align-items:center;gap:12px}
+    .right{margin-left:auto}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .team-grid{grid-template-columns:1fr}
+      .team-member img{height:400px}
+    }
+    @media (max-width:600px){
+      nav .nav-links{display:none}
+      nav{height:64px}
+      .hero{padding-top:72px}
+      .team-member img{height:350px}
+      .member-info{padding:20px}
+      .member-info h3{font-size:20px}
+    }
+
+    /* Reveal animations */
+    .reveal{opacity:0;transform:translateY(16px);transition:all .7s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <!-- Animated BG blobs -->
+  <div class="bg-wrap" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            HydroSky <small>LLC · Hydros Lab @ University of Oklahoma</small>
+          </div>
+        </div>
+        <div class="nav-links">
+          <div class="nav-row">
+            <a href="index.html">Home</a>
+            <a href="index.html#solutions">Solutions</a>
+            <a href="index.html#tech">Technology</a>
+            <a href="index.html#cases">Case Studies</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="nav-row">
+            <a href="team.html" class="nav-external">Team</a>
+            <a class="btn primary" href="index.html#contact">Schedule a Demo</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Research Team</h1>
+      <p>Meet the passionate researchers and engineers behind HydroSky's innovative hydrologic solutions. Our team brings together expertise across multiple disciplines to deliver cutting-edge flood and drought modeling capabilities.</p>
+    </div>
+  </section>
+
+  <!-- Team Members -->
+  <section>
+    <div class="container">
+      <div class="team-grid">
+        <div class="team-member reveal">
+          <img src="figures/people/p1.png" alt="Radar/Satellite Precipitation Retrieval/Validation Team" loading="lazy">
+          <div class="member-info">
+            <h3>Radar/Satellite Precipitation Retrieval/Validation</h3>
+            <p>Advanced precipitation estimation from radar and satellite data, with comprehensive validation frameworks for improved accuracy in hydrologic modeling.</p>
+            <span class="member-badge">Precipitation Science</span>
+          </div>
+        </div>
+        
+        <div class="team-member reveal">
+          <img src="figures/people/p2.png" alt="Geoinformatics/Remote Sensing Team" loading="lazy">
+          <div class="member-info">
+            <h3>Geoinformatics/Remote Sensing</h3>
+            <p>Spatial data processing, GIS analysis, and remote sensing techniques for environmental monitoring and basin characterization.</p>
+            <span class="member-badge">Spatial Analytics</span>
+          </div>
+        </div>
+        
+        <div class="team-member reveal">
+          <img src="figures/people/p3.png" alt="Hydrology/Climate/Data Assimilation Team" loading="lazy">
+          <div class="member-info">
+            <h3>Hydrology/Climate/Data Assimilation</h3>
+            <p>Hydrologic modeling, climate analysis, and data assimilation techniques to improve forecast accuracy and understanding of water cycle processes.</p>
+            <span class="member-badge">Hydrologic Modeling</span>
+          </div>
+        </div>
+        
+        <div class="team-member reveal">
+          <img src="figures/people/p4.png" alt="Extremes: Flash Floods and Landslide Team" loading="lazy">
+          <div class="member-info">
+            <h3>Extremes: Flash Floods and Landslide</h3>
+            <p>Research focused on extreme weather events, flash flood prediction, and landslide risk assessment for enhanced early warning systems.</p>
+            <span class="member-badge">Extreme Events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container center">
+      <div>© <span id="year"></span> HydroSky LLC. All rights reserved.</div>
+      <div class="right"><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const ro = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');}})
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+    // Team member click functionality
+    document.querySelectorAll('.team-member').forEach(member => {
+      member.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        const title = this.querySelector('h3').textContent;
+        const description = this.querySelector('p').textContent;
+        
+        // Create modal
+        const modal = document.createElement('div');
+        modal.style.cssText = `
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(5,8,22,0.95);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+          backdrop-filter: blur(10px);
+        `;
+        
+        modal.innerHTML = `
+          <div style="
+            max-width: 90vw;
+            max-height: 90vh;
+            position: relative;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+          ">
+            <img src="${img.src}" alt="${img.alt}" style="
+              width: 100%;
+              height: auto;
+              max-height: 70vh;
+              object-fit: contain;
+              display: block;
+            ">
+            <div style="
+              padding: 20px;
+              color: var(--txt);
+            ">
+              <h3 style="margin: 0 0 10px; color: var(--txt);">${title}</h3>
+              <p style="margin: 0; color: var(--muted);">${description}</p>
+            </div>
+            <button onclick="this.parentElement.parentElement.remove()" style="
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              background: rgba(255,255,255,0.1);
+              border: 1px solid var(--border);
+              color: var(--txt);
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              cursor: pointer;
+              font-size: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            ">×</button>
+          </div>
+        `;
+        
+        document.body.appendChild(modal);
+        
+        // Close modal on background click
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            modal.remove();
+          }
+        });
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            modal.remove();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
