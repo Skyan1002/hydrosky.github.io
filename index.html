@@ -43,13 +43,16 @@
     /* ======= Layout ======= */
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;background:rgba(5,8,22,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
-    nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav{display:flex;align-items:center;justify-content:space-between;height:80px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
     .logo{width:36px;height:36px;border-radius:10px;background:var(--shine);border:1px solid var(--border);box-shadow:0 10px 30px rgba(34,211,238,.2)}
     .brand small{color:var(--muted);font-weight:400}
-    .nav-links{display:flex;gap:22px}
+    .nav-links{display:flex;flex-direction:column;gap:8px}
+    .nav-row{display:flex;gap:22px;align-items:center}
     .nav-links a{color:var(--txt);text-decoration:none;font-weight:500;opacity:.9}
     .nav-links a:hover{opacity:1}
+    .nav-external{color:var(--accent1) !important;opacity:1 !important;font-weight:600}
+    .nav-external:hover{color:var(--accent3) !important}
 
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--border);color:var(--txt);text-decoration:none}
     .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(34,211,238,.15)}
@@ -101,6 +104,8 @@
     .cta input,.cta textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:12px;color:var(--txt);padding:12px;font:inherit;outline:none}
     .cta textarea{min-height:120px;resize:vertical}
 
+
+
     footer{padding:36px 0;color:#b8c9da}
     footer a{color:#cfe7ff;text-decoration:none}
 
@@ -116,6 +121,7 @@
     }
     @media (max-width:600px){
       nav .nav-links{display:none}
+      nav{height:64px}
       .hero{padding-top:72px}
       .stat{grid-column:span 12}
     }
@@ -144,12 +150,17 @@
           </div>
         </div>
         <div class="nav-links">
-          <a href="#solutions">Solutions</a>
-          <a href="#tech">Technology</a>
-          <a href="#cases">Case Studies</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-          <a class="btn primary" href="#contact">Schedule a Demo</a>
+          <div class="nav-row">
+            <a href="#solutions">Solutions</a>
+            <a href="#tech">Technology</a>
+            <a href="#cases">Case Studies</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="nav-row">
+            <a href="team.html" class="nav-external">Team</a>
+            <a class="btn primary" href="#contact">Schedule a Demo</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -306,6 +317,8 @@
       </div>
     </div>
   </section>
+
+
 
   <!-- Contact / CTA -->
   <section id="contact">
