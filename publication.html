@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Video Tutorials — HydroSky</title>
-  <meta name="description" content="Learn about CREST model and other hydrologic modeling techniques through our comprehensive video tutorials." />
-  <meta property="og:title" content="Video Tutorials — HydroSky" />
-  <meta property="og:description" content="Learn about CREST model and other hydrologic modeling techniques through our comprehensive video tutorials." />
+  <title>Publications — HydroSky</title>
+  <meta name="description" content="Scientific publications and academic research from HydroSky in hydrological modeling, climate studies, and water resource management." />
+  <meta property="og:title" content="Publications — HydroSky" />
+  <meta property="og:description" content="Scientific publications and academic research from HydroSky in hydrological modeling, climate studies, and water resource management." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hydrosky.org/video" />
+  <meta property="og:url" content="https://hydrosky.org/publication" />
   <meta name="theme-color" content="#0ea5e9" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💧</text></svg>">
 
@@ -63,17 +63,28 @@
     .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0;background:var(--shine);-webkit-background-clip:text;background-clip:text;color:transparent}
     .hero p{color:var(--muted);max-width:820px;font-size:18px;margin-top:20px}
 
-    /* ======= Video Section ======= */
-    .video-section{padding:80px 0}
-    .video-container{max-width:900px;margin:0 auto;text-align:center}
-    .video-wrapper{position:relative;width:100%;border-radius:20px;overflow:hidden;background:var(--panel);border:1px solid var(--border);margin-bottom:30px}
-    .video-wrapper iframe{width:100%;height:500px;border:none;display:block}
-    .video-info{text-align:left;max-width:800px;margin:0 auto}
-    .video-info h2{margin:0 0 15px;font-size:28px;color:var(--txt)}
-    .video-info p{color:var(--muted);line-height:1.6;margin-bottom:20px}
-    .video-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
-    .meta-item{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px}
-    .meta-item svg{width:16px;height:16px;fill:currentColor}
+    /* ======= Publication List ======= */
+    .publication-list{margin-top:60px}
+    .pub-item{border:1px solid var(--border);border-radius:20px;background:var(--panel);padding:30px;margin-bottom:30px;transition:transform .3s ease,box-shadow .3s ease}
+    .pub-item:hover{transform:translateY(-4px);box-shadow:0 15px 30px rgba(34,211,238,.15)}
+    .pub-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:15px;flex-wrap:wrap;gap:10px}
+    .pub-year{background:var(--accent1);color:var(--bg);padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600}
+    .pub-journal{color:var(--accent1);font-size:14px;font-weight:500}
+    .pub-title{margin:0 0 10px;font-size:20px;font-weight:600;line-height:1.4;color:var(--txt)}
+    .pub-authors{color:var(--muted);font-size:14px;margin-bottom:15px}
+    .pub-abstract{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:20px}
+    .pub-links{display:flex;gap:15px;flex-wrap:wrap}
+    .pub-link{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:12px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.3);color:var(--accent1);text-decoration:none;font-size:13px;font-weight:500;transition:all .3s ease}
+    .pub-link:hover{background:rgba(34,211,238,.2);transform:translateY(-1px)}
+    .scholar-link{background:rgba(124,58,237,.1);border-color:rgba(124,58,237,.3);color:var(--accent2)}
+    .scholar-link:hover{background:rgba(124,58,237,.2)}
+
+    /* ======= External Link Section ======= */
+    .scholar-section{margin-top:60px;text-align:center;padding:40px;border:1px solid var(--border);border-radius:20px;background:var(--panel)}
+    .scholar-section h2{margin:0 0 15px;color:var(--txt)}
+    .scholar-section p{color:var(--muted);margin-bottom:25px}
+    .scholar-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 25px;border-radius:14px;background:var(--shine);color:white;text-decoration:none;font-weight:600;transition:transform .3s ease}
+    .scholar-btn:hover{transform:translateY(-2px)}
 
     /* ======= Sections ======= */
     section{padding:80px 0;border-bottom:1px solid var(--border)}
@@ -89,15 +100,12 @@
     .right{margin-left:auto}
 
     /* Responsive */
-    @media (max-width:900px){
-      .video-wrapper iframe{height:400px}
-    }
     @media (max-width:600px){
       nav .nav-links{display:none}
       nav{height:64px}
       .hero{padding-top:72px}
-      .video-wrapper iframe{height:250px}
-      .video-info h2{font-size:24px}
+      .pub-item{padding:20px}
+      .pub-title{font-size:18px}
     }
 
     /* Reveal animations */
@@ -147,40 +155,50 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Video Tutorials</h1>
-      <p>Learn about hydrologic modeling techniques, CREST model implementation, and advanced water cycle analysis through our comprehensive video tutorials.</p>
+      <h1>Publications</h1>
+      <p>Our research contributions to the scientific community through peer-reviewed publications in hydrological modeling, climate studies, and water resource management.</p>
     </div>
   </section>
 
-  <!-- Video Content -->
-  <section class="video-section">
+  <!-- Publications -->
+  <section>
     <div class="container">
-      <div class="video-container reveal">
-        <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uJNpz13SwGw?si=vRGAPAFAqZqvsX_5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!-- Google Scholar Link -->
+      <div class="scholar-section reveal">
+        <h2>Complete Publication List</h2>
+        <p>Visit our Google Scholar profile for the most up-to-date and comprehensive list of all publications, citations, and research metrics.</p>
+        <a href="https://scholar.google.com/citations?hl=zh-CN&user=zFsgkJgAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" class="scholar-btn">
+          📚 View Google Scholar Profile
+        </a>
+      </div>
+
+      <!-- Featured Publications -->
+      <div class="publication-list">
+        <div class="pub-item reveal">
+          <div class="pub-header">
+            <div class="pub-year">2025</div>
+            <div class="pub-journal">arXiv preprint</div>
+          </div>
+          <h3 class="pub-title">AQUAH: Automatic Quantification and Unified Agent in Hydrology</h3>
+          <div class="pub-authors">Yan, Songkun, et al.</div>
+          <div class="pub-abstract">This paper introduces AQUAH, an innovative framework for automatic quantification and unified agent applications in hydrology. The system combines advanced machine learning techniques with hydrological modeling to provide comprehensive water resource analysis and management solutions.</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2508.02936" target="_blank" rel="noopener" class="pub-link">📄 arXiv</a>
+            <a href="https://doi.org/10.48550/arXiv.2508.02936" target="_blank" rel="noopener" class="pub-link">🔗 DOI</a>
+          </div>
         </div>
-        <div class="video-info">
-          <h2>AI Agent for Hydrological Modeling Demo: Flash Flood Event</h2>
-          <p>Demonstration of an AI agent designed for hydrological modeling, specifically showcasing its capabilities in flash flood event analysis and prediction. This demo illustrates how artificial intelligence can enhance traditional hydrologic modeling approaches for improved flood forecasting and emergency response.</p>
-          <div class="video-meta">
-            <div class="meta-item">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              <span>AI Agent</span>
-            </div>
-            <div class="meta-item">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              <span>Flash Flood</span>
-            </div>
-            <div class="meta-item">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-              <span>Hydrological Modeling</span>
-            </div>
+
+        <div class="pub-item reveal">
+          <div class="pub-header">
+            <div class="pub-year">2022</div>
+            <div class="pub-journal">Atmosphere</div>
+          </div>
+          <h3 class="pub-title">Cross-examining precipitation products by rain gauge, remote sensing, and wrf simulations over a south american region across the pacific coast and andes</h3>
+          <div class="pub-authors">Chen, Mengye, et al.</div>
+          <div class="pub-abstract">This study cross-examines precipitation products using rain gauge data, remote sensing observations, and Weather Research and Forecasting (WRF) simulations over a South American region spanning the Pacific coast and Andes mountains. The research provides comprehensive validation and comparison of different precipitation estimation methods across complex topographic regions.</div>
+          <div class="pub-links">
+            <a href="https://www.mdpi.com/2073-4433/13/10/1666" target="_blank" rel="noopener" class="pub-link">📄 Full Text</a>
+            <a href="https://doi.org/10.3390/atmos13101666" target="_blank" rel="noopener" class="pub-link">🔗 DOI</a>
           </div>
         </div>
       </div>

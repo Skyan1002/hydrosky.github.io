@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research — HydroSky</title>
+  <meta name="description" content="Research results and scientific publications from HydroSky's hydrological modeling and climate studies." />
+  <meta property="og:title" content="Research — HydroSky" />
+  <meta property="og:description" content="Research results and scientific publications from HydroSky's hydrological modeling and climate studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hydrosky.org/research" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💧</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#050816;
+      --panel:rgba(255,255,255,0.08);
+      --border:rgba(255,255,255,0.12);
+      --txt:#e6f4ff;
+      --muted:#a9c0d6;
+      --accent1:#22d3ee; /* cyan */
+      --accent2:#7c3aed; /* violet */
+      --accent3:#0ea5e9; /* sky */
+      --shine:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3));
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
+
+    /* ======= Fancy animated background ======= */
+    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(60px);opacity:.5}
+    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:screen}
+    .b1{width:40vmax;height:40vmax;background:#0ea5e9;left:8%;top:5%;animation:float 10s ease-in-out infinite}
+    .b2{width:45vmax;height:45vmax;background:#7c3aed;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
+    .b3{width:35vmax;height:35vmax;background:#22d3ee;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-4%) scale(1.03)}100%{transform:translateY(0)}}
+
+    /* ======= Layout ======= */
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(5,8,22,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+    .logo{width:36px;height:36px;border-radius:10px;background:var(--shine);border:1px solid var(--border);box-shadow:0 10px 30px rgba(34,211,238,.2)}
+    .brand small{color:var(--muted);font-weight:400}
+    .nav-links{display:flex;flex-direction:column;gap:8px}
+    .nav-row{display:flex;gap:22px;align-items:center}
+    .nav-links a{color:var(--txt);text-decoration:none;font-weight:500;opacity:.9}
+    .nav-links a:hover{opacity:1}
+    .nav-external{color:var(--accent1) !important;opacity:1 !important;font-weight:600}
+    .nav-external:hover{color:var(--accent3) !important}
+
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--border);color:var(--txt);text-decoration:none}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(34,211,238,.15)}
+    .btn.primary{background:var(--shine);border:0;color:white}
+
+    /* ======= Hero ======= */
+    .hero{position:relative;padding:96px 0 56px;border-bottom:1px solid var(--border)}
+    .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0;background:var(--shine);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);max-width:820px;font-size:18px;margin-top:20px}
+
+    /* ======= Research Gallery ======= */
+    .research-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:30px;margin-top:60px}
+    .research-item{position:relative;border-radius:20px;overflow:hidden;background:var(--panel);border:1px solid var(--border);transition:transform .3s ease,box-shadow .3s ease;cursor:pointer}
+    .research-item:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(34,211,238,.2)}
+    .research-item::before{content:"🔍";position:absolute;top:15px;right:15px;background:rgba(5,8,22,.8);color:var(--accent1);padding:8px;border-radius:50%;font-size:16px;opacity:0;transition:opacity .3s ease;z-index:10}
+    .research-item:hover::before{opacity:1}
+    .research-item img{width:100%;height:300px;object-fit:cover;display:block;background:white}
+    .research-caption{padding:20px;color:var(--txt)}
+    .research-caption h3{margin:0 0 8px;font-size:18px;font-weight:600;line-height:1.3}
+    .research-type{color:var(--accent1);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+
+    /* ======= Modal ======= */
+    .modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(5,8,22,0.95);display:flex;align-items:center;justify-content:center;z-index:1000;backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:all .3s ease}
+    .modal.show{opacity:1;visibility:visible}
+    .modal-content{max-width:90vw;max-height:90vh;position:relative;background:var(--panel);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+    .modal-content img{width:100%;height:auto;max-height:70vh;object-fit:contain;display:block;background:white}
+    .modal-info{padding:20px;color:var(--txt)}
+    .modal-info h3{margin:0 0 8px;font-size:24px;font-weight:600}
+    .modal-info .research-type{margin-bottom:8px}
+    .modal-close{position:absolute;top:15px;right:15px;background:rgba(255,255,255,0.1);border:1px solid var(--border);color:var(--txt);border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:background .3s ease}
+    .modal-close:hover{background:rgba(255,255,255,0.2)}
+
+    /* ======= Sections ======= */
+    section{padding:80px 0;border-bottom:1px solid var(--border)}
+    h2{font-size:clamp(28px,3.5vw,40px);margin:0 0 12px}
+    .sub{color:var(--muted);margin:0 0 26px}
+
+    footer{padding:36px 0;color:#b8c9da}
+    footer a{color:#cfe7ff;text-decoration:none}
+
+    /* Utilities */
+    .row{display:flex;gap:14px;flex-wrap:wrap}
+    .center{display:flex;align-items:center;gap:12px}
+    .right{margin-left:auto}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .research-gallery{grid-template-columns:1fr;gap:20px}
+      .research-item img{height:250px}
+    }
+    @media (max-width:600px){
+      nav .nav-links{display:none}
+      nav{height:64px}
+      .hero{padding-top:72px}
+      .research-item img{height:200px}
+      .research-caption{padding:15px}
+      .research-caption h3{font-size:16px}
+    }
+
+    /* Reveal animations */
+    .reveal{opacity:0;transform:translateY(16px);transition:all .7s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <!-- Animated BG blobs -->
+  <div class="bg-wrap" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            HydroSky <small>Hydros Lab @ National Weather Center</small>
+          </div>
+        </div>
+        <div class="nav-links">
+          <div class="nav-row">
+            <a href="index.html">Home</a>
+            <a href="index.html#solutions">Solutions</a>
+            <a href="index.html#tech">Technology</a>
+            <a href="index.html#cases">Case Studies</a>
+            <a href="index.html#process">Process</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="nav-row">
+            <a href="team.html" class="nav-external">Team</a>
+            <a href="video.html" class="nav-external">Video</a>
+            <a href="photos.html" class="nav-external">Photos</a>
+            <a href="research.html" class="nav-external">Research</a>
+            <a href="publication.html" class="nav-external">Publication</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Research Results</h1>
+      <p>Scientific publications, research findings, and technical results from our hydrological modeling and climate studies across South America and other regions.</p>
+    </div>
+  </section>
+
+  <!-- Research Gallery -->
+  <section>
+    <div class="container">
+      <div class="research-gallery">
+        <div class="research-item reveal">
+          <img src="figures/results/CODEX RCM and GCM Precipitation Simulations over SA.jpg" alt="CODEX RCM and GCM Precipitation Simulations over SA" loading="lazy">
+          <div class="research-caption">
+            <div class="research-type">Climate Modeling</div>
+            <h3>CODEX RCM and GCM Precipitation Simulations over SA</h3>
+          </div>
+        </div>
+        
+        <div class="research-item reveal">
+          <img src="figures/results/Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region fig1.png" alt="Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region Figure 1" loading="lazy">
+          <div class="research-caption">
+            <div class="research-type">Regional Downscaling</div>
+            <h3>Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region (Figure 1)</h3>
+          </div>
+        </div>
+        
+        <div class="research-item reveal">
+          <img src="figures/results/Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region fig2.png" alt="Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region Figure 2" loading="lazy">
+          <div class="research-caption">
+            <div class="research-type">Regional Downscaling</div>
+            <h3>Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region (Figure 2)</h3>
+          </div>
+        </div>
+        
+        <div class="research-item reveal">
+          <img src="figures/results/Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region fig3.png" alt="Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region Figure 3" loading="lazy">
+          <div class="research-caption">
+            <div class="research-type">Regional Downscaling</div>
+            <h3>Very-High-Resolution Regional Climate Dynamic Downscaling and Hydrological Simulations for Arequipa Region (Figure 3)</h3>
+          </div>
+        </div>
+        
+        <div class="research-item reveal">
+          <img src="figures/results/Results of 1st 10-year Past Climate Simulation for Arequipa Region.png" alt="Results of 1st 10-year Past Climate Simulation for Arequipa Region" loading="lazy">
+          <div class="research-caption">
+            <div class="research-type">Climate Simulation</div>
+            <h3>Results of 1st 10-year Past Climate Simulation for Arequipa Region</h3>
+          </div>
+        </div>
+        
+        <div class="research-item reveal">
+          <img src="figures/results/Detailed Analyses to Understand How Boundary Layer Scheme Affects Rainfall in Amazon Region.png" alt="Detailed Analyses to Understand How Boundary Layer Scheme Affects Rainfall in Amazon Region" loading="lazy">
+          <div class="research-caption">
+            <div class="research-type">Boundary Layer Analysis</div>
+            <h3>Detailed Analyses to Understand How Boundary Layer Scheme Affects Rainfall in Amazon Region</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="researchModal">
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <div class="research-type" id="modalType"></div>
+        <h3 id="modalTitle"></h3>
+      </div>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container center">
+      <div>© <span id="year"></span> HydroSky. All rights reserved.</div>
+      <div class="right"><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const ro = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');}})
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+    // Research modal functionality
+    document.querySelectorAll('.research-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        const title = this.querySelector('h3').textContent;
+        const type = this.querySelector('.research-type').textContent;
+        
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('modalImage').alt = img.alt;
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalType').textContent = type;
+        
+        document.getElementById('researchModal').classList.add('show');
+      });
+    });
+
+    function closeModal() {
+      document.getElementById('researchModal').classList.remove('show');
+    }
+
+    // Close modal on background click
+    document.getElementById('researchModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html> 
