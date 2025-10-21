@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyDROS - Team Members</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-size: 1.8em;
+        }
+        
+        /* People List Styles */
+        ul.people, ul.peopleNoPicture {
+            list-style-type: none;
+            text-align: left;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        
+        ul.people li {
+            display: block;
+            height: 180px;
+            width: 270px;
+            margin: 15px 10px;
+            float: left;
+            line-height: 1.35em;
+            color: #666;
+            background: #fafafa;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        ul.people li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        ul.people li span.name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            padding-top: 5px;
+            line-height: 1.5em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        ul.people li span.position {
+            font-size: 13px;
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        ul.people li .ppl {
+            float: left;
+            width: 118px;
+            height: 146px;
+            margin: 2px 15px 5px 5px;
+            border: solid 6px white;
+            box-shadow: 1px 2px 6px #777;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+        
+        @-webkit-keyframes bounce {
+            0% { -webkit-transform: translateY(0); }
+            50% { -webkit-transform: translateY(-7px); }
+            100% { -webkit-transform: translateY(0); }
+        }
+        
+        ul.people li:hover .ppl {
+            -webkit-animation: bounce 0.25s ease-in-out;
+            animation: bounce 0.25s ease-in-out;
+        }
+        
+        ul.people li a[href^="mailto"] {
+            font-size: 11px;
+            font-weight: normal;
+            color: #900;
+            display: block;
+            margin-right: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 18px;
+            vertical-align: baseline;
+            text-decoration: none;
+        }
+        
+        ul.people li a[href^="mailto"]:hover {
+            text-decoration: underline;
+        }
+        
+        /* People without picture styles */
+        ul.peopleNoPicture li {
+            margin: 0px 5px;
+            padding: 12px 15px;
+            display: block;
+            border-bottom: solid 1px #e0dbcc;
+            background: white;
+            transition: background-color 0.2s ease;
+        }
+        
+        ul.peopleNoPicture li:hover {
+            background-color: #f5f5f5;
+        }
+        
+        ul.peopleNoPicture li:first-child,
+        ul.peopleNoPicture li:first-child a,
+        ul.peopleNoPicture li:first-child a:hover {
+            color: #777;
+            font-weight: bold;
+        }
+        
+        ul.peopleNoPicture li:last-child {
+            border-bottom: none;
+        }
+        
+        ul.peopleNoPicture li:nth-child(2n) {
+            background-color: #fdfbef;
+        }
+        
+        ul.peopleNoPicture li:nth-child(2n):hover {
+            background-color: #f9f6e8;
+        }
+        
+        ul.peopleNoPicture span {
+            width: 290px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        ul.peopleNoPicture span.degree {
+            width: 220px;
+            margin-right: 20px;
+        }
+        
+        ul.peopleNoPicture span.affil {
+            width: 160px;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HyDROS Team Members</h1>
+        <p class="subtitle">Hydrological Remote Sensing Research Group</p>
+        
+        <h2>Faculty and Scientists</h2>
+        <ul class="people clearfix">
+            <li>
+                <img class="ppl" src="../peopleimgs/yanghong.jpg" alt="Yang Hong" />
+                <span class="name">Yang Hong</span>
+                <span class="position">Professor</span>
+                CEES / SoM | NWC 4610<br/>
+                (405) 325-3644
+                <a href="mailto:yanghong@ou.edu">yanghong@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/jjgourley.jpg" alt="JJ Gourley" />
+                <span class="name">JJ Gourley</span>
+                <span class="position">Adj. Associate Professor</span>
+                SoM / NOAA NSSL | NWC 4745<br/>
+                (405) 325-6472
+                <a href="mailto:jj.gourley@noaa.gov">jj.gourley@noaa.gov</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/pierre.jpg" alt="Pierre Kirstetter" />
+                <span class="name">Pierre Kirstetter</span>
+                <span class="position">Research Scientist, Adj. Faculty</span>
+                ARRC / CEES | NWC 4642<br/>
+                (405) 325-6092
+                <a href="mailto:pierre.kirstetter@noaa.gov">pierre.kirstetter@noaa.gov</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/kezhang.jpg" alt="Ke Zhang" />
+                <span class="name">Ke Zhang</span>
+                <span class="position">Research Scientist</span>
+                NWC 3108<br/>
+                (405) 325-1343
+                <a href="mailto:kezhang@ou.edu">kezhang@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Aondover Tarhule" />
+                <span class="name">Aondover Tarhule</span>
+                <span class="position">Professor</span>
+                NWC 3630<br/>
+                (405) 325-7228
+                <a href="mailto:atarhule@ou.edu">atarhule@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Jeff Basara" />
+                <span class="name">Jeff Basara</span>
+                <span class="position">Associate Professor</span>
+                NWC 5238<br/>
+                (405) 325-1760
+                <a href="mailto:jbasara@ou.edu">jbasara@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Hernan Moreno" />
+                <span class="name">Hernan Moreno</span>
+                <span class="position">Assistant Professor</span>
+                SEC Suite 662<br/>
+                (480) 399-0571
+                <a href="mailto:moreno@ou.edu">moreno@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="David A. Sabatini" />
+                <span class="name">David A. Sabatini</span>
+                <span class="position">David Ross Boyd Professor</span>
+                CEC 301B<br/>
+                (405) 325-4273
+                <a href="mailto:sabatini@ou.edu">sabatini@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Randall Kolar" />
+                <span class="name">Randall Kolar</span>
+                <span class="position">David Ross Boyd and Austin Presidential Professor</span>
+                CEC 334<br/>
+                (405) 325-4267
+                <a href="mailto:kolar@ou.edu">kolar@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Laura Alvarez" />
+                <span class="name">Laura Alvarez</span>
+                <span class="position">Research Scientist and Lecturer</span>
+                SEC Suite 676<br/>
+                (405) 441-4434
+                <a href="mailto:alvarez@ou.edu">alvarez@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Teshome Yami" />
+                <span class="name">Teshome Yami</span>
+                <span class="position">Research Scientist</span>
+                CEES | NWC 4612
+                <a href="mailto:Teshome.L.Yami-1@ou.edu">Teshome.L.Yami-1@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Tiantian Yang" />
+                <span class="name">Tiantian Yang</span>
+                <span class="position">Assistant Professor</span>
+                NWC 4630<br/>
+                (405) 325-4216
+                <a href="mailto:tiantian.yang@ou.edu">tiantian.yang@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/humbertovergara.jpg" alt="Humberto Vergara" />
+                <span class="name">Humberto Vergara</span>
+                <span class="position">Research Scientist</span>
+                CIMMS | NWC 4730<br/>
+                (405) 325-6489
+                <a href="mailto:humber@ou.edu">humber@ou.edu</a>
+            </li>
+        </ul>
+        
+        <h2>Post Doctoral Fellows, Visiting Professors and Visiting Scholars</h2>
+        <ul class="people clearfix">
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Xiangyu Luo" />
+                <span class="name">Xiangyu Luo</span>
+                <span class="position">Post-doc</span>
+                COE/CEES | NWC 4642
+                <a href="mailto:xyluo@ou.edu">xyluo@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Liang Gao" />
+                <span class="name">Liang Gao</span>
+                <span class="position">Post-doc</span>
+                CEES | NWC 4640
+                <a href="mailto:Liang.Gao-1@ou.edu">Liang.Gao-1@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Shang Gao" />
+                <span class="name">Shang Gao</span>
+                <span class="position">Post-doc</span>
+                CEES | NWC 4803
+                <a href="mailto:Shang.Gao@ou.edu">Shang.Gao@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Jiaqi Zhang" />
+                <span class="name">Jiaqi Zhang</span>
+                <span class="position">Post-doc</span>
+                CEES | NWC 4803
+                <a href="mailto:jiaqi.zhang@ou.edu">jiaqi.zhang@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Changchun Xi" />
+                <span class="name">Changchun Xi</span>
+                <span class="position">Visiting Scholar</span>
+                CEES | NWC 4646
+                <a href="mailto:Changchun.xu-1@ou.edu">Changchun.xu-1@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Zeeman Chen" />
+                <span class="name">Zeeman Chen</span>
+                <span class="position">Visiting Professor</span>
+                CEES | NWC 4803
+                <a href="mailto:c.zeemen@ou.edu">c.zeemen@ou.edu</a>
+            </li>
+        </ul>
+        
+        <h2>Graduate Students</h2>
+        <ul class="people clearfix">
+            <li>
+                <img class="ppl" src="../peopleimgs/zhenhong.jpg" alt="Zhen Hong" />
+                <span class="name">Zhen Hong</span>
+                <span class="position">Geoinformatics</span>
+                NWC 4650
+                <a href="mailto:Zhen.Hong-1@ou.edu">Zhen.Hong-1@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Laura Holtzman" />
+                <span class="name">Laura Holtzman</span>
+                <span class="position">Geography and Environmental Sustainability</span>
+                NWC 4730
+                <a href="mailto:lauraholtzman@ou.edu">lauraholtzman@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Mengye Chen" />
+                <span class="name">Mengye Chen</span>
+                <span class="position">CEES</span>
+                NWC 4803
+                <a href="mailto:mchen15@ou.edu">mchen15@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Andrea Tavera" />
+                <span class="name">Andrea Tavera</span>
+                <span class="position">Exchange Student</span>
+                Environmental Engineering, El Bosque Univ.
+                <a href="mailto:ataverap@unbosque.edu.co">ataverap@unbosque.edu.co</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Jorge Duarte" />
+                <span class="name">Jorge Duarte</span>
+                <span class="position">Research Scholar</span>
+                ARRC | NWC 4630
+                <a href="mailto:jaduarteg90@gmail.com">jaduarteg90@gmail.com</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Soumaya Nabih" />
+                <span class="name">Soumaya Nabih</span>
+                <span class="position">Fulbright Scholar</span>
+                NWC 4650
+                <a href="mailto:Soumaya.Nabih-1@ou.edu">Soumaya.Nabih-1@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/zheli.jpg" alt="Zhi Li" />
+                <span class="name">Zhi Li</span>
+                <span class="position">COE/CEES</span>
+                NWC 4650
+                <a href="mailto:li1995@ou.edu">li1995@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Noah Brauer" />
+                <span class="name">Noah Brauer</span>
+                <span class="position">Research Assistant</span>
+                CAGS/SOM | NWC
+                <a href="mailto:nbrauer@ou.edu">nbrauer@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Devon Woods" />
+                <span class="name">Devon Woods</span>
+                <span class="position">Research Assistant</span>
+                CEES/SOM | NWC
+                <a href="mailto:woods.devon.j@ou.edu">woods.devon.j@ou.edu</a>
+            </li>
+        </ul>
+        
+        <h2>Undergraduate Students</h2>
+        <ul class="people clearfix">
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Jorge Andrés Celis R" />
+                <span class="name">Jorge Andrés Celis R</span>
+                <span class="position">Visiting Scholar</span>
+                CEES | NWC
+                <a href="mailto:Jorge.A.Celis.Rodriguez-1@ou.edu">Jorge.A.Celis.Rodriguez-1@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Ziyu Ding" />
+                <span class="name">Ziyu Ding</span>
+                <span class="position">Visiting Scholar</span>
+                CEES
+                <a href="mailto:ding.ziyu@ou.edu">ding.ziyu@ou.edu</a>
+            </li>
+        </ul>
+        
+        <h2>Collaborators</h2>
+        <ul class="people clearfix">
+            <li>
+                <img class="ppl" src="../peopleimgs/you_liangzhi.jpg" alt="Liangzhi You" />
+                <span class="name">Liangzhi You</span>
+                <span class="position">Senior Research Fellow, Program Leader</span>
+                International Food Policy Research Institute (IFPRI)
+                <a href="mailto:l.you@cgiar.org">l.you@cgiar.org</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/wangnaiyu.jpg" alt="Naiyu Wang" />
+                <span class="name">Naiyu Wang</span>
+                <span class="position">Assistant Professor</span>
+                CEES<br/>
+                (405) 325-1489
+                <a href="mailto:naiyu.wang@ou.edu">naiyu.wang@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/hongjiexie.jpg" alt="Hongjie Xie" />
+                <span class="name">Hongjie Xie</span>
+                <span class="position">Visiting Professor</span>
+                LRSG UTSA
+                <a href="mailto:hongjie.xie@utsa.edu">hongjie.xie@utsa.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/emmanouilanagnostou.jpg" alt="Emmanouil Anagnostou" />
+                <span class="name">Emmanouil Anagnostou</span>
+                <span class="position">Professor</span>
+                University of Connecticut
+                <a href="mailto:manos@engr.uconn.edu">manos@engr.uconn.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/robertadler.jpeg" alt="Robert Adler" />
+                <span class="name">Robert Adler</span>
+                <span class="position">Senior Research Scientist</span>
+                University of Maryland
+                <a href="mailto:radler@umd.edu">radler@umd.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/no_photo.jpg" alt="Walter Petersen" />
+                <span class="name">Walter Petersen</span>
+                <span class="position">Field Support Office Chief</span>
+                NASA/GSFC
+                <a href="mailto:walt.petersen@nasa.gov">walt.petersen@nasa.gov</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/josephturk.jpg" alt="Joseph Turk" />
+                <span class="name">Joseph Turk</span>
+                <span class="position">NASA/JPL</span>
+                <a href="mailto:Joseph.Turk@jpl.nasa.gov">Joseph.Turk@jpl.nasa.gov</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/ninglu.jpg" alt="Ning Lu" />
+                <span class="name">Ning Lu</span>
+                <span class="position">Professor</span>
+                Colorado School of Mines
+                <a href="mailto:ninglu@mines.edu">ninglu@mines.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/qingcao.jpg" alt="Qing Cao" />
+                <span class="name">Qing Cao</span>
+                <span class="position">Research Scientist</span>
+                EEC
+                <a href="mailto:qingcao@eecradar.com">qingcao@eecradar.com</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/sadiqkhan.jpg" alt="Sadiq Khan" />
+                <span class="name">Sadiq Khan</span>
+                <span class="position">Research Scientist</span>
+                National Water Center
+                <a href="mailto:sadiq@ou.edu">sadiq@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/shengchen.jpg" alt="Sheng Chen" />
+                <span class="name">Sheng Chen</span>
+                <span class="position">Postdoc Research Fellow</span>
+                CEES | NWC 4803<br/>
+                (405) 325-1140
+                <a href="mailto:chenshengou@ou.edu">chenshengou@ou.edu</a>
+            </li>
+            
+            <li>
+                <img class="ppl" src="../peopleimgs/yixinwen.jpg" alt="Yixin Wen" />
+                <span class="name">Yixin Wen</span>
+                <span class="position">SoM</span>
+                NWC 4650
+                <a href="mailto:YixinWen@ou.edu">YixinWen@ou.edu</a>
+            </li>
+        </ul>
+        
+        <h2>Alumni</h2>
+        <ul class="peopleNoPicture">
+            <li><span>Xianwu Xue</span> <span class="affil">Research Scientist, CEES, NWC 4640, xuexianwu@ou.edu</span></li>
+            <li><span>Lacey Swope</span> <span class="affil">Meteorologist, KWTV NEWS9</span></li>
+            <li><span>Martin Calianno</span> <span class="affil">Alumni</span></li>
+            <li><span>Alireza Shokoohi</span> <span class="affil">Alumni</span></li>
+            <li><span>Julien Lagrange</span> <span class="affil">Alumni</span></li>
+            <li><span>Wenjuan Liu</span> <span class="affil">Alumni</span></li>
+            <li><span>Jun Wang</span> <span class="affil">Alumni</span></li>
+            <li><span>Pradeep Adhikari</span> <span class="affil">PhD Student, OU Geography</span></li>
+            <li><span>Li Li</span> <span class="affil">Alumni</span></li>
+            <li><span>Zonghu Liao</span> <span class="affil">Associate Professor, China University of Petroleum</span></li>
+            <li><span>Lu Liu</span> <span class="affil">PhD student, University of Maryland</span></li>
+            <li><span>He Chen</span> <span class="affil">Alumni</span></li>
+            <li><span>Trevor Grout</span> <span class="affil">Surface Water Hydrologist, USGS</span></li>
+            <li><span>Lidon Saura</span> <span class="affil">Alumni</span></li>
+            <li><span>Bin Yong</span> <span class="affil">Hohai University</span></li>
+            <li><span>Jiahu Wang</span> <span class="affil">PhD, Associate Professor, Hohai University</span></li>
+            <li><span>Zengxin Zhang</span> <span class="affil">Alumni</span></li>
+            <li><span>Shanhu Jiang</span> <span class="affil">Alumni</span></li>
+            <li><span>Lynn Zhang</span> <span class="affil">Alumni</span></li>
+            <li><span>Gaili Wang</span> <span class="affil">Alumni</span></li>
+            <li><span>Zhe Li</span> <span class="affil">Alumni</span></li>
+            <li><span>Mc-cloud Katjizeu</span> <span class="affil">Hydrologist, Namibia Department of Hydrology</span></li>
+            <li><span>Nicole C. Grams</span> <span class="affil">Weather Fusion</span></li>
+            <li><span>Zhidan Hu</span> <span class="affil">Alumni</span></li>
+            <li><span>Huan Li</span> <span class="affil">GIS</span></li>
+            <li><span>Lei Qiao</span> <span class="affil">Oklahoma State University</span></li>
+            <li><span>Umar Khatta</span> <span class="affil">Alumni</span></li>
+            <li><span>Lilly Rose Lagadec</span> <span class="affil">Universite de Grenoble, France</span></li>
+            <li><span>Celine Lutoff</span> <span class="affil">Universite de Grenoble, France</span></li>
+            <li><span>Saber Moazami</span> <span class="affil">Alumni</span></li>
+            <li><span>Xiaodi Yu</span> <span class="affil">Alumni</span></li>
+            <li><span>Junjun Hu</span> <span class="affil">Alumni</span></li>
+            <li><span>Qinshu Li</span> <span class="affil">liqinshu10@gmail.com</span></li>
+            <li><span>Wentao Zhang</span> <span class="affil">zhangwentao@pku.edu.cn</span></li>
+            <li><span>Jun Li</span> <span class="affil">lijun_more@126.com</span></li>
+            <li><span>Weiyue Li</span> <span class="affil">lwy326@gmail.com</span></li>
+            <li><span>Gina Hodges</span> <span class="affil">Devon Energy Fellowship</span></li>
+            <li><span>Zhongxue Zhou</span> <span class="affil">Visiting Professor</span></li>
+            <li><span>Xiaogang He</span> <span class="affil">Visiting Scholar</span></li>
+            <li><span>Yu Zhang</span> <span class="affil">Postdoc Research Fellow (CEES)</span></li>
+            <li><span>Zengchao Hao</span> <span class="affil">Alumni</span></li>
+            <li><span>Lihua Tang</span> <span class="affil">Visiting Professor, Tsinghua University</span></li>
+            <li><span>Zsanett Kopecskó</span> <span class="affil">Research Scholar</span></li>
+            <li><span>Jill Hardy</span> <span class="affil">SoM Fellowship</span></li>
+            <li><span>Marusa Spitalar</span> <span class="affil">Alumni</span></li>
+            <li><span>Thibaut Wassner</span> <span class="affil">Alumni</span></li>
+            <li><span>Maria Moreno</span> <span class="affil">Alumni</span></li>
+            <li><span>Camila Jurado</span> <span class="affil">Alumni</span></li>
+            <li><span>Paola Gonzalez</span> <span class="affil">Alumni</span></li>
+            <li><span>Jiayuan Lin</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Pauline Jaunet</span> <span class="affil">Alumni</span></li>
+            <li><span>Brandon Smith</span> <span class="affil">Alumni</span></li>
+            <li><span>Marine Giroud</span> <span class="affil">Alumni</span></li>
+            <li><span>Nicholas Carr</span> <span class="affil">Alumni</span></li>
+            <li><span>Haiyan Huang</span> <span class="affil">Postdoctoral Researcher</span></li>
+            <li><span>Bin Yang</span> <span class="affil">Visiting Scholar</span></li>
+            <li><span>Yong Ye</span> <span class="affil">Visiting Scholar</span></li>
+            <li><span>Xiaohua Xiang</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Xiaoling Wu</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Lahcen Benaabidate</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Xinyi Shen</span> <span class="affil">Alumni</span></li>
+            <li><span>Jinsong Deng</span> <span class="affil">Alumni</span></li>
+            <li><span>Zhanming Wan</span> <span class="affil">Geoinformatics</span></li>
+            <li><span>Na Yang</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Abebe Sine Gebregiorgis</span> <span class="affil">Postdoctoral Researcher</span></li>
+            <li><span>Yi Liu</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Wenyu Yang</span> <span class="affil">CEES</span></li>
+            <li><span>Negar Karbalaee</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Yaoyao Zheng</span> <span class="affil">Meteorology</span></li>
+            <li><span>Zac Flamig</span> <span class="affil">SoM Fellowship</span></li>
+            <li><span>Robert (Race) Clark III</span> <span class="affil">SoM Fellowship</span></li>
+            <li><span>Haijun Liu</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Jinping Zhang</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Sungmin O</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Galateia Terti</span> <span class="affil">Alumni</span></li>
+            <li><span>Elizabeth Argyle</span> <span class="affil">Alumni</span></li>
+            <li><span>Ben Toms</span> <span class="affil">Alumni</span></li>
+            <li><span>Shanshan Luo</span> <span class="affil">Alumni</span></li>
+            <li><span>Wei Wan</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Yan Ye</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Manabendra Saharia</span> <span class="affil">Alumni</span></li>
+            <li><span>Yan Shen</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Pierre-Alain Ayral</span> <span class="affil">Visiting Professor, CEES</span></li>
+            <li><span>Jessica Erlingis</span> <span class="affil">SoM Fellowship</span></li>
+            <li><span>Emad Hasan</span> <span class="affil">Post-doc, Geoinformatics</span></li>
+            <li><span>Yingzhao Ma</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Meihong Ma</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Chunfen Zeng</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Marc Mandement</span> <span class="affil">Visiting Intern, ARRC</span></li>
+            <li><span>Zhongfei Li</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Chen Xu</span> <span class="affil">CEES</span></li>
+            <li><span>Bo Rao</span> <span class="affil">CS</span></li>
+            <li><span>Xirong Guo</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Xiaona Zhang</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Ming Zhong</span> <span class="affil">Visiting Scholar, CEES</span></li>
+            <li><span>Xiaoqian Pan</span> <span class="affil">Alumni</span></li>
+            <li><span>Christopher Bednarczyk</span> <span class="affil">Grad School Texas Tech</span></li>
+            <li><span>Lindsay A. Ross</span> <span class="affil">Alumni</span></li>
+            <li><span>Brian J. Squitieri</span> <span class="affil">Grad School Iowa State</span></li>
+            <li><span>Megan N. Salisbury</span> <span class="affil">Alumni</span></li>
+            <li><span>Juan G. Arango Calderon</span> <span class="affil">Alumni</span></li>
+        </ul>
+        
+        <div class="footer">
+            <p>HyDROS - Hydrological Remote Sensing Research Group</p>
+            <p>University of Oklahoma | School of Civil Engineering and Environmental Science</p>
+        </div>
+    </div>
+</body>
+</html>
+
