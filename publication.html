@@ -218,8 +218,872 @@
           </div>
         </div>
       </div>
+
+      
     </div>
   </section>
+
+
+
+  <!-- Refereed Publications Table (2022–2021) -->
+  <section id="refereed">
+    <div class="container">
+      <h2>Refereed Publications</h2>
+      <p class="sub">Formatted table view (ID · Topic · Citation). This step shows years 2022 and 2021.</p>
+
+      <style>
+        .pub-table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.03);margin-bottom:20px}
+        table.pub-table{width:100%;border-collapse:separate;border-spacing:0;min-width:720px}
+        .pub-table thead th{position:sticky;top:0;background:rgba(5,8,22,.9);backdrop-filter:blur(6px);color:#cfe7ff;font-weight:600;text-align:left;padding:12px;border-bottom:1px solid var(--border)}
+        .pub-table tbody td{padding:12px;vertical-align:top;border-bottom:1px solid var(--border);color:var(--muted)}
+        .pub-table .col-id{width:68px;color:#9bc9ff}
+        .pub-table .col-topic{width:180px;color:var(--accent1);font-weight:600}
+        .pub-table a{color:var(--accent3);text-decoration:none}
+        .pub-table a:hover{text-decoration:underline}
+        .pub-year-toggle{display:flex;align-items:center;gap:12px;margin:30px 0 16px;cursor:pointer;user-select:none;transition:opacity 0.2s}
+        .pub-year-toggle:hover{opacity:0.8}
+        .pub-year-badge{display:inline-block;padding:10px 20px;border:1px solid var(--border);border-radius:999px;color:#cfe7ff;font-size:20px;font-weight:600;background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(139,92,246,.15));box-shadow:0 2px 8px rgba(0,0,0,.2)}
+        .pub-year-icon{font-size:18px;transition:transform 0.3s;color:var(--accent1)}
+        .pub-year-icon.collapsed{transform:rotate(-90deg)}
+        .pub-year-content{max-height:5000px;overflow:hidden;transition:max-height 0.4s ease-out,opacity 0.3s}
+        .pub-year-content.collapsed{max-height:0;opacity:0}
+      </style>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2022</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-id">383</td>
+              <td class="col-topic">Soil moisture</td>
+              <td>Hong, Z., Moreno, H. A., Li, Z., Li, S., Greene, J. S., Hong, Y., & Alvarez, L. V., 2022: Triple Collocation of Ground‑, Satellite‑ and Land Surface Model‑Based Surface Soil Moisture Products in Oklahoma—Part I: Individual Product Assessment. Remote Sensing, 14 (22), 5641. doi: <a href="https://doi.org/10.3390/rs14225641" target="_blank" rel="noopener">10.3390/rs14225641</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">382</td>
+              <td class="col-topic">Satellite precipitation</td>
+              <td>Li, Z., Tang, G., Kirstetter, P., Gao, S., Li, J. L., Wen, Y., & Hong, Y., 2022: Evaluation of GPM IMERG and its constellations in extreme events over the conterminous United States. Journal of Hydrology, 606, 127357. doi: <a href="https://doi.org/10.1016/j.jhydrol.2021.127357" target="_blank" rel="noopener">10.1016/j.jhydrol.2021.127357</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">381</td>
+              <td class="col-topic">Flood modeling</td>
+              <td>Li Z., Gao S., Chen M., Gourley J., Mizukami N., & Hong Y., 2022: CREST‑VEC: A framework towards more accurate and realistic flood simulation across scales. Geoscientific Model Development, 1‑30. doi: <a href="https://doi.org/10.5194/gmd-15-6181-2022" target="_blank" rel="noopener">10.5194/gmd-15-6181-2022</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">380</td>
+              <td class="col-topic">Climate change</td>
+              <td>Li, Z., Gao, S., Chen, M., Gourley, J. J., Liu, C., Prein, A. F., & Hong, Y., 2022: The conterminous United States are projected to become more prone to flash floods in a high‑end emissions scenario. Communications Earth & Environment, 3 (1), 1‑9. doi: <a href="https://doi.org/10.1038/s43247-022-00409-6" target="_blank" rel="noopener">10.1038/s43247-022-00409-6</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">379</td>
+              <td class="col-topic">Flood modeling</td>
+              <td>Li, Z., Chen, M., Gao, S., Wen, Y., Gourley, J. J., Yang, T., Kolar, R., Hong, Y., 2022: Can re‑infiltration process be ignored for flood inundation mapping and prediction during extreme storms? A case study in Texas Gulf Coast region. Environmental Modelling & Software, 155, 105450. doi: <a href="https://doi.org/10.1016/j.envsoft.2022.105450" target="_blank" rel="noopener">10.1016/j.envsoft.2022.105450</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">378</td>
+              <td class="col-topic">Climate change</td>
+              <td>Li, Z., Gao, S., Chen, M., Gourley, J. J., & Hong, Y., 2022: Spatiotemporal characteristics of US floods: Current status and forecast under a future warmer climate. Earth’s Future, 10 (10), e2022EF002700. doi: <a href="https://doi.org/10.1029/2022EF002700" target="_blank" rel="noopener">10.1029/2022EF002700</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">377</td>
+              <td class="col-topic">Flood modeling</td>
+              <td>Chen, M., Li, Z., Gao, S., Xue, M., Gourley, J.J., Kolar, R.L., Hong, Y., 2022: A flood predictability study for Hurricane Harvey with the CREST‑iMAP model using high‑resolution quantitative precipitation forecasts and U‑Net deep learning precipitation nowcasts. Journal of Hydrology, 612, 128‑168. doi: <a href="https://doi.org/10.1016/j.jhydrol.2022.128168" target="_blank" rel="noopener">10.1016/j.jhydrol.2022.128168</a>.</td>
+            </tr>
+            <tr>
+              <td class="col-id">376</td>
+              <td class="col-topic">Satellite precipitation</td>
+              <td>Chen, M., Huang, Y., Li, Z., Larico, A.J.M., Xue, M., Hong, Y., Hu, X.‑M., Novoa, H.M., Martin, E., McPherson, R., Zhang, J., Gao, S., Wen, Y., Perez, A.V., Morales, I.Y., 2022: Cross‑Examining Precipitation Products by Rain Gauge, Remote Sensing, and WRF Simulations over a South American Region across the Pacific Coast and Andes. Atmosphere, 13, 1666. doi: <a href="https://doi.org/10.3390/atmos13101666" target="_blank" rel="noopener">10.3390/atmos13101666</a>.</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2021</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">375</td><td class="col-topic">Hydrologic modeling</td><td>Yang, Y., Pan, M., Lin, P., Beck, H. E., Zeng, Z., Yamazaki, D., ... & Wood, E. F., 2021: Global Reach‑Level 3‑Hourly River Flood Reanalysis (1980–2019). Bulletin of the American Meteorological Society, 102 (11), E2086‑E2105.</td></tr>
+            <tr><td class="col-id">374</td><td class="col-topic">Machine learning</td><td>Yang, T., Zhang, L., Kim, T., Hong, Y., Zhang, D., & Peng, Q., 2021: A large‑scale comparison of Artificial Intelligence and Data Mining (AI&DM) techniques in simulating reservoir releases over the Upper Colorado Region. Journal of Hydrology, 602 (126723).</td></tr>
+            <tr><td class="col-id">373</td><td class="col-topic">Hydrologic modeling</td><td>Yami, T. L., Gao, S., Chen, M., Li, Z., Vergara, H., Clark, R. R., ... & Hong, Y., 2021: CREST/EF5 capacity building to enhance resilience to hydrodynamic disasters in emerging regions. African Journal of Environmental Science and Technology, 15 (6), 230‑242.</td></tr>
+            <tr><td class="col-id">372</td><td class="col-topic">Agriculture</td><td>Xu, C., Zhang, X., Zhang, J., Chen, Y., Yami, T. L., & Hong, Y., 2021: Estimation of Crop Water Requirement Based on Planting Structure Extraction from Multi‑Temporal MODIS EVI. Water Resources Management, 35 (7), 2231‑2247.</td></tr>
+            <tr><td class="col-id">371</td><td class="col-topic">Precipitation</td><td>Qin, N. X., Wang, J. N., Gao, L., Hong, Y., Huang, J. L., & Lu, Q. Q., 2021: Observed trends of different rainfall intensities and the associated spatiotemporal variations during 1958–2016 in Guangxi, China. International Journal of Climatology, 41, E2880‑E2895.</td></tr>
+            <tr><td class="col-id">370</td><td class="col-topic">Droughts</td><td>Qin, N. X., Wang, J. N., Hong, Y., Lu, Q. Q., Huang, J. L., Liu, M. H., & Gao, L., 2021: The drought variability based on continuous days without available precipitation in Guizhou Province, southwest China. Water, 13 (5), 660.</td></tr>
+            <tr><td class="col-id">369</td><td class="col-topic">Flash floods</td><td>Zhong, M., Zeng, T., Jiang, T., Wu, H., Chen, X., & Hong, Y., 2021: A copula‑based multivariate probability analysis for flash flood risk under the compound effect of soil moisture and rainfall. Water Resources Management, 35 (1), 83‑98.</td></tr>
+            <tr><td class="col-id">368</td><td class="col-topic">Satellite precipitation</td><td>Ma, Y., Sun, X., Chen, H., Hong, Y., & Zhang, Y., 2021: A two‑stage blending approach for merging multiple satellite precipitation estimates and rain gauge observations: An experiment in the northeastern Tibetan Plateau. Hydrology and Earth System Sciences, 25 (1), 359‑374.</td></tr>
+            <tr><td class="col-id">367</td><td class="col-topic">Flash floods</td><td>Ma, M., Wang, H., Yang, Y., Zhao, G., Tang, G., Hong, Z., ... & Hong, Y., 2021: Development of a new rainfall‑triggering index of flash flood warning—case study in Yunnan province, China. Journal of Flood Risk Management, 14 (1), e12676.</td></tr>
+            <tr><td class="col-id">366</td><td class="col-topic">Salinity</td><td>Liu, B., Wan, W., Guo, Z., Ji, R., Wang, T., Tang, G., ... & Hong, Y., 2021: First Assessment of CyGNSS‑Incorporated SMAP Sea Surface Salinity Retrieval Over Pan‑Tropical Ocean. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 14, 12163‑12173.</td></tr>
+            <tr><td class="col-id">365</td><td class="col-topic">Landslide</td><td>Gao, L., Zhang, L. M., Chen, H. X., Fei, K., & Hong, Y., 2021: Topography and geology effects on travel distances of natural terrain landslides: Evidence from a large multi‑temporal landslide inventory in Hong Kong. Engineering Geology, 292, 106266.</td></tr>
+            <tr><td class="col-id">364</td><td class="col-topic">Machine learning</td><td>Chen, B., You, S., Ye, Y., Fu, Y., Ye, Z., Deng, J., ... & Hong, Y., 2021: An interpretable self‑adaptive deep neural network for estimating daily spatially‑continuous PM2.5 concentrations across China. Science of The Total Environment, 768, 144724.</td></tr>
+            <tr><td class="col-id">363</td><td class="col-topic">Satellite precipitation</td><td>Chen, H., Yong, B., Kirstetter, P. E., Wang, L., & Hong, Y., 2021: Global component analysis of errors in three satellite‑only global precipitation estimates. Hydrology and Earth System Sciences, 25 (6), 3087‑3104.</td></tr>
+            <tr><td class="col-id">362</td><td class="col-topic">Machine learning</td><td>Kim, T., Yang, T., Gao, S., Zhang, L., Ding, Z., Wen, X., ... & Hong, Y., 2021: Can AI and data‑driven ML models match or replace process‑driven hydrologic models for streamflow simulation? Journal of Hydrology, 598, 126423.</td></tr>
+            <tr><td class="col-id">361</td><td class="col-topic">Stream intermittency</td><td>Gao, S., Li, Z., Chen, M., Lin, P., Hong, Z., Allen, D., ... & Hong, Y., 2021: Spatiotemporal variability of global river extent ... Remote Sensing of Environment, 267, 112725.</td></tr>
+            <tr><td class="col-id">360</td><td class="col-topic">Droughts</td><td>Gao, S., Li, Z., Chen, M., Allen, D., Neeson, T., & Hong, Y., 2021: Monitoring Drought through the Lens of Landsat ... Remote Sensing, 13 (17), 3423.</td></tr>
+            <tr><td class="col-id">359</td><td class="col-topic">Stream intermittency</td><td>Gao, S., Chen, M., Li, Z., Cook, S., Allen, D., Neeson, T., ... & Hong, Y., 2021: Mapping Dynamic Non‑Perennial Stream Networks ... Journal of Hydrology, 126522.</td></tr>
+            <tr><td class="col-id">358</td><td class="col-topic">Droughts</td><td>Li, Z., Wen, Y., Schreier, M., Behrangi, A., Hong, Y., & Lambrigtsen, B., 2021: Advancing satellite precipitation retrievals with data driven approaches: Is black box model explainable? Earth and Space Science, 8 (2), e2020EA001423.</td></tr>
+            <tr><td class="col-id">357</td><td class="col-topic">Satellite Precipitation</td><td>Li, Z., Tang, G., Hong, Z., Chen, M., Gao, S., Kirstetter, P., ... & Hong, Y., 2021: Two‑decades of GPM IMERG early and final run products intercomparison: Similarity and difference ... Journal of Hydrology, 594, 125975.</td></tr>
+            <tr><td class="col-id">356</td><td class="col-topic">Floods</td><td>Li, Z., Chen, M., Gao, S., Luo, X., Gourley, J. J., Kirstetter, P., ... & Hong, Y., 2021: CREST‑iMAP v1.0: A fully coupled hydrologic‑hydraulic modeling framework dedicated to flood inundation mapping and prediction. Environmental Modelling & Software, 141, 105051.</td></tr>
+            <tr><td class="col-id">355</td><td class="col-topic">Floods</td><td>Li, Z., Chen, M., Gao, S., Gourley, J. J., Yang, T., Shen, X., ... & Hong, Y., 2021: A multi‑source 120‑year US flood database with a unified common format and public access. Earth System Science Data, 13 (8), 3755‑3766.</td></tr>
+            <tr><td class="col-id">354</td><td class="col-topic">Extreme weather</td><td>Li, Z., Tang, G., Kirstetter, P., Gao, S., Li, J. F., Wen, Y., & Hong, Y., 2021: Evaluation of GPM IMERG and its Constellations in Extreme Events over the CONUS. Journal of Hydrology, 127357.</td></tr>
+            <tr><td class="col-id">353</td><td class="col-topic">Floods</td><td>Chen, M., Li, Z., Luo, X., Wing, O. E. J., Gourley, J.J., Kolar, R. L., Hong, Y., 2021: A comprehensive flood inundation mapping for Hurricane Harvey using an integrated hydrological and hydraulic model. Journal of Hydrometeorology, 22 (7), 1713‑1726. doi: 10.1175/JHM‑D‑20‑0218.1.</td></tr>
+            <tr><td class="col-id">352</td><td class="col-topic">Flash flood</td><td>Gourley, J. J., and H. Vergara, 2021: Comments on Flash flood verification: Pondering precipitation proxies. J. Hydrometeor. doi: 10.1175/JHM‑D‑20‑0215.1.</td></tr>
+            <tr><td class="col-id">351</td><td class="col-topic">Flash drought</td><td>Osman, M., B. F. Zaitchik, H. S. Badr, J. I. Christian, T. Tadesse, J. A. Otkin, and M. C. Anderson, 2021: Flash drought onset over the contiguous United States ... Hydrol. Earth Syst. Sci., 25, 565‑581. doi: 10.1088/1748‑9326/ab9faf.</td></tr>
+            <tr><td class="col-id">350</td><td class="col-topic">Flash drought</td><td>Homeyer, C. R., A. O. Fierro, B. A. Schenkel, A. C. Didlake, G. M. McFarquhar, J. Hu, Alexander V. Ryzhkov, J. B. Basara. A. M. Murphy, J. Zawislak, 2021: Polarimetric Signatures in Landfalling Tropical Cyclones. Monthly Weather Review, 15, 9. doi: 10.1088/1748‑9326/ab9faf.</td></tr>
+            <tr><td class="col-id">349</td><td class="col-topic">Evaporation</td><td>Bajgain, R., Xiao, X., Wagle, P., Zhou, Y., Kimball, J. S., Brust, C., Basara, J. B., Gowda, P., Starks, P., Neel, J. P. S., 2021: Comparing Evapotranspiration Products of Different Temporal and Spatial Scales in Native and Managed Prairie Pastures. Remote Sensing, 149, 131‑154. doi: 10.1175/MWR‑D‑20‑0111.1.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2020</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">348</td><td class="col-topic">Flash flood</td><td>Gourley, J. J., H. Vergara, A. Arthur, R. A. Clark III, D. Staley, J. Fulton, L. Hempel, D. C. Goodrich, K. Rowden, and P. R. Robichaud, 2020: Predicting the Floods that Follow the Flames. Bull. Amer. Meteor. Soc, 101, E1101–E1106. doi: <a href="https://doi.org/10.1175/BAMS-D-20-0040.1" target="_blank" rel="noopener">10.1175/BAMS-D-20-0040.1</a>.</td></tr>
+            <tr><td class="col-id">347</td><td class="col-topic">Radar precipitation</td><td>Lengfeld, K., P.-E. Kirstetter, H. J. Fowler, J. Yu, A. Becker, Z. Flamig, and J. Gourley, 2020: Use of radar data for extreme precipitation at fine scales and short durations. Environmental Research Letters, 15, 085003. doi: <a href="https://doi.org/10.1088/1748-9326/ab98b4" target="_blank" rel="noopener">10.1088/1748-9326/ab98b4</a>.</td></tr>
+            <tr><td class="col-id">346</td><td class="col-topic">Satellite precipitation</td><td>Upadhyaya, S., P. E. Kirstetter, J. J. Gourley, and R. J. Kuligowski, 2020: On the propagation of satellite precipitation estimation errors: from passive microwave to infrared estimates. J. Hydrometeor, 21, 1367-1381. doi: <a href="https://doi.org/10.1175/JHM-D-20-0215.1" target="_blank" rel="noopener">10.1175/JHM-D-20-0215.1</a>.</td></tr>
+            <tr><td class="col-id">345</td><td class="col-topic">Flash flood</td><td>Martinaitis, S. M., B. Albright, J. J. Gourley, S. Perfater, T. Meyer, Z. L. Flamig, R. A. Clark III, H. Vergara, and M. Klein, 2020: The 23 June 2016 West Virginia flash flood event as observed through two Hydrometeorology Testbed Experiments. Wea. Forecasting, 35, 2099-2126. doi: <a href="https://doi.org/10.1175/WAF-D-20-0016.1" target="_blank" rel="noopener">10.1175/WAF-D-20-0016.1</a>.</td></tr>
+            <tr><td class="col-id">344</td><td class="col-topic">Hydrologic modeling</td><td>Flamig, Z., H. Vergara, and J. J. Gourley, 2020: The Ensemble Framework For Flash Flood Forecasting (EF5) v1.2: description and case study. Geosci. Model Dev., 13, 4943-4958. doi: <a href="https://doi.org/10.5194/gmd-13-4943-2020" target="_blank" rel="noopener">10.5194/gmd-13-4943-2020</a>.</td></tr>
+            <tr><td class="col-id">343</td><td class="col-topic">Hydrology</td><td>Christian, J., Niraula, R., Saleh, A., Bhattarai, N., Bajgain, R., Kannan, N., Osei, E., Gowda, P., Neel, J., Xiao, X., Basara, J. B., 2020: Understanding the effects of pasture type and stocking rate on the hydrology of the Southern Great Plains. Science of The Total Environment, 708, 134873. doi: <a href="https://doi.org/10.1016/j.scitotenv.2019.134873" target="_blank" rel="noopener">10.1016/j.scitotenv.2019.134873</a>.</td></tr>
+            <tr><td class="col-id">342</td><td class="col-topic">Extreme weather</td><td>Jennrich, G.C., J.C. Furtado, J.B. Basara, and E.R. Martin, 2020: Synoptic Characteristics of 14-Day Extreme Precipitation Events Across the United States. J. Climate, 33, 6423–6440. doi: <a href="https://doi.org/10.1175/JCLI-D-19-0563.1" target="_blank" rel="noopener">10.1175/JCLI-D-19-0563.1</a>.</td></tr>
+            <tr><td class="col-id">341</td><td class="col-topic">Flash drought</td><td>Hunt, E. D., J. I. Christian, J. B. Basara, L. Lowman, J. A Otkin, J. Bell, K. Jarecke, R. A. Wakefield, R. M. Randall, 2020: The Flash Drought of 1936. Journal of Applied and Service Climatology, 4. doi: <a href="https://doi.org/10.46275/JOASC.2020.11.001" target="_blank" rel="noopener">10.46275/JOASC.2020.11.001</a>.</td></tr>
+            <tr><td class="col-id">340</td><td class="col-topic">Flash drought</td><td>Christian, J., Basara, J. B., Hunt, E., Otkin, J., and X. Xiao, 2020: Flash drought development and cascading impacts associated with the 2010 Russian Heatwave. Environmental Research Letters, 15, 9. doi: <a href="https://doi.org/10.1088/1748-9326/ab9faf" target="_blank" rel="noopener">10.1088/1748-9326/ab9faf</a>.</td></tr>
+            <tr><td class="col-id">339</td><td class="col-topic">Extreme weather</td><td>Brauer, N., Basara, J. B., Homeyer, C. R., McFarquhar, G., Kirstetter, P.-E., 2020: Quantifying Precipitation Efficiency and Drivers of Excessive Precipitation in Post-Landfall Hurricane Harvey. Journal of Hydrometeorology, 21, 433-452.</td></tr>
+            <tr><td class="col-id">338</td><td class="col-topic">Algriculture</td><td>Bajgain, R. X. Xiao, J. B Basara, R. Doughty; X. Wu; P. Wagle; Y. Zhou; P. Gowda, J. Steiner, 2020: Differential responses of native and managed prairie pastures to environmental variability and management practices. Agricultural and Forest Meteorology, 294, 108137.</td></tr>
+            <tr><td class="col-id">337</td><td class="col-topic">Satellite precipitation</td><td>H Chen, B Yong, Y Shen, J Liu, Y Hong, J Zhang, 2020: Comparison analysis of six purely satellite-derived global precipitation estimates. Journal of Hydrology, 581, 124376.</td></tr>
+            <tr><td class="col-id">336</td><td class="col-topic">Floods</td><td>Z Zeng, Y Gan, AJ Kettner, Q Yang, C Zeng, GR Brakenridge, Y Hong, 2020: Towards high resolution flood monitoring: An integrated methodology using passive microwave brightness temperatures and Sentinel synthetic aperture radar imagery. Journal of Hydrology, 582, 124377.</td></tr>
+            <tr><td class="col-id">335</td><td class="col-topic">Satellite precipitation</td><td>C Wang, J Xu, G Tang, Y Yang, Y Hong, 2020: Infrared precipitation estimation using convolutional neural network. IEEE Transactions on Geoscience and Remote Sensing, 58, 8612-8625.</td></tr>
+            <tr><td class="col-id">334</td><td class="col-topic">Floods</td><td>W Xu, M Zhong, Y Hong, K Lin, 2020: Enhancing community resilience to urban floods with a network structuring model. Safety Science, 127, 104699.</td></tr>
+            <tr><td class="col-id">333</td><td class="col-topic">Floods</td><td>M Zhong, J Wang, T Jiang, Z Huang, X Chen, Y Hong, 2020: Using the Apriori Algorithm and Copula Function for the Bivariate Analysis of Flash Flood Risk. Water, 12, 2223.</td></tr>
+            <tr><td class="col-id">332</td><td class="col-topic">Remote sensing</td><td>Y Ye, J Deng, L Huang, Q Zheng, K Wang, C Tong, Y Hong, 2020: Modeling and Prediction of NPP-VIIRS Nighttime Light Imagery Based on Spatiotemporal Statistical Method. IEEE Transactions on Geoscience and Remote Sensing.</td></tr>
+            <tr><td class="col-id">331</td><td class="col-topic">Satellite precipitation</td><td>H Chen, B Yong, L Wang, L Ren, Y Hong, 2020: Global component analysis of errors in five satellite-only global precipitation estimates. Hydrology and Earth System Sciences Discussions, 1-50.</td></tr>
+            <tr><td class="col-id">330</td><td class="col-topic">Hydroclimatology</td><td>NX Qin, JN Wang, L Gao, Y Hong, JL Huang, QQ Lu, 2020: Observed trends of different rainfall intensities and the associated spatiotemporal variations during 1958–2016 in Guangxi, China. International Journal of Climatology.</td></tr>
+            <tr><td class="col-id">329</td><td class="col-topic">Satellite precipitation</td><td>Z Shen, B Yong, JJ Gourley, W Qi, D Lu, J Liu, L Ren, Y Hong, J Zhang, 2020: Investigating the evaluation uncertainty for satellite precipitation estimates based on two different ground precipitation observation products. Journal of Hydrometeorology, 21, 2595-2606.</td></tr>
+            <tr><td class="col-id">328</td><td class="col-topic">Deep learning</td><td>Li, Z., Wen, Y., Schreier, M., Behrangi, A., Hong, Y., Lambrigtsen, B., 2020: Advancing Satellite Precipitation Retrievals with Data Driven Approaches: Is black box model explainable? Earth and Space Science, 7, e2020EA001423. doi: <a href="https://doi.org/10.1029/2020EA001423" target="_blank" rel="noopener">10.1029/2020EA001423</a>.</td></tr>
+            <tr><td class="col-id">327</td><td class="col-topic">Satellite precipitation</td><td>Z Shen, B Yong, JJ Gourley, W Qi, D Lu, J Liu, L Ren, Y Hong, J Zhang, 2020: Recent global performance of the Climate Hazards group Infrared Precipitation (CHIRP) with Stations (CHIRPS). Journal of Hydrology, 591, 125284.</td></tr>
+            <tr><td class="col-id">326</td><td class="col-topic">Hydrogeology</td><td>Labriola, L.G., J.H. Ellis, S. Gangopadhyay, T. Pruitt, P.E. Kirstetter, Y. Hong, 2020: Evaluating the effects of downscaled climate projections on groundwater storage and simulated base-flow contribution to the North Fork Red River and Lake Altus, southwest Oklahoma (USA). Journal of Hydrogeology. doi: <a href="https://doi.org/10.1007/s10040-020-02230-x" target="_blank" rel="noopener">10.1007/s10040-020-02230-x</a>.</td></tr>
+            <tr><td class="col-id">325</td><td class="col-topic">Natural Hazards</td><td>B Blanton, K Dresback, B Colle, R Kolar, H Vergara, Y Hong, N Leonardo, 2020: An integrated scenario ensemble‑based framework for hurricane evacuation modeling: Part 2–Hazard modeling. Risk analysis, 40, 117-1331.</td></tr>
+            <tr><td class="col-id">324</td><td class="col-topic">Floods</td><td>M Zhong, K Lin, G Tang, Q Zhang, Y Hong, X Chen, 2020: A framework to evaluate community resilience to urban floods: A case study in three communities. Sustainability, 12, 15217.</td></tr>
+            <tr><td class="col-id">323</td><td class="col-topic">Extreme precipitation</td><td>Brauer, N., Basara, J. B., Homeyer, C. R., McFarquhar, G., Kirstetter, P.-E., 2020: Quantifying Precipitation Efficiency and Drivers of Excessive Precipitation in Post-Landfall Hurricane Harvey. Journal of Hydrometeorology, 21, 433-452.</td></tr>
+            <tr><td class="col-id">322</td><td class="col-topic">wildfire Hydrology</td><td>Moreno, H., J.J. Gourley, T. G. Pham, and D. M. Spade, 2020: Utility of satellite-derived burn severity to study short- and long-term effects of wildfire on streamflow at the basin scale. Journal of Hydrology, 580, 1-18. doi: <a href="https://doi.org/10.1016/j.jhydrol.2019.124244" target="_blank" rel="noopener">10.1016/j.jhydrol.2019.124244</a>.</td></tr>
+            <tr><td class="col-id">321</td><td class="col-topic">Flash flood</td><td>Yussouf, N., K. A. Wilson, S. M. Martinaitis, H. J. Vergara, P. L. Heinselman, and J. J. Gourley, 2020: Coupling of NSSL Warn-on-Forecast and FLASH systems for probabilistic flash flood prediction. Journal of Hydrometeorology, 21, 123-141. doi: <a href="https://doi.org/10.1175/JHM-D-19-0131.1" target="_blank" rel="noopener">10.1175/JHM-D-19-0131.1</a>.</td></tr>
+            <tr><td class="col-id">320</td><td class="col-topic">Weather forecast</td><td>Argyle, E.M., J.J. Gourley, Z. Kang, and R.L. Shehab, 2020: Investigating the relationship between eye movements and situation awareness in weather forecasting. Applied Ergonomics, 85, 1-9. doi: <a href="https://doi.org/10.1016/j.apergo.2020.103071" target="_blank" rel="noopener">10.1016/j.apergo.2020.103071</a>.</td></tr>
+            <tr><td class="col-id">319</td><td class="col-topic">Flash Flood, Remote Sensing</td><td>Chen, M., S. Nabih, N. Brauer, S. Gao, J. Gourley, Z. Hong, R. Kolar, and Y. Hong, 2020: Can remote sensing technologies capture the extreme precipitation event and its cascading hydrological response? A case study of Hurricane Harvey using EF5 modeling framework. Remote Sensing, 12, 1-20. doi: <a href="https://doi.org/10.3390/rs12030445" target="_blank" rel="noopener">10.3390/rs12030445</a>.</td></tr>
+            <tr><td class="col-id">318</td><td class="col-topic">Remote Sensing</td><td>Li, Z., M. Chen, S. Gao, Z. Hong, G. Tang, Y. Wen, J. Gourley, and Y. Hong, 2020: Cross-examination of similarity, difference and deficiency of gauge, radar and satellite precipitation measuring uncertainties for extreme events using conventional metrics and multiplicative triple collocation. Remote Sensing, 12, 1-18. doi: <a href="https://doi.org/10.3390/rs12081258" target="_blank" rel="noopener">10.3390/rs12081258</a>.</td></tr>
+            <tr><td class="col-id">317</td><td class="col-topic">Hydrology</td><td>Fulton, J., C. Mason, J. Eggleston, M. Nicotra, C-L. Chiu, M. Henneberg, H. Best, J. Cederberg, S. Holnbeck, R. Lotspeich, C. Laveau, T. Moramarco, M. Jones, J. Gourley, and D. Wasielewski, 2020: Near-field remote sensing of surface velocity and river discharge using radars and the probability concept at 10 U.S. Geological Survey streamgages. Remote Sensing, 12, 1-28. doi: <a href="https://doi.org/10.3390/rs12081296" target="_blank" rel="noopener">10.3390/rs12081296</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2019</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">316</td><td class="col-topic">Remote sensing</td><td>Pinker, R., Y. Ma, W. Chen, G. Hulley, E. Borbas, T. Islam, C. Hain, K.-A. Cawse Nicholson, S. Hook, J. Basara, 2019: Towards a Unified and Coherent Land Surface Temperature Earth System Data Record from Geostationary Satellites. Remote Sensing, 11, 1399. doi: <a href="https://doi.org/10.3390/rs11121399" target="_blank" rel="noopener">10.3390/rs11121399</a>.</td></tr>
+            <tr><td class="col-id">315</td><td class="col-topic">Flash drought</td><td>Otkin, J.A., Y. Zhong, E.D. Hunt, J. Basara, M. Svoboda, M.C. Anderson, and C. Hain, 2019: Assessing The Evolution Of Soil Moisture And Vegetation Conditions During A Flash Drought – Flash Recovery Sequence Over The South-Central United States. Journal of Hydrometeorology, 20, 549-562. doi: <a href="https://doi.org/10.1175/JHM-D-18-0171.1" target="_blank" rel="noopener">10.1175/JHM-D-18-0171.1</a>.</td></tr>
+            <tr><td class="col-id">314</td><td class="col-topic">Climatology</td><td>Flanagan, P.X., J.B. Basara, J.C. Furtado, E.R. Martin, and X. Xiao, 2019: Role of Sea Surface Temperatures in Forcing Circulation Anomalies Driving United States Great Plains Pluvial Years. Journal of Climate, 32, 7081-7100. doi: <a href="https://doi.org/10.1175/JCLI-D-18-0726.1" target="_blank" rel="noopener">10.1175/JCLI-D-18-0726.1</a>.</td></tr>
+            <tr><td class="col-id">313</td><td class="col-topic">Flash drought</td><td>Christian, J., J.B. Basara, J. Otkin, E. Hunt, 2019: Regional characteristics of flash droughts across the United States. Environmental Research Communications, 1, 12. doi: <a href="https://doi.org/10.1088/2515-7620/ab50ca" target="_blank" rel="noopener">10.1088/2515-7620/ab50ca</a>.</td></tr>
+            <tr><td class="col-id">312</td><td class="col-topic">Flash drought</td><td>Christian, J., J.B. Basara, J. Otkin, E. Hunt, R. Wakefield, P. Flanagan, X. Xiao, 2019: A Methodology for Flash Drought Identification: Application of Flash Drought Frequency Across the United States. Journal of Hydrometeorology, 20, 833-846. doi: <a href="https://doi.org/10.1175/JHM-D-18-0198.1" target="_blank" rel="noopener">10.1175/JHM-D-18-0198.1</a>.</td></tr>
+            <tr><td class="col-id">311</td><td class="col-topic">Hydrometeorology</td><td>Blumberg, W.G., D.D. Turner, S.M. Cavallo, J. Gao, J. Basara, and A. Shapiro, 2019: An Analysis of the Processes Affecting Rapid Near-Surface Water Vapor Increases during the Afternoon to Evening Transition in Oklahoma. Journal of Applied Meteorology and Climatology, 58, 2217-2234. doi: <a href="https://doi.org/10.1175/JAMC-D-19-0062.1" target="_blank" rel="noopener">10.1175/JAMC-D-19-0062.1</a>.</td></tr>
+            <tr><td class="col-id">310</td><td class="col-topic">Flash drought</td><td>Basara, J. B., Christian, J., Wakefield, R., Otkin, J., Hunt, E., and D. Brown, 2019: The evolution, propagation, and spread of flash drought in the Central United States during 2012. Environmental Research Letters, 14, 084025. doi: <a href="https://doi.org/10.1088/1748-9326/ab2cc0" target="_blank" rel="noopener">10.1088/1748-9326/ab2cc0</a>.</td></tr>
+            <tr><td class="col-id">309</td><td class="col-topic">Radar</td><td>Min, C., S. Chen, J. Gourley, H. Chen, A. Zhang, Y. Huang, and C. Huang, 2019: Coverage of China new generation weather radar network. Advances in Meteorology, 2019, 1-10. doi: <a href="https://doi.org/10.1155/2019/5789358" target="_blank" rel="noopener">10.1155/2019/5789358</a>.</td></tr>
+            <tr><td class="col-id">308</td><td class="col-topic">Precipitation</td><td>Erlingis, J.M., J.J. Gourley, and J.B. Basara, 2019: Diagnosing moisture sources for flash floods in the United States. Part I: Kinematic trajectories. Journal of Hydrometeorology, 20, 1495-1509. doi: <a href="https://doi.org/10.1175/JHM-D-18-0119.1" target="_blank" rel="noopener">10.1175/JHM-D-18-0119.1</a>.</td></tr>
+            <tr><td class="col-id">307</td><td class="col-topic">Precipitation</td><td>Erlingis, J.M., J.J. Gourley, and J.B. Basara, 2019: Diagnosing moisture sources for flash floods in the United States. Part II: Terrestrial and oceanic sources of moisture. Journal of Hydrometeorology, 20, 1511-1531. doi: <a href="https://doi.org/10.1175/JHM-D-18-0120.1" target="_blank" rel="noopener">10.1175/JHM-D-18-0120.1</a>.</td></tr>
+            <tr><td class="col-id">306</td><td class="col-topic">Total Water Storage</td><td>Sabzi, H.Z., H.A. Moreno, R. Fovargue, X. Xue, Y. Hong, and T.M. Neeson, 2019: Comparison of projected water availability and demand reveals future hotspots of water stress in the Red River basin, USA. Journal of Hydrology, 26. doi: <a href="https://doi.org/10.1016/j.ejrh.2019.100638" target="_blank" rel="noopener">10.1016/j.ejrh.2019.100638</a>.</td></tr>
+            <tr><td class="col-id">305</td><td class="col-topic">Total Water Storage</td><td>Hasan, E., A. Tarhule, Y. Hong, and B. Moore III, 2019: Assessment of Physical Water Scarcity in Africa Using GRACE and TRMM Satellite Data. Remote Sensing, 11 (8). doi: <a href="https://doi.org/10.3390/rs11080904" target="_blank" rel="noopener">10.3390/rs11080904</a>.</td></tr>
+            <tr><td class="col-id">304</td><td class="col-topic">Remote Sensing</td><td>Deng, J., Y. Huang, B. Chen, C. Tong, P. Liu, H. Wang, and Y. Hong, 2019: A Methodology to Monitor Urban Expansion and Green Space Change Using a Time Series of Multi-Sensor SPOT and Sentinel-2A Images. Remote Sensing, 11 (10). doi: <a href="https://doi.org/10.3390/rs11101230" target="_blank" rel="noopener">10.3390/rs11101230</a>.</td></tr>
+            <tr><td class="col-id">303</td><td class="col-topic">Remote Sensing</td><td>Wan, W., H. Xie, E. Hasan, and Y. Hong, 2019: Remote Sensing Water Cycle: Theory, Sensors, Data, and Applications. Remote Sensing, 11 (10). doi: <a href="https://doi.org/10.3390/rs11101210" target="_blank" rel="noopener">10.3390/rs11101210</a>.</td></tr>
+            <tr><td class="col-id">302</td><td class="col-topic">Flash flood</td><td>Zhong, M., T. Jiang, Y. Hong, and X. Yang, 2019: Performance of multi-level association rule mining for the relationship between causal factor patterns and flash flood magnitudes in a humid area. Journal of Geomatics, Natural Hazards and Risk, 10 (1), 1967-1987. doi: <a href="https://doi.org/10.1080/19475705.2019.1655102" target="_blank" rel="noopener">10.1080/19475705.2019.1655102</a>.</td></tr>
+            <tr><td class="col-id">301</td><td class="col-topic">Soil Moisture</td><td>Yang, Y., P. Lin, K.C. Fisher, M. Turmon, J. Hobbs, C.M. Emery, J.T. Reager, C.H. David, H. Lu, K. Yang, Y. Hong, E.F. Wood, and M. Pan, 2019: Enhancing SWOT discharge assimilation through spatiotemporal correlations. Remote Sensing of Environment, 234, ISSN 0034-4257. doi: <a href="https://doi.org/10.1016/j.rse.2019.111450" target="_blank" rel="noopener">10.1016/j.rse.2019.111450</a>.</td></tr>
+            <tr><td class="col-id">300</td><td class="col-topic">Remote Sensing, Evapotranspiration, Precipitation</td><td>Guo, X., Y. Yang, Z. Li, L. You, C. Zeng, J. Cao, and Y. Hong, 2019: Drought Trend Analysis Based on the Standardized Precipitation–Evapotranspiration Index Using NASA's Earth Exchange Global Daily Downscaled Projections ... Water, 11, 2455.</td></tr>
+            <tr><td class="col-id">299</td><td class="col-topic">Satellite Precipitation</td><td>Chen, H., B. Yong, J.J. Gourley, J. Liu, L. Ren, W. Wang, Y. Hong, and J. Zhang, 2019: Impact of the crucial geographic and climatic factors on the input source errors of GPM-based global satellite precipitation estimates. Journal of Hydrology, 575, 1-16. doi: <a href="https://doi.org/10.1016/j.jhydrol.2019.05.020" target="_blank" rel="noopener">10.1016/j.jhydrol.2019.05.020</a>.</td></tr>
+            <tr><td class="col-id">298</td><td class="col-topic">Remote Sensing, Flood</td><td>Zeng, Z.Y., Y. Gan, A. Kettner, G. R. Brakenridge, and Y. Hong, 2019: Towards high resolution flood monitoring: An integrated methodology using passive microwave brightness temperatures and Sentinel synthetic aperture radar imagery. Journal of Hydrology, 582. doi: <a href="https://doi.org/10.1016/j.jhydrol.2019.124377" target="_blank" rel="noopener">10.1016/j.jhydrol.2019.124377</a>.</td></tr>
+            <tr><td class="col-id">297</td><td class="col-topic">Flash flood</td><td>Zhong, M., J. Wang, L. Gao, K. Lin, and Y. Hong, 2019: Fuzzy Risk Assessment of Flash Floods Using a Cloud-Based Information Diffusion Approach. Water Resources Management, 33, 2537-2553. doi: <a href="https://doi.org/10.1007/s11269-019-02266-z" target="_blank" rel="noopener">10.1007/s11269-019-02266-z</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2018</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">296</td><td class="col-topic">Precipitation</td><td>Erlingis, J.M., J.J. Gourley, P.E. Kirstetter, E.N. Anagnostou, J. Kalogiros, M.N. Anagnostou, and W.A. Petersen, 2018: Evaluation of operational and experimental precipitation algorithms and microphysical insights during IPHEx. Journal of Hydrometeorology, 19, 113-125. doi: <a href="https://doi.org/10.1175/JHM-D-17-0080.1" target="_blank" rel="noopener">10.1175/JHM-D-17-0080.1</a>.</td></tr>
+            <tr><td class="col-id">295</td><td class="col-topic">Hydrology</td><td>Hasan, E., A. Tarhule, P.E. Kirstetter, R. Clark, and Y. Hong, 2018: Runoff sensitivity to climate change in the Nile River Basin. Journal of Hydrology, 561, 312-321. doi: <a href="https://doi.org/10.1016/j.jhydrol.2018.04.004" target="_blank" rel="noopener">10.1016/j.jhydrol.2018.04.004</a>.</td></tr>
+            <tr><td class="col-id">294</td><td class="col-topic">Natural Hazards</td><td>Hong, Z. H. Moreno, and Y. Hong, 2018: Spatiotemporal Assessment of Induced Seismicity in Oklahoma: Foreseeable Fewer Earthquakes for Sustainable Oil and Gas Extraction? Geosciences, 8 (12), 436.</td></tr>
+            <tr><td class="col-id">293</td><td class="col-topic">Satellite precipitation</td><td>Gebregiogis, A.S., P.E. Kirstetter, Y. Hong, J.J. Gourley, G.J. Huffman, W.A. Petersen, and M.R. Schwaller, 2018: To What Extent is the Day 1 GPM IMERG Satellite Precipitation Estimate Improved as Compared to TRMM TMPA_RT? Journal of Geophysical Research Atmospheres, 123 (3), 1694-1707.</td></tr>
+            <tr><td class="col-id">292</td><td class="col-topic">Radar</td><td>Ayat, H., M.R. Kavianpour, S. Moazami, Y. Hong, and E. Ghaemi, 2018: Calibration of weather radar using region probability matching method (RPMM). Theoretical and Applied Climatology, 134 (1-2), 165-176. doi: <a href="https://doi.org/10.1007/s00704-017-2266-7" target="_blank" rel="noopener">10.1007/s00704-017-2266-7</a>.</td></tr>
+            <tr><td class="col-id">291</td><td class="col-topic">Natural Hazards</td><td>Blanton, B., K. Dresback, B. Colle, R. Kolar, R. Vergara, Y. Hong, and T. Wachtendorf, 2018: An Integrated Scenario Ensemble-Based Framework for Hurricane Evacuation Modeling: Part 2-Hazard Modeling. Risk analysis. doi: <a href="https://doi.org/10.1111/risa.13004" target="_blank" rel="noopener">10.1111/risa.13004</a>.</td></tr>
+            <tr><td class="col-id">290</td><td class="col-topic">Satellite Precipitation</td><td>Kirstetter, P.E., N. Karbalaee, K. Hsu, and Y. Hong, 2018: Probabilistic precipitation rate estimates with space_based infrared sensors. Quarterly Journal of the Royal Meteorological Society, 144, 191-205.</td></tr>
+            <tr><td class="col-id">289</td><td class="col-topic">Satellite Precipitation</td><td>Wang, C.G., G.Q. Tang, Z.Y. Han, X.L. Guo, and Y. Hong, 2018: Global intercomparison and regional evaluation of GPM IMERG Version-03, Version-04 and its latest Version-05 precipitation products: Similarity, difference and improvements. Journal of Hydrology, 564, 342-356. doi: <a href="https://doi.org/10.1016/j.jhydrol.2018.06.064" target="_blank" rel="noopener">10.1016/j.jhydrol.2018.06.064</a>.</td></tr>
+            <tr><td class="col-id">288</td><td class="col-topic">Hydrological Modeling</td><td>Belete, M., J.S. Deng, M.M. Zhou, K. Wang, S.X. You, Y. Hong, and M. Weston, 2018: A New Approach to Modeling Water Balance in Nile River Basin, Africa. Sustainability, 10 (3), 14. doi: <a href="https://doi.org/10.3390/su10030810" target="_blank" rel="noopener">10.3390/su10030810</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2017</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">287</td><td class="col-topic">Dataset</td><td>Xinyi Shen, Emmanouil N. Anagnostou, Yiwen Mei, Yang Hong, 2017: A global distributed basin morphometric dataset. Scientific Data, 4 (160124). doi: <a href="https://doi.org/10.1038/sdata.2016.124" target="_blank" rel="noopener">10.1038/sdata.2016.124</a>.</td></tr>
+            <tr><td class="col-id">286</td><td class="col-topic">Satellite Precipitation</td><td>Gebregiorgis, A.S., P. Kirstetter, Y.E. Hong, N.J. Carr, J.J. Gourley, W. Petersen, and Y. Zheng, 2017: Understanding Overland Multisensor Satellite Precipitation Error in TMPA-RT Products. J. Hydrometeor, 18, 285-306. doi: <a href="https://doi.org/10.1175/JHM-D-15-0207.1" target="_blank" rel="noopener">10.1175/JHM-D-15-0207.1</a>.</td></tr>
+            <tr><td class="col-id">285</td><td class="col-topic">Flash flood</td><td>Saharia, M., P. Kirstetter, H. Vergara, J.J. Gourley, Y. Hong, and M. Giroud, 2017: Mapping Flash Flood Severity in the United States. J. Hydrometeor, 18, 397-411. doi: <a href="https://doi.org/10.1175/JHM-D-16-0082.1" target="_blank" rel="noopener">10.1175/JHM-D-16-0082.1</a>.</td></tr>
+            <tr><td class="col-id">284</td><td class="col-topic">Flood</td><td>Manabendra Saharia, Pierre-Emmanuel Kirstetter, Humberto Vergara, Jonathan J. Gourley, Yang Hong, 2017: Characterization of floods in the United States. Journal of Hydrology, 548, 524-535. doi: <a href="https://doi.org/10.1016/j.jhydrol.2017.03.010" target="_blank" rel="noopener">10.1016/j.jhydrol.2017.03.010</a>.</td></tr>
+            <tr><td class="col-id">283</td><td class="col-topic">Satellite Precipitation</td><td>Na Yang, Ke Zhang, Yang Hong, Qiaohua Zhao, Qin Huang, Yinshan Xu, Xianwu Xue, Sheng Chen, 2017: Evaluation of the TRMM multisatellite precipitation analysis and its applicability in supporting reservoir operation and water resources management in Hanjiang basin, China. Journal of Hydrology, 549, 313-325. doi: <a href="https://doi.org/10.1016/j.jhydrol.2017.04.006" target="_blank" rel="noopener">10.1016/j.jhydrol.2017.04.006</a>.</td></tr>
+            <tr><td class="col-id">282</td><td class="col-topic">Remote Sensing</td><td>Chaofan Wu, Hongxiang Tao, Manyu Zhai, Yi Lin, Ke Wang, Jinsong Deng, Aihua Shen, Muye Gan, Jun Li, Hong Yang, 2017: Using nonparametric modeling approaches and remote sensing imagery to estimate ecological welfare forest biomass. Journal of Forestry Research, 1-11. doi: <a href="https://doi.org/10.1007/s11676-017-0404-9" target="_blank" rel="noopener">10.1007/s11676-017-0404-9</a>.</td></tr>
+            <tr><td class="col-id">281</td><td class="col-topic">Remote Sensing, Evapotranspiration</td><td>Jinping Zhang, Xiaomin Lin, Yong Zhao, Yang Hong, 2017: Encounter risk analysis of rainfall and reference crop evapotranspiration in the irrigation district. Journal of Hydrology, 552, 62-69. doi: <a href="https://doi.org/10.1016/j.jhydrol.2017.06.035" target="_blank" rel="noopener">10.1016/j.jhydrol.2017.06.035</a>.</td></tr>
+            <tr><td class="col-id">280</td><td class="col-topic">Precipitation evaluation</td><td>Wen, Y., P. Kirstetter, J.J. Gourley, Y. Hong, A. Behrangi, and Z. Flamig, 2017: Evaluation of MRMS Snowfall Products over the Western United States. J. Hydrometeor., 18, 1707-1713. doi: <a href="https://doi.org/10.1175/JHM-D-16-0266.1" target="_blank" rel="noopener">10.1175/JHM-D-16-0266.1</a>.</td></tr>
+            <tr><td class="col-id">279</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Ziyue Zeng, Guoqiang Tang, Yang Hong, Chao Zeng, Yuan Yang, 2017: Development of an NRCS curve number global dataset using the latest geospatial remote sensing data for worldwide hydrologic applications. Remote Sensing Letters, 8 (6), 528-536. doi: <a href="https://doi.org/10.1080/2150704X.2017.1297544" target="_blank" rel="noopener">10.1080/2150704X.2017.1297544</a>.</td></tr>
+            <tr><td class="col-id">278</td><td class="col-topic">Satellite Precipitation</td><td>Li, L., Hong, Y., Wang, J. et al., 2017: Correction to: Evaluation of the real-time TRMM-based multi-satellite precipitation analysis for an operational flood prediction system in Nzoia Basin, Lake Victoria, Africa. Natural Hazards, 89 (3), 1495. doi: <a href="https://doi.org/10.1007/s11069-017-3100-3" target="_blank" rel="noopener">10.1007/s11069-017-3100-3</a>.</td></tr>
+            <tr><td class="col-id">277</td><td class="col-topic">Atmospheric Experiment</td><td>Zhao, P., X. Xu, F. Chen, X. Guo, X. Zheng, L. Liu, Y. Hong, et al., 2017: The Third Atmospheric Scientific Experiment for Understanding the Earth-Atmosphere Coupled System over the Tibetan Plateau and Its Effects. Bull. Amer. Meteor. Soc. doi: <a href="https://doi.org/10.1175/BAMS-D-16-0050.1" target="_blank" rel="noopener">10.1175/BAMS-D-16-0050.1</a>.</td></tr>
+            <tr><td class="col-id">276</td><td class="col-topic">radar</td><td>Hooman Ayat, M. Reza Kavianpour, Saber Moazami, Yang Hong, 2017: Calibration of weather radar using region probability matching method (RPMM). Theoretical and Applied Climatology. doi: <a href="https://doi.org/10.1007/s00704-017-2266-7" target="_blank" rel="noopener">10.1007/s00704-017-2266-7</a>.</td></tr>
+            <tr><td class="col-id">275</td><td class="col-topic">Radar</td><td>Esmail Ghaemi, Mohammadreza Kavianpour, Saber Moazami, Yang Hong & Hooman Ayat, 2017: Uncertainty analysis of radar rainfall estimates over two different climates in Iran. International Journal of Remote Sensing, 38 (18), 5106-5126. doi: <a href="https://doi.org/10.1080/01431161.2017.1335909" target="_blank" rel="noopener">10.1080/01431161.2017.1335909</a>.</td></tr>
+            <tr><td class="col-id">274</td><td class="col-topic">dataset</td><td>Shen, X., Anagnostou, E. N., Mei, Y., & Hong, Y., 2017: A global distributed basin morphometric dataset. Scientific Data, 4. doi: <a href="https://doi.org/10.1038/sdata.2016.124" target="_blank" rel="noopener">10.1038/sdata.2016.124</a>.</td></tr>
+            <tr><td class="col-id">273</td><td class="col-topic">Flood</td><td>Saharia, M., P. Kirstetter, H. Vergara, J. Gourley, Y. Hong, and M. Giroud, 2017: Mapping Flash Flood Severity in the United States. J. Hydrometeor., 18, 397–411. doi: <a href="https://doi.org/10.1175/JHM-D-16-0082.1" target="_blank" rel="noopener">10.1175/JHM-D-16-0082.1</a>.</td></tr>
+            <tr><td class="col-id">272</td><td class="col-topic">Satellite Precipitation</td><td>Gebregiorgis, A. S., Kirstetter, P. E., Hong, Y. E., Carr, N. J., Gourley, J. J., Petersen, W., & Zheng, Y., 2017: Understanding Overland Multi-Sensor Satellite Precipitation Error in TRMM TMPA-RT Products. Journal of Hydrometeorology, 18, 285-306. doi: <a href="https://doi.org/10.1175/JHM-D-15-0207.1" target="_blank" rel="noopener">10.1175/JHM-D-15-0207.1</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2016</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">271</td><td class="col-topic">Flood</td><td>WANG, Jun, HuiJun WANG, and Yang HONG, 2016: A high-resolution flood forecasting and monitoring system for China using satellite remote sensing data. Chinese Science Bulletin, 61 (405), 518-528.</td></tr>
+            <tr><td class="col-id">270</td><td class="col-topic">Radar</td><td>Wen, Yixin, et al., 2016: Evaluation of a method to enhance real-time, ground radar‑based rainfall estimates using climatological profiles of reflectivity from space. Journal of Hydrometeorology, 17 (3), 761-775. doi: <a href="https://doi.org/10.1175/JHM-D-15-0062.1" target="_blank" rel="noopener">10.1175/JHM-D-15-0062.1</a>.</td></tr>
+            <tr><td class="col-id">269</td><td class="col-topic">Precipitation</td><td>Guo, Hao, et al., 2016: Early assessment of integrated multi-satellite retrievals for global precipitation measurement over China. Atmospheric Research, 176, 121-133. doi: <a href="https://doi.org/10.1016/j.atmosres.2016.02.020" target="_blank" rel="noopener">10.1016/j.atmosres.2016.02.020</a>.</td></tr>
+            <tr><td class="col-id">268</td><td class="col-topic">Precipitation</td><td>Chen, Sheng, et al., 2016: Precipitation Spectra Analysis Over China With High-Resolution Measurements From Optimally Merged Satellite/Gauge Observations—Part I: Spatial and Seasonal Analysis. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 9 (7), 2966-2978. doi: <a href="https://doi.org/10.1109/JSTARS.2016.2529003" target="_blank" rel="noopener">10.1109/JSTARS.2016.2529003</a>.</td></tr>
+            <tr><td class="col-id">267</td><td class="col-topic">Precipitation</td><td>Yong, B., J. Wang, L. Ren, Y. You, P. Xie, and Y. Hong, 2016: Evaluating Four Multisatellite Precipitation Estimates over the Diaoyu Islands during Typhoon Seasons. J. Hydrometeor., 17, 1623–1641. doi: <a href="https://doi.org/10.1175/JHM-D-15-0165.1" target="_blank" rel="noopener">10.1175/JHM-D-15-0165.1</a>.</td></tr>
+            <tr><td class="col-id">266</td><td class="col-topic">Drought</td><td>Z. Hao. et al, 2016: Probabilistic drought characterization in the categorical form using ordinal regression. Journal of Hydrology, 535, 331–339. doi: <a href="https://doi.org/10.1016/j.jhydrol.2016.01.074" target="_blank" rel="noopener">10.1016/j.jhydrol.2016.01.074</a>.</td></tr>
+            <tr><td class="col-id">265</td><td class="col-topic">Flood</td><td>J. Hardy, J.J. Gourley, et al, 2016: A Method for Probabilistic Flash Flood Forecasting. Journal of Hydrology, 541, 480–494. doi: <a href="https://doi.org/10.1016/j.jhydrol.2016.04.007" target="_blank" rel="noopener">10.1016/j.jhydrol.2016.04.007</a>.</td></tr>
+            <tr><td class="col-id">264</td><td class="col-topic">Spectral Angle Mapper</td><td>Hasan, E., Fagin, T., El Alfy, Z., & Hong, Y., 2016: Spectral Angle Mapper and aeromagnetic data integration for gold-associated alteration zone mapping: a case study for the Central Eastern Desert Egypt. International Journal of Remote Sensing, 37 (8), 1762-1776. doi: <a href="https://doi.org/10.1080/01431161.2016.1165887" target="_blank" rel="noopener">10.1080/01431161.2016.1165887</a>.</td></tr>
+            <tr><td class="col-id">263</td><td class="col-topic">Drought</td><td>Liu, Y., Ren, L., Hong, Y., Zhu, Y., Yang, X., Yuan, F., & Jiang, S., 2016: Sensitivity analysis of standardization procedures in drought indices to varied input data selections. Journal of Hydrology, 538, 817-830. doi: <a href="https://doi.org/10.1016/j.jhydrol.2016.04.073" target="_blank" rel="noopener">10.1016/j.jhydrol.2016.04.073</a>.</td></tr>
+            <tr><td class="col-id">262</td><td class="col-topic">Satellite Precipitation</td><td>Derin, Y., Anagnostou, E., Berne, A., Borga, M., Boudevillain, B., Buytaert, W., ... & Lavado-Casimiro, W., 2016: Multiregional Satellite Precipitation Products Evaluation over Complex Terrain. Journal of Hydrometeorology, 17 (6), 1817-1836. doi: <a href="https://doi.org/10.1175/JHM-D-15-0197.1" target="_blank" rel="noopener">10.1175/JHM-D-15-0197.1</a>.</td></tr>
+            <tr><td class="col-id">261</td><td class="col-topic">Landslide</td><td>Qiao, Gang, et al, 2016: Multiple Constraints Based Robust Matching of Poor-Texture Close-Range Images for Monitoring a Simulated Landslide. Remote Sensing, 8 (5), 396. doi: <a href="https://doi.org/10.3390/rs8050396" target="_blank" rel="noopener">10.3390/rs8050396</a>.</td></tr>
+            <tr><td class="col-id">260</td><td class="col-topic">Precipitation</td><td>Jiang, Shanhu, et al., 2016: Evaluation of latest TMPA and CMORPH precipitation products with independent rain gauge observation networks over high-latitude and low-latitude basins in China. Chinese Geographical Science, 26 (4), 439-455. doi: <a href="https://doi.org/10.1007/s11769-016-0818-x" target="_blank" rel="noopener">10.1007/s11769-016-0818-x</a>.</td></tr>
+            <tr><td class="col-id">259</td><td class="col-topic">Satellite Precipitation</td><td>Yong, Bin, et al., 2016: Error-Component Analysis of TRMM-Based Multi-Satellite Precipitation Estimates over Mainland China. Remote Sensing, 8 (5), 440. doi: <a href="https://doi.org/10.3390/rs8050440" target="_blank" rel="noopener">10.3390/rs8050440</a>.</td></tr>
+            <tr><td class="col-id">258</td><td class="col-topic">Hydrology</td><td>Vergara, Humberto, et al., 2016: Estimating a-priori kinematic wave model parameters based on regionalization for flash flood forecasting in the Conterminous United States. Journal of Hydrology, 541, 421-433. doi: <a href="https://doi.org/10.1016/j.jhydrol.2016.06.011" target="_blank" rel="noopener">10.1016/j.jhydrol.2016.06.011</a>.</td></tr>
+            <tr><td class="col-id">257</td><td class="col-topic">Landslide</td><td>W. Li, C. Liu, Y. Hong et al., 2016: A public Cloud-based China's Landslide Inventory Database (CsLID): development, zone, and spatiotemporal analysis for significant historical events, 1949-2011. Journal of Mountain Science, 13 (7), 1275–1285. doi: <a href="https://doi.org/10.1007/s11629-015-3659-7" target="_blank" rel="noopener">10.1007/s11629-015-3659-7</a>.</td></tr>
+            <tr><td class="col-id">256</td><td class="col-topic">Flood</td><td>Gourley, J., Z. Flamig, H. Vergara, P. Kirstetter, R. Clark, E. Argyle, A. Arthur, S. Martinaitis, G. Terti, J. Erlingis, Y. Hong, and K. Howard, 2016: The Flooded Locations And Simulated Hydrographs (FLASH) project: improving the tools for flash flood monitoring and prediction across the United States. Bull. Amer. Meteor. Soc. doi: <a href="https://doi.org/10.1175/BAMS-D-15-00247.1" target="_blank" rel="noopener">10.1175/BAMS-D-15-00247.1</a>.</td></tr>
+            <tr><td class="col-id">255</td><td class="col-topic">Morphometry</td><td>Shen et al., 2016: GDBC: A tool for generating global-scale distributed basin morphometry. Environmental Modelling & Software, 83, 212-223. doi: <a href="https://doi.org/10.1016/j.envsoft.2016.05.012" target="_blank" rel="noopener">10.1016/j.envsoft.2016.05.012</a>.</td></tr>
+            <tr><td class="col-id">254</td><td class="col-topic">Hydrology</td><td>Shen et al., 2016: Refining a Distributed Linear Reservoir Routing Method to Improve Performance of the CREST Model. Journal of Hydrologic Engineering. doi: <a href="https://doi.org/10.1061/(ASCE)HE.1943-5584.0001442" target="_blank" rel="noopener">10.1061/(ASCE)HE.1943-5584.0001442</a>.</td></tr>
+            <tr><td class="col-id">253</td><td class="col-topic">Precipitation</td><td>Carr, N., P. Kirstetter, J. Gourley, and Y. Hong, 2016: Polarimetric Signatures of Mid-Latitude Warm-Rain Precipitation Events. J. Appl. Meteor. Climatol. doi: <a href="https://doi.org/10.1175/JAMC-D-16-0164.1" target="_blank" rel="noopener">10.1175/JAMC-D-16-0164.1</a>.</td></tr>
+            <tr><td class="col-id">252</td><td class="col-topic">Hydrological Modeling</td><td>Clark, R., Z. Flamig, H. Vergara, Y. Hong, J. Gourley, D. Mandl, S. Frye, M. Handy, and M. Patterson, 2016: Hydrological Modeling and Capacity Building in the Republic of Namibia. Bulletin of the American Meteorological Society. doi: <a href="https://doi.org/10.1175/BAMS-D-15-00130.1" target="_blank" rel="noopener">10.1175/BAMS-D-15-00130.1</a>.</td></tr>
+            <tr><td class="col-id">251</td><td class="col-topic">Landslide</td><td>Zhang, Ke, Xianwu Xue, Hong Yang, Jonathan J. Gourley, Ning Lu, Zhanming Wan, Zhen Hong, and Rick Wooten, 2016: iCRESTRIGRS: a coupled modeling system for cascading flood-landslide disaster forecasting. Hydrology and Earth System Sciences, 20, 5035-5048. doi: <a href="https://doi.org/10.5194/hess-20-5035-2016" target="_blank" rel="noopener">10.5194/hess-20-5035-2016</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2015</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">250</td><td class="col-topic">Runoff Prediction; Karst Watershed</td><td>Xianmeng Meng, Mashing Yin, Libo Ning, Dengfeng Liu, Xianwu Xue, 2015: A threshold artificial neural network model for improving runoff prediction in a karst watershed. Environmental Earth Sciences, 74 (3), 5039-5048. doi: <a href="https://doi.org/10.1007/s12665-015-4562-9" target="_blank" rel="noopener">10.1007/s12665-015-4562-9</a>.</td></tr>
+            <tr><td class="col-id">249</td><td class="col-topic">Urban</td><td>Xiao‑Ming Hu, Ming Xue, Petra M. Klein, Bradley G. Illston, Sheng Chen, 2015: Analysis of Urban Effects in Oklahoma City using a Dense Surface Observing Network. Journal of Applied Meteorology and Climatology. doi: <a href="https://doi.org/10.1175/JAMC-D-15-0206.1" target="_blank" rel="noopener">10.1175/JAMC-D-15-0206.1</a>.</td></tr>
+            <tr><td class="col-id">248</td><td class="col-topic">Global ET, Climate</td><td>Zhang, K., J.S. Kimball, R.R. Nemani, S.W. Running, Y. Hong, J.J. Gourley, Z. Yu, 2015: Vegetation Greening and Climate Change Promote Multidecadal Rises of Global Land Evapotranspiration. Scientific Reports, 5, 15956. doi: <a href="https://doi.org/10.1038/srep15956" target="_blank" rel="noopener">10.1038/srep15956</a>.</td></tr>
+            <tr><td class="col-id">247</td><td class="col-topic">Sea Level Rise</td><td>Emad Hasan, Sadiq Ibrahim Khan, Yang Hong, 2015: Investigation of Potential Sea Level Rise Impact on the Nile Delta, Egypt using Digital Elevation Models. Environmental Monitoring and Assessment, 187 (10), 1-14. doi: <a href="https://doi.org/10.1007/s10661-015-4868-9" target="_blank" rel="noopener">10.1007/s10661-015-4868-9</a>.</td></tr>
+            <tr><td class="col-id">246</td><td class="col-topic">Satellite precipitation</td><td>Golian, S., Moazami, S., Kirstetter, P.-E., Hong, Y., 2015: Evaluating the performance of merged multi-satellite precipitation products over a complex terrain. Water Resources Management, 29 (13), 4885-4901. doi: <a href="https://doi.org/10.1007/s11269-015-1096-6" target="_blank" rel="noopener">10.1007/s11269-015-1096-6</a>.</td></tr>
+            <tr><td class="col-id">245</td><td class="col-topic">Urban Landscape Classification</td><td>Li‑gang Ma, Jin‑song Deng, Huai Yang, Yang Hong, Ke Wang, 2015: Urban landscape classification using Chinese advanced high‑resolution satellite imagery and an object‑oriented multi‑variable model. Frontiers of Information Technology & Electronic Engineering, 6 (3), 238‑248. doi: <a href="https://doi.org/10.1631/FITEE.1400083" target="_blank" rel="noopener">10.1631/FITEE.1400083</a>.</td></tr>
+            <tr><td class="col-id">244</td><td class="col-topic">GRACE, ET</td><td>Zhanming Wan, Ke Zhang, Xianwu Xue, Zhen Hong, Yang Hong, Jonathan Gourley, 2015: Water Balance Based Actual Evapotranspiration Reconstruction from Ground and Satellite Observations Over the CONUS. Water Resources Research, 51, 6485–6499. doi: <a href="https://doi.org/10.1002/2015WR017311" target="_blank" rel="noopener">10.1002/2015WR017311</a>.</td></tr>
+            <tr><td class="col-id">243</td><td class="col-topic">Precipitation Evaluation</td><td>Sheng Chen, Junjun Hu, Zengxin Zhang, Ali Behrangi, Yang Hong, Abebe S. Gebregiorgis, Jianrong Cao, Baoqing Hu, Xianwu Xue, Xinhua Zhang, 2015: Hydrologic Evaluation of the TRMM Multi‑satellite Precipitation Analysis over Ganjiang Basin in Humid Southeastern China. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 8 (9), 4568‑4580. doi: <a href="https://doi.org/10.1109/JSTARS.2015.2483484" target="_blank" rel="noopener">10.1109/JSTARS.2015.2483484</a>.</td></tr>
+            <tr><td class="col-id">242</td><td class="col-topic">Calibration, Hydrological Models</td><td>Xianwu Xue, Ke Zhang, Yang Hong, Jonathan J. Gourley, Wayne Kellogg, Renee A. McPherson, Zhanming Wan, Barney N. Austin, 2015: New Multisite Cascading Calibration Approach for Hydrological Models: Case Study in the Red River Basin Using the VIC Model. Journal of Hydrologic Engineering, 05015019. doi: <a href="https://doi.org/10.1061/(ASCE)HE.1943-5584.0001282" target="_blank" rel="noopener">10.1061/(ASCE)HE.1943-5584.0001282</a>.</td></tr>
+            <tr><td class="col-id">241</td><td class="col-topic">Climate Change, Natural Hazards</td><td>Ren, D., Leslie, L. M., Shen, X., Hong, Y., Duan, Q., Mahmood, R., ... & Lynch, M. J., 2015: The Gravity Environment of Zhouqu Debris Flow of August 2010 and Its Implication for Future Recurrence. International Journal of Geosciences, 6 (4), 317‑325. doi: <a href="https://doi.org/10.4236/ijg.2015.64025" target="_blank" rel="noopener">10.4236/ijg.2015.64025</a>.</td></tr>
+            <tr><td class="col-id">240</td><td class="col-topic">Soil Moisture</td><td>Shen, X., Hong, Y., Qin, Q., Basara, J. B., Mao, K., Wang, D., 2015: A Semiphysical Microwave Surface Emission Model for Soil Moisture Retrieval. IEEE Transactions on Geoscience and Remote Sensing, 53 (7), 4079‑4090. doi: <a href="https://doi.org/10.1109/TGRS.2015.2390219" target="_blank" rel="noopener">10.1109/TGRS.2015.2390219</a>.</td></tr>
+            <tr><td class="col-id">239</td><td class="col-topic">Climate change, Deforestation, Land use</td><td>Zhang, K., Castanho, A. D., Galbraith, D. R., Moghim, S., Levine, N., Bras, R. L., Coe, M., et al., 2015: The Fate of Amazonian Ecosystems over the Coming Century Arising from Changes in Climate, Atmospheric CO₂ and Land use. Global Change Biology. doi: <a href="https://doi.org/10.1111/gcb.12903" target="_blank" rel="noopener">10.1111/gcb.12903</a>.</td></tr>
+            <tr><td class="col-id">238</td><td class="col-topic">Satellite Precipitation</td><td>Sheng Chen, Jonathan J. Gourley, Yang Hong, Qing Cao, Nicholas Carr, Pierre‑Emmanuel Kirstetter, Jian Zhang, Zac Flamig, 2015: Using citizen science reports to evaluate estimates of surface precipitation type. Bulletin of the American Meteorological Society. doi: <a href="https://doi.org/10.1175/BAMS-D-13-00247.1" target="_blank" rel="noopener">10.1175/BAMS-D-13-00247.1</a>.</td></tr>
+            <tr><td class="col-id">237</td><td class="col-topic">Landslide, Sensor Network</td><td>Ping Lu, Hangbin Wu, Gang Qiao, Weiyue Li, Marco Scaioni, Tiantian Feng, Shijie Liu, Wen Chen, Nan Li, Chun Liu, Xiaohua Tong, Yang Hong, Rongxing Li, 2015: Model test study on monitoring dynamic process of slope failure through spatial sensor network. Environmental Earth Sciences, 74 (4), 3315‑3332. doi: <a href="https://doi.org/10.1007/s12665-015-4369-8" target="_blank" rel="noopener">10.1007/s12665-015-4369-8</a>.</td></tr>
+            <tr><td class="col-id">236</td><td class="col-topic">Satellite Precipitation Estimates</td><td>Xiuqin Yang, Bin Yong, Yang Hong, Sheng Chen, Xinhua Zhang, 2015: Error analysis of multi‑satellite precipitation estimates with an independent rain gauge observation network over a mid‑size humid basin. Hydrological Sciences Journal. doi: <a href="https://doi.org/10.1080/02626667.2015.1040020" target="_blank" rel="noopener">10.1080/02626667.2015.1040020</a>.</td></tr>
+            <tr><td class="col-id">235</td><td class="col-topic">Hydrometeorology</td><td>Knox, R. G., Longo, M., Swann, A. L. S., Zhang, K., Levine, N. M., Moorcroft, P. R., Bras, R. L., 2015: Hydrometeorological effects of historical land‑conversion in an ecosystem‑atmosphere model of Northern South America. Hydrology and Earth System Sciences, 19, 241‑273. doi: <a href="https://doi.org/10.5194/hess-19-241-2015" target="_blank" rel="noopener">10.5194/hess-19-241-2015</a>.</td></tr>
+            <tr><td class="col-id">234</td><td class="col-topic">Monsoon; Indus Basin</td><td>S. I. Khan, Y. Hong, J. J. Gourley, M. U. K. Khattak, H. J. Vergara, 2015: Spatial and Diurnal Variability of Monsoon Systems assessed by TRMM rain rate over Indus Basin. IEEE JSTARS, 8 (9), 4325‑4335. doi: <a href="https://doi.org/10.1109/JSTARS.2015.2421947" target="_blank" rel="noopener">10.1109/JSTARS.2015.2421947</a>.</td></tr>
+            <tr><td class="col-id">233</td><td class="col-topic">Drought, Poyang Lake</td><td>Zengxin Zhang, Xi Chen, Chong‑Yu Xu, Yang Hong, Jill Hardy, Zhonghua Sun, 2015: Examining the influence of river‑lake interaction on the drought and water resources in the Poyang lake basin. Journal of Hydrology, 522, 510‑521. doi: <a href="https://doi.org/10.1016/j.jhydrol.2015.01.008" target="_blank" rel="noopener">10.1016/j.jhydrol.2015.01.008</a>.</td></tr>
+            <tr><td class="col-id">232</td><td class="col-topic">Rainfall estimation</td><td>Sheng Chen, Yang Hong, Qing Cao, Yudong Tian, Junjun Hu, Xinhua Zhang, Weiyue Li, Nicholas Carr, Xinyi Shen, Lei Qiao, 2015: Inter‑comparison of Precipitation Estimates from WSR‑88D Radar and TRMM Measurement over CONUS. IEEE Transactions on Geoscience and Remote Sensing, 55 (8), 4444‑4456. doi: <a href="https://doi.org/10.1109/TGRS.2015.2399307" target="_blank" rel="noopener">10.1109/TGRS.2015.2399307</a>.</td></tr>
+            <tr><td class="col-id">231</td><td class="col-topic">Rainfall estimation</td><td>Sheng Chen, Jian Zhang, Esther Mullens, Yang Hong, Ali Behrangi, Yudong Tian, Xiao‑Ming Hu, Junjun Hu, Zengxin Zhang, Xinhua Zhang, 2015: Mapping the Precipitation Type Distribution over the CONUS Using NOAA/NSSL National Multi‑sensor Mosaic QPE. IEEE Transactions on Geoscience and Remote Sensing, 53 (8), 4434‑4443. doi: <a href="https://doi.org/10.1109/TGRS.2015.2399015" target="_blank" rel="noopener">10.1109/TGRS.2015.2399015</a>.</td></tr>
+            <tr><td class="col-id">230</td><td class="col-topic">Precipitation</td><td>Kirstetter, P.E., Gourley, J.J., Hong, Y., Zhang, J., Moazamigoodarzi, S., Langston, C., Arthur, A., 2015: Probabilistic precipitation rate estimates with ground‑based radar networks. Water Resources Research, 51 (3), 1422‑1442. doi: <a href="https://doi.org/10.1002/2014WR015672" target="_blank" rel="noopener">10.1002/2014WR015672</a>.</td></tr>
+            <tr><td class="col-id">229</td><td class="col-topic">Satellite, Precipitation</td><td>N. Carr, P.‑E. Kirstetter, Y. Hong, J. J. Gourley, M. Schwaller, W. Petersen, Nai‑Yu Wang, R. R. Ferraro, Xianwu Xue, 2015: The influence of surface and precipitation characteristics on TRMM TMI rainfall retrieval uncertainty. Journal of Hydrometeorology, 16 (4), 1596–1614. doi: <a href="https://doi.org/10.1175/JHM-D-14-0194.1" target="_blank" rel="noopener">10.1175/JHM-D-14-0194.1</a>.</td></tr>
+            <tr><td class="col-id">228</td><td class="col-topic">Satellite Precipitation</td><td>Yong, B., Chen, B., Hong, Y., Gourley, J.J., Li, Z., 2015: Impact of missing passive microwave sensors on multi‑satellite precipitation retrieval algorithm. Remote Sensing, 7 (1), 668‑683. doi: <a href="https://doi.org/10.3390/rs70100668" target="_blank" rel="noopener">10.3390/rs70100668</a>.</td></tr>
+            <tr><td class="col-id">227</td><td class="col-topic">Satellite Precipitation</td><td>He, X., Kim, H., Kirstetter, P.‑E., Yoshimura, K., Chang, E.‑C., Ferguson, C. R., Erlingis, J. M., Hong, Y., Oki, T., 2015: The Diurnal Cycle of Precipitation in Regional Spectral Model Simulations over West Africa: Sensitivities to Resolution and Cumulus Schemes. Weather and Forecasting, 30 (2), 424‑445. doi: <a href="https://doi.org/10.1175/WAF-D-14-00013.1" target="_blank" rel="noopener">10.1175/WAF-D-14-00013.1</a>.</td></tr>
+            <tr><td class="col-id">226</td><td class="col-topic">Radar, Hydrometeorology</td><td>Kirstetter, P.‑E., Gourley, J. J., Hong, Y., Zhang, J., Moazamigoodarzi, S., Langston, C., Arthur, A., 2015: A probabilistic Quantitative Precipitation Estimation for ground‑based radar networks at high space and time scale. Water Resources Research, 51 (3), 1422‑1442. doi: <a href="https://doi.org/10.1002/2014WR015672" target="_blank" rel="noopener">10.1002/2014WR015672</a>.</td></tr>
+            <tr><td class="col-id">225</td><td class="col-topic">Climate, Hydrology, Water</td><td>Hu, Z., Wang, L., Wang, Z., Hong, Y., Zheng, H., 2015: Quantitative assessment of climate and human impacts on surface water resources in a typical semi‑arid watershed in the middle reaches of the Yellow River from 1985 to 2006. International Journal of Climatology, 35 (1), 97–113. doi: <a href="https://doi.org/10.1002/joc.3965" target="_blank" rel="noopener">10.1002/joc.3965</a>.</td></tr>
+            <tr><td class="col-id">224</td><td class="col-topic">Radar, Hydrometeorology</td><td>Wang, G., Hong, Y., Liu, L., Wong, W. K., Zahraei, A., Lakshmanan, V., 2015: Inter‑comparison of Radar‑based Nowcasting Schemes in Jianghuai River Basin, China. Meteorological Applications, 22 (3), 289–300. doi: <a href="https://doi.org/10.1002/met.1451" target="_blank" rel="noopener">10.1002/met.1451</a>.</td></tr>
+            <tr><td class="col-id">223</td><td class="col-topic">Hydrology, Satellite</td><td>Huang, Y., Chen, S., Cao, Q., Hong, Y., Wu, B., Huang, M., Qiao, L., Zhang, Z., Li, Z., Li, W., Yang, X., 2015: Evaluation of Version‑7 TRMM Multi‑Satellite Precipitation Analysis Product during the Beijing Extreme Heavy Rainfall Event of 21 July 2012. Water, 6, 32‑44. doi: <a href="https://doi.org/10.3390/w6010032" target="_blank" rel="noopener">10.3390/w6010032</a>.</td></tr>
+            <tr><td class="col-id">222</td><td class="col-topic">Climate, Hydrology</td><td>Adhikari, P., Hong, Y., 2015: Will the Bagmati Basin’s Future Hydrological Change be linked with Global Climate Change Patterns? British Journal of Environment and Climate Change, 5 (3), 269‑284. doi: <a href="https://doi.org/10.9734/BJECC/2015/7962" target="_blank" rel="noopener">10.9734/BJECC/2015/7962</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2014</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">221</td><td class="col-topic">Ensemble Kalman Filter</td><td>Vergara, H., Hong, Y., Gourley, J. J., 2014: Improving Flood Forecasting Skill with the Ensemble Kalman Filter. Revista de Tecnología, 13 (1), 9‑27.</td></tr>
+            <tr><td class="col-id">220</td><td class="col-topic">Error modeling, QPE</td><td>Seyyedi, H., Anagnostou, E. N., Kirstetter, P.‑E., Maggioni, V., Hong, Y., Gourley, J. J., 2014: Incorporating Surface Soil Moisture Information in Error Modeling of TRMM Passive Microwave Rainfall. IEEE Transactions on Geoscience and Remote Sensing, 52 (10), 6226‑6240. doi: <a href="https://doi.org/10.1109/TGRS.2013.2295795" target="_blank" rel="noopener">10.1109/TGRS.2013.2295795</a>.</td></tr>
+            <tr><td class="col-id">219</td><td class="col-topic">Rainfall estimation</td><td>Delrieu, G., Wijbrans, A., Boudevillain, B., Faure, D., Bonnifait, L., Kirstetter, P.‑E., 2014: Geostatistical radar‑raingauge merging: a novel method for the quantification of the rain estimation accuracy. Advances in Water Resources, 71, 110‑124. doi: <a href="https://doi.org/10.1016/j.advwatres.2014.06.005" target="_blank" rel="noopener">10.1016/j.advwatres.2014.06.005</a>.</td></tr>
+            <tr><td class="col-id">218</td><td class="col-topic">Flash flood</td><td>Špitalar, M., Lutoff, C., Gourley, J. J., Kirstetter, P.‑E., Brilly, M., Carr, N., 2014: Analysis of flash flood parameters and human impacts in the US. Journal of Hydrology, 519 (A), 863–870. doi: <a href="https://doi.org/10.1016/j.jhydrol.2014.07.004" target="_blank" rel="noopener">10.1016/j.jhydrol.2014.07.004</a>.</td></tr>
+            <tr><td class="col-id">217</td><td class="col-topic">Precipitation estimation</td><td>Kirstetter, P.‑E., Hong, Y., Gourley, J. J., Schwaller, M., Petersen, W., Cao, Q., 2014: Impact of sub‑pixel rainfall variability on spaceborne precipitation estimation: evaluating the TRMM 2A25 product. Quarterly Journal of the Royal Meteorological Society. doi: <a href="https://doi.org/10.1002/qj.2416" target="_blank" rel="noopener">10.1002/qj.2416</a>.</td></tr>
+            <tr><td class="col-id">216</td><td class="col-topic">Radar, HyMeX</td><td>Bousquet, O., Berne, A., Delanoe, J., Dufournet, Y., Gourley, J. J., Van Baelen, J., Augros, C., et al., 2014: Multiple‑frequency radar observations collected in southern France during the field phase of HyMeX. Bulletin of the American Meteorological Society. doi: <a href="https://doi.org/10.1175/BAMS-D-13-00076.1" target="_blank" rel="noopener">10.1175/BAMS-D-13-00076.1</a>.</td></tr>
+            <tr><td class="col-id">215</td><td class="col-topic">Precipitation</td><td>Gonçalves, W. A., Machado, L. A. T., Kirstetter, P.‑E., 2014: The biomass burning aerosol influence on precipitation over the Central Amazon: An observational study. Atmos. Chem. Phys. Discuss., 14, 18879‑18904. doi: <a href="https://doi.org/10.5194/acpd-14-18879-2014" target="_blank" rel="noopener">10.5194/acpd-14-18879-2014</a>.</td></tr>
+            <tr><td class="col-id">214</td><td class="col-topic">Forecast</td><td>Wang, G., Wong, W. K., Hong, Y., Liu, L., Dong, J., Xue, M., 2014: Improvement of Forecast skill for Severe Weather by Merging Radar‑based Extrapolation and Storm‑scale NWP corrected forecast. Atmospheric Research, 154, 14‑24. doi: <a href="https://doi.org/10.1016/j.atmosres.2014.10.021" target="_blank" rel="noopener">10.1016/j.atmosres.2014.10.021</a>.</td></tr>
+            <tr><td class="col-id">213</td><td class="col-topic">Urban Remote Sensing</td><td>Gan, M., Deng, J., Zheng, X., Hong, Y., Wang, K., 2014: Monitoring urban greenness dynamics using multiple endmember spectral mixture analysis. PLoS ONE, 9 (11), e112202. doi: <a href="https://doi.org/10.1371/journal.pone.0112202" target="_blank" rel="noopener">10.1371/journal.pone.0112202</a>.</td></tr>
+            <tr><td class="col-id">212</td><td class="col-topic">Precipitation evaluation</td><td>Moazami, S., Golian, S., Hong, Y., Chen, S., Kavianpour, M. R., 2014: Comprehensive evaluation of four high‑resolution satellite precipitation products over diverse climate conditions in Iran. Hydrological Sciences Journal. doi: <a href="https://doi.org/10.1080/02626667.2014.987675" target="_blank" rel="noopener">10.1080/02626667.2014.987675</a>.</td></tr>
+            <tr><td class="col-id">211</td><td class="col-topic">Hydrologic Modeling</td><td>Vergara, H., Hong, Y., Gourley, J. J., Anagnostou, E. N., Maggioni, V., Stampoulis, D., Kirstetter, P.‑E., 2014: Effects of Resolution of Satellite‑Based Rainfall Estimates on Hydrologic Modeling Skill at Different Scales. J. Hydrometeor, 15 (2), 593–613. doi: <a href="https://doi.org/10.1175/JHM-D-12-0113.1" target="_blank" rel="noopener">10.1175/JHM-D-12-0113.1</a>.</td></tr>
+            <tr><td class="col-id">210</td><td class="col-topic">Flood, Forecast</td><td>Zhang, Y., Hong, Y., Wang, X., Gourley, J., Xue, X., Saharia, M., Ni, G., et al., 2014: Hydrometeorological Analysis and Remote Sensing of Extremes: Was the July 2012 Beijing Flood Event Detectable and Predictable by Global Satellite Observing and Global Weather Modeling Systems? Journal of Hydrometeorology. doi: <a href="https://doi.org/10.1175/JHM-D-14-0048.1" target="_blank" rel="noopener">10.1175/JHM-D-14-0048.1</a>.</td></tr>
+            <tr><td class="col-id">209</td><td class="col-topic">Ungauged Catchments, Flood Simulation</td><td>Yao, C., Zhang, K., Yu, Z., Li, Z., Li, Q., 2014: Improving the flood prediction capability of the Xinanjiang model in ungauged nested catchments by coupling it with the geomorphologic instantaneous unit hydrograph. Journal of Hydrology, 517, 1035‑1048. doi: <a href="https://doi.org/10.1016/j.jhydrol.2014.06.037" target="_blank" rel="noopener">10.1016/j.jhydrol.2014.06.037</a>.</td></tr>
+            <tr><td class="col-id">208</td><td class="col-topic">Satellite</td><td>Yong, B., Liu, D., Gourley, J. J., Tian, Y., Huffman, G. J., Ren, L., Hong, Y., Wang, W., Shen, Y., Zhang, J., 2014: Global view of real‑time TRMM Multi‑satellite Precipitation Analysis: implication to its successor GPM mission. Bulletin of the American Meteorological Society. doi: <a href="https://doi.org/10.1175/BAMS-D-14-00017.1" target="_blank" rel="noopener">10.1175/BAMS-D-14-00017.1</a>.</td></tr>
+            <tr><td class="col-id">207</td><td class="col-topic">Climate, Hydrology</td><td>Qiao, L., Hong, Y., McPherson, R., Shafer, M., Gade, D., Williams, D., ... & Lilly, D., 2014: Climate change and hydrological response in the trans‑state Oologah Lake watershed—Evaluating dynamically downscaled NARCCAP and statistically downscaled CMIP3 simulations with VIC model. Water Resources Management, 28 (10), 3291‑3305. doi: <a href="https://doi.org/10.1007/s11269-014-0678-z" target="_blank" rel="noopener">10.1007/s11269-014-0678-z</a>.</td></tr>
+            <tr><td class="col-id">206</td><td class="col-topic">Complex Terrain, Rainfall</td><td>Li, Z., Yang, D., Hong, Y., Zhang, J., Qi, Y., 2014: Characterizing Spatiotemporal Variations of Hourly Rainfall by Gauge and Radar in the Mountainous Three Gorges Region. Journal of Applied Meteorology and Climatology, 53 (4), 873–889. doi: <a href="https://doi.org/10.1175/JAMC-D-13-0277.1" target="_blank" rel="noopener">10.1175/JAMC-D-13-0277.1</a>.</td></tr>
+            <tr><td class="col-id">205</td><td class="col-topic">Flood, Web GIS</td><td>Wan, Z., Hong, Y., Khan, S., Gourley, J., Flamig, Z., Kirschbaum, D., Tang, G., 2014: A Cloud‑based Global Flood Disaster Community Cyber‑infrastructure: Development and Demonstration. Environmental Modelling & Software, 58, 86‑94. doi: <a href="https://doi.org/10.1016/j.envsoft.2014.04.007" target="_blank" rel="noopener">10.1016/j.envsoft.2014.04.007</a>.</td></tr>
+            <tr><td class="col-id">204</td><td class="col-topic">Satellite, Hydrometeorology</td><td>Cao, Q., Hong, Y., Chen, S., Gourley, J. J., Zhang, J., Kirstetter, P.‑E., 2014: Snowfall Detectability of NASA’s CloudSat: The First Cross‑Investigation of Its 2C‑Snow‑Profile Product and National Multi‑Sensor Mosaic QPE (NMQ) Snowfall Data. Progress In Electromagnetics Research, 148, 55–61. doi: <a href="https://doi.org/10.2528/PIER14030405" target="_blank" rel="noopener">10.2528/PIER14030405</a>.</td></tr>
+            <tr><td class="col-id">203</td><td class="col-topic">Latent Heat, Satellite</td><td>Yao, Y., Liang, S., Li, X., Hong, Y., Fisher, J. B., Zhang, N., Chen, J., Cheng, J., Zhao, S., Zhang, X., Jiang, B., Sun, L., Jia, K., Wang, K., Chen, Y., Mu, Q., Feng, F., 2014: Bayesian multi‑model estimation of global terrestrial latent heat flux from eddy covariance, meteorological and satellite observations. Journal of Geophysical Research: Atmospheres, 119 (8), 4521–4545.</td></tr>
+            <tr><td class="col-id">202</td><td class="col-topic">Data Interpolation, Building Performance</td><td>Hu, J., Ogunsola, O., Song, L., McPherson, R., Zhu, M., Hong, Y., Chen, S., 2014: Restoration of missing dry‑bulb temperature data with long‑term gaps (up to 60 days) for use in building performance monitoring and analysis—Part II. HVAC&R Research, 20 (6), 606‑615. doi: <a href="https://doi.org/10.1080/10789669.2014.917921" target="_blank" rel="noopener">10.1080/10789669.2014.917921</a>.</td></tr>
+            <tr><td class="col-id">201</td><td class="col-topic">Data Interpolation, Building Performance</td><td>Hu, J., Ogunsola, O., Song, L., McPherson, R., Zhu, M., Hong, Y., Chen, S., 2014: Restoration of 1‑24 hour dry‑bulb temperature gaps for use in building performance monitoring and analysis—Part I. HVAC&R Research, 20 (6), 594‑605. doi: <a href="https://doi.org/10.1080/10789669.2014.925347" target="_blank" rel="noopener">10.1080/10789669.2014.925347</a>.</td></tr>
+            <tr><td class="col-id">200</td><td class="col-topic">Remote Sensing, Flood</td><td>Khan, S., Hong, Y., Gourley, J., Khattak, M. U., De Groeve, T., 2014: Multi‑Sensor Imaging and Space‑Ground Cross‑Validation for 2010 Flood along Indus River, Pakistan. Remote Sensing, 6 (3), 2393‑2407. doi: <a href="https://doi.org/10.3390/rs6032393" target="_blank" rel="noopener">10.3390/rs6032393</a>.</td></tr>
+            <tr><td class="col-id">199</td><td class="col-topic">Satellite Precipitation</td><td>Huang, Y., Chen, S., Cao, Q., Hong, Y., Wu, B., Huang, M., Qiao, L., Zhang, Z., Li, Z., Li, W., Yang, X., 2014: Evaluation of Version‑7 TRMM Multi‑Satellite Precipitation Analysis Product during the Beijing Extreme Heavy Rainfall Event of 21 July 2012. Water, 6 (1), 32‑44. doi: <a href="https://doi.org/10.3390/w6010032" target="_blank" rel="noopener">10.3390/w6010032</a>.</td></tr>
+            <tr><td class="col-id">198</td><td class="col-topic">QPE</td><td>Delrieu, G., Bonnifait, L., Kirstetter, P.‑E., Boudevillain, B., 2014: Dependence of radar quantitative precipitation estimation error on the rain intensity in the Cévennes region, France. Hydrological Sciences Journal, 59 (7), 1‑12. doi: <a href="https://doi.org/10.1080/02626667.2013.827337" target="_blank" rel="noopener">10.1080/02626667.2013.827337</a>.</td></tr>
+            <tr><td class="col-id">197</td><td class="col-topic">Satellite, Precipitation</td><td>Chen, S., Liu, H., You, Y., Mullens, E., Hu, J., Yuan, Y., Huang, M., He, L., Luo, Y., Zeng, X., Tang, G., Hong, Y., 2014: Evaluation of High‑Resolution Precipitation Estimates from Satellites during July 2012 Beijing Flood Event Using Dense Rain Gauge Observations. PLoS ONE, 9 (4), e89681. doi: <a href="https://doi.org/10.1371/journal.pone.0089681" target="_blank" rel="noopener">10.1371/journal.pone.0089681</a>.</td></tr>
+            <tr><td class="col-id">196</td><td class="col-topic">Satellite, Precipitation</td><td>Khan, S. I., Hong, Y., Gourley, J. J., Khattak, M. U., Yong, B., Vergara, H. J., 2014: Evaluation of Three High‑Resolution Satellite Precipitation Estimates: Potential for Monsoon Monitoring over Pakistan. Advances in Space Research, 54 (4), 670‑684. doi: <a href="https://doi.org/10.1016/j.asr.2014.04.017" target="_blank" rel="noopener">10.1016/j.asr.2014.04.017</a>.</td></tr>
+            <tr><td class="col-id">195</td><td class="col-topic">Hydrology</td><td>Leng, G., Tang, Q., Huang, M., Hong, Y., Leung, L. R., 2014: Projected changes in mean and interannual variability of surface water over continental China. Science China Earth Sciences, 57, 1‑16. doi: <a href="https://doi.org/10.1007/s11430-014-4987-0" target="_blank" rel="noopener">10.1007/s11430-014-4987-0</a>.</td></tr>
+            <tr><td class="col-id">194</td><td class="col-topic">Flash Flood Guidance</td><td>Clark III, R., Gourley, J., Flamig, Z., Hong, Y., Clark, E., 2014: CONUS‑wide Evaluation of National Weather Service Flash Flood Guidance Products. Weather and Forecasting, 29, 377‑392. doi: <a href="https://doi.org/10.1175/WAF-D-12-00124.1" target="_blank" rel="noopener">10.1175/WAF-D-12-00124.1</a>.</td></tr>
+            <tr><td class="col-id">193</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Yong, B., Chen, B., Gourley, J. J., Ren, L., Hong, Y., Chen, X., Wang, W., Shen, Y., 2014: Intercomparison of the V6 and V7 TMPA precipitation products over high and low latitude basins with independent gauge networks. Journal of Hydrology, 508, 77‑87. doi: <a href="https://doi.org/10.1016/j.jhydrol.2013.10.050" target="_blank" rel="noopener">10.1016/j.jhydrol.2013.10.050</a>.</td></tr>
+            <tr><td class="col-id">192</td><td class="col-topic">QPE</td><td>Cao, Q., Wen, Y., Hong, Y., Gourley, J. J., Kirstetter, P.‑E., 2014: Enhancing Quantitative Precipitation Estimation Over the CONUS Using a Ground‑Space Multi‑Sensor Integration Approach. IEEE Geoscience and Remote Sensing Letters, 11 (7), 1305‑1309. doi: <a href="https://doi.org/10.1109/LGRS.2013.2295768" target="_blank" rel="noopener">10.1109/LGRS.2013.2295768</a>.</td></tr>
+            <tr><td class="col-id">191</td><td class="col-topic">Precipitation</td><td>Qiao, L., Hong, Y., Chen, S., Zou, C. B., Gourley, J. J., Yong, B., 2014: Performance assessment of the successive V6 and V7 TMPA products over the climate‑transitional zone in the southern Great Plains, USA. Journal of Hydrology, 513, 446‑456. doi: <a href="https://doi.org/10.1016/j.jhydrol.2014.03.040" target="_blank" rel="noopener">10.1016/j.jhydrol.2014.03.040</a>.</td></tr>
+            <tr><td class="col-id">190</td><td class="col-topic">Satellite Precipitation, Hydrology</td><td>Jiang, S., Ren, L., Hong, Y., Yang, X., Ma, M., Zhang, Y., Yuan, F., 2014: Improvement of Multi‑Satellite Real‑Time Precipitation Products for Ensemble Streamflow Simulation in a Middle Latitude Basin in South China. Water Resources Management, 28 (8), 2259‑2278. doi: <a href="https://doi.org/10.1007/s11269-014-0612-4" target="_blank" rel="noopener">10.1007/s11269-014-0612-4</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2013</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">189</td><td class="col-topic">Natural Hazards, Flood</td><td>Gourley, J. J., Hong, Y., Flamig, Z. L., Arthur, A., Clark, R. A., Calianno, M., Ruin, I., Ortel, T., Wieczorek, M. E., Clark, E., Kirstetter, P.‑E., Krajewski, W. F., 2013: A Unified Flash Flood Database over the US. Bulletin of the American Meteorological Society, 94 (6), 799–805. doi: <a href="https://doi.org/10.1175/BAMS-D-12-00198.1" target="_blank" rel="noopener">10.1175/BAMS-D-12-00198.1</a>.</td></tr>
+            <tr><td class="col-id">188</td><td class="col-topic">Remote Sensing, Radar</td><td>Cao, Q., Hong, Y., Qi, Y., Wen, Y., Zhang, J., Gourley, J. J., Liao, L., 2013: Empirical Conversion of Vertical Profile of Reflectivity (VPR) from Ku‑band to S‑band Frequency. Journal of Geophysical Research: Atmospheres, 118 (4), 1814–1825. doi: <a href="https://doi.org/10.1002/jgrd.50138" target="_blank" rel="noopener">10.1002/jgrd.50138</a>.</td></tr>
+            <tr><td class="col-id">187</td><td class="col-topic">Satellite, Precipitation</td><td>Chen, S., Hong, Y., Gourley, J. J., Huffman, G. J., Tian, Y. D., Cao, Q., Kirstetter, P.‑E., Hu, J., Hardy, J., Xue, X. W., Yong, B., 2013: Evaluation of the successive V6 and V7 TRMM multisatellite precipitation analysis over CONUS. Water Resources Research, 49 (12), 8174–8186. doi: <a href="https://doi.org/10.1002/2012WR012795" target="_blank" rel="noopener">10.1002/2012WR012795</a>.</td></tr>
+            <tr><td class="col-id">186</td><td class="col-topic">Precipitation</td><td>Delrieu, G., Boudevillain, B., Wijbrans, A., Faure, D., Bonnifait, L., Confoland, A., Kirstetter, P.‑E., 2013: Prototype de ré‑analyses pluviométriques pour la région Cévennes‑Vivarais en 2008. La Météorologie, 83. doi: <a href="https://doi.org/10.4267/2042/52052" target="_blank" rel="noopener">10.4267/2042/52052</a>.</td></tr>
+            <tr><td class="col-id">185</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Chen, S., Hong, Y., Cao, Q., Gourley, J. J., Tian, Y., Hardy, J., Kirstetter, P.‑E., Yong, B., Shen, Y., 2013: Similarity and difference of the two successive V6 and V7 TRMM multisatellite precipitation analysis performance over China. Journal of Geophysical Research, 118, 13060–13074. doi: <a href="https://doi.org/10.1002/2013JD019964" target="_blank" rel="noopener">10.1002/2013JD019964</a>.</td></tr>
+            <tr><td class="col-id">184</td><td class="col-topic">Flood</td><td>Mei, Y., Anagnostou, E. N., Stampoulis, D., Nikolopoulos, E. I., Borga, M., Vergara, H., 2013: Rainfall Organization Control on the Flood Response of mild‑slope Basins. Journal of Hydrology. doi: <a href="https://doi.org/10.1016/j.jhydrol.2013.12.013" target="_blank" rel="noopener">10.1016/j.jhydrol.2013.12.013</a>.</td></tr>
+            <tr><td class="col-id">183</td><td class="col-topic">Hydrology</td><td>Dresback, K. M., Fleming, J. G., Blanton, B. O., Kaiser, C., Gourley, J. J., Tromble, E. M., Luettich Jr., R. A., Kolar, R. L., Hong, Y., Van Cooten, S., Vergara, H. J., Flamig, Z. L., Lander, H. M., Kelleher, K. E., Nemunaitis‑Monroe, K. L., 2013: Skill assessment of a real‑time forecast system utilizing a coupled hydrologic and coastal hydrodynamic model during Hurricane Irene (2011). Continental Shelf Research, 71, 78‑94. doi: <a href="https://doi.org/10.1016/j.csr.2013.10.007" target="_blank" rel="noopener">10.1016/j.csr.2013.10.007</a>.</td></tr>
+            <tr><td class="col-id">182</td><td class="col-topic">Remote Sensing, Satellite, Precipitation</td><td>Kirstetter, P.‑E., Viltard, N., Gosset, M., 2013: An error model for instantaneous satellite rainfall estimates: evaluation of BRAIN‑TMI over West Africa. QJRMS, 139, 894‑911. doi: <a href="https://doi.org/10.1002/qj.1964" target="_blank" rel="noopener">10.1002/qj.1964</a>.</td></tr>
+            <tr><td class="col-id">181</td><td class="col-topic">Agriculture, Ecology</td><td>Qiu, L., Zhu, J., Zhu, Y., Hong, Y., Wang, K., Deng, J., 2013: Land use changes induced soil organic carbon variations in agricultural soils of Fuyang County, China. Journal of Soils and Sediments, 13 (6), 981‑988. doi: <a href="https://doi.org/10.1007/s11368-013-0684-4" target="_blank" rel="noopener">10.1007/s11368-013-0684-4</a>.</td></tr>
+            <tr><td class="col-id">180</td><td class="col-topic">Radar, Hydrometeorology</td><td>Fall, V., Cao, Q., Hong, Y., 2013: Intercomparison of Vertical Structure of Storms Revealed by Ground‑Based (NMQ) and Spaceborne Radars (CloudSat‑CPR and TRMM‑PR). The Scientific World Journal. doi: <a href="https://doi.org/10.1155/2013/270726" target="_blank" rel="noopener">10.1155/2013/270726</a>.</td></tr>
+            <tr><td class="col-id">179</td><td class="col-topic">Radar, Precipitation</td><td>Kirstetter, P.‑E., Andrieu, H., Boudevillain, B., Delrieu, G., 2013: A physically‑based identification of vertical profiles of reflectivity from volume scan radar data. Journal of Applied Meteorology and Climatology, 52 (7), 1645‑1663. doi: <a href="https://doi.org/10.1175/JAMC-D-12-0228.1" target="_blank" rel="noopener">10.1175/JAMC-D-12-0228.1</a>.</td></tr>
+            <tr><td class="col-id">178</td><td class="col-topic">Remote Sensing, Satellite, Precipitation</td><td>Kacimi, S., Viltard, N., Kirstetter, P.‑E., 2013: A new methodology for rain identification from passive microwave data in Tropics using neural networks. QJRMS, 139 (673), 912‑922. doi: <a href="https://doi.org/10.1002/qj.2114" target="_blank" rel="noopener">10.1002/qj.2114</a>.</td></tr>
+            <tr><td class="col-id">177</td><td class="col-topic">Remote Sensing, Satellite</td><td>Brogniez, H., Kirstetter, P.‑E., Eymard, L., 2013: Expected improvements in the atmospheric humidity profile retrieval using the Megha‑Tropiques microwave payload. QJRMS, 139 (673), 842‑851. doi: <a href="https://doi.org/10.1002/qj.1869" target="_blank" rel="noopener">10.1002/qj.1869</a>.</td></tr>
+            <tr><td class="col-id">176</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Moazami, S., Golian, S., Kavianpour, M. R., Hong, Y., 2013: Comparison of PERSIANN and V7 TRMM TMPA products with rain gauge data over Iran. International Journal of Remote Sensing, 34 (22), 8156‑8171. doi: <a href="https://doi.org/10.1080/01431161.2013.833360" target="_blank" rel="noopener">10.1080/01431161.2013.833360</a>.</td></tr>
+            <tr><td class="col-id">175</td><td class="col-topic">Data Assimilation, Hydrology</td><td>Chen, H., Yang, D., Hong, Y., Gourley, J. J., Zhang, Y., 2013: Hydrological data assimilation with the Ensemble Square‑Root‑Filter: use of streamflow observations to update model states for real‑time flash flood forecasting. Advances in Water Resources, 59, 209‑220. doi: <a href="https://doi.org/10.1016/j.advwatres.2013.06.010" target="_blank" rel="noopener">10.1016/j.advwatres.2013.06.010</a>.</td></tr>
+            <tr><td class="col-id">174</td><td class="col-topic">Natural Hazards, Landslide</td><td>Liu, C., Li, W., Wu, H., Lu, P., Sang, K., Sun, W., Hong, Y., Li, R., 2013: Susceptibility Evaluation and Mapping of China's Landslides Based on Multi‑source Data. Natural Hazards. doi: <a href="https://doi.org/10.1007/s11069-013-0759-y" target="_blank" rel="noopener">10.1007/s11069-013-0759-y</a>.</td></tr>
+            <tr><td class="col-id">173</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Moazami, S., Golian, S., Kavianpour, M. R., Hong, Y., 2013: Uncertainty analysis of bias from satellite rainfall estimates using copula method. Atmospheric Research. doi: <a href="https://doi.org/10.1016/j.atmosres.2013.08.016" target="_blank" rel="noopener">10.1016/j.atmosres.2013.08.016</a>.</td></tr>
+            <tr><td class="col-id">172</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Li, Z., Yang, D., Hong, Y., 2013: Multi‑scale evaluation of high‑resolution multi‑sensor blended global precipitation products over the Yangtze River. Journal of Hydrology, 500, 157‑169. doi: <a href="https://doi.org/10.1016/j.jhydrol.2013.07.023" target="_blank" rel="noopener">10.1016/j.jhydrol.2013.07.023</a>.</td></tr>
+            <tr><td class="col-id">171</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Xue, X., Hong, Y., Limaye, A. S., Gourley, J., Huffman, G. J., Khan, S. I., Dorji, C., Chen, S., 2013: Statistical and Hydrological Evaluation of TRMM‑based TMPA over the Wangchu Basin of Bhutan. Journal of Hydrology, 499, 91‑99. doi: <a href="https://doi.org/10.1016/j.jhydrol.2013.06.042" target="_blank" rel="noopener">10.1016/j.jhydrol.2013.06.042</a>.</td></tr>
+            <tr><td class="col-id">170</td><td class="col-topic">Remote Sensing, Radar, QPE</td><td>Qi, Y., Zhang, J., Cao, Q., Hong, Y., Hu, X., 2013: Correction of Radar QPE Errors for Non‑Uniform VPRs in MCS Using TRMM Observations. Journal of Hydrometeorology, 14, 1672–1682. doi: <a href="https://doi.org/10.1175/JHM-D-12-0165.1" target="_blank" rel="noopener">10.1175/JHM-D-12-0165.1</a>.</td></tr>
+            <tr><td class="col-id">169</td><td class="col-topic">Climate, Hydrology</td><td>Qiao, L., Pan, Z., Herrmann, R., Hong, Y., 2013: Hydrological variability and uncertainty induced by climate change in the lower Missouri River Basin based on NARCCAP simulations and SWAT model. Journal of American Water Resources Association. doi: <a href="https://doi.org/10.1111/jawr.12126" target="_blank" rel="noopener">10.1111/jawr.12126</a>.</td></tr>
+            <tr><td class="col-id">168</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Chen, S., Kirstetter, P.‑E., Hong, Y., Gourley, J. J., Tian, Y., Qi, Y., Cao, Q., Zhang, J., Howard, K., Hu, J., Xue, X., 2013: Evaluation of Spatial Errors of Precipitation Rates and Types from TRMM PR over southern CONUS. Journal of Hydrometeorology. doi: <a href="https://doi.org/10.1175/JHM-D-13-0027.1" target="_blank" rel="noopener">10.1175/JHM-D-13-0027.1</a>.</td></tr>
+            <tr><td class="col-id">167</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Yong, B., Ren, L., Hong, Y., Gourley, J., Tian, Y., Huffman, G., Chen, X., Wang, W., Wen, Y., 2013: First evaluation of the climatological calibration algorithm in the real‑time TMPA‑RT precipitation estimates. Water Resources Research, 49 (5), 2461–2472. doi: <a href="https://doi.org/10.1002/wrcr.20246" target="_blank" rel="noopener">10.1002/wrcr.20246</a>.</td></tr>
+            <tr><td class="col-id">166</td><td class="col-topic">Remote Sensing, Drought</td><td>Zhang, N., Hong, Y., Qin, Q., Zhu, L., 2013: Evaluation of the Visible and Shortwave Infrared Drought Index in China. International Journal of Disaster Risk Science, 4 (2), 68‑76. doi: <a href="https://doi.org/10.1007/s13753-013-0008-8" target="_blank" rel="noopener">10.1007/s13753-013-0008-8</a>.</td></tr>
+            <tr><td class="col-id">165</td><td class="col-topic">Remote Sensing, Drought</td><td>Zhang, N., Hong, Y., Qin, Q., Liu, L., 2013: VSDI: a visible and shortwave infrared drought index for monitoring soil and vegetation moisture. International Journal of Remote Sensing, 34 (13), 4585‑4609. doi: <a href="https://doi.org/10.1080/01431161.2013.779046" target="_blank" rel="noopener">10.1080/01431161.2013.779046</a>.</td></tr>
+            <tr><td class="col-id">164</td><td class="col-topic">Climate, Drought</td><td>Liu, L., Hong, Y., Looper, J., Riley, R., Yong, B., Zhang, Z., Hocker, J., Shafer, M., 2013: Climatological Drought Analyses and Projection using SPI and PDSI. Journal of Hydrologic Engineering, 18 (7), 809‑816. doi: <a href="https://doi.org/10.1061/(ASCE)HE.1943-5584.0000619" target="_blank" rel="noopener">10.1061/(ASCE)HE.1943-5584.0000619</a>.</td></tr>
+            <tr><td class="col-id">163</td><td class="col-topic">Remote Sensing, Soil Moisture</td><td>Shen, X., Mao, K., Hong, Y., Qin, Q., Zhang, G., 2013: Bare surface soil moisture estimation using double‑angle and dual‑polarization L‑band radar data. IEEE Transactions on Geoscience and Remote Sensing, 51 (7), 3931‑3942. doi: <a href="https://doi.org/10.1109/TGRS.2012.2228209" target="_blank" rel="noopener">10.1109/TGRS.2012.2228209</a>.</td></tr>
+            <tr><td class="col-id">162</td><td class="col-topic">Data Assimilation, Remote Sensing</td><td>Zhang, Y., Hong, Y., Wang, X., Gourley, J. J., Gao, J., Vergara, H., Yong, B., 2013: Assimilation of Passive Microwave Streamflow Signals for Improving Flood Forecasting. IEEE JSTARS. doi: <a href="https://doi.org/10.1109/JSTARS.2013.2251321" target="_blank" rel="noopener">10.1109/JSTARS.2013.2251321</a>.</td></tr>
+            <tr><td class="col-id">161</td><td class="col-topic">Climate, Hydrology</td><td>Yong, B., Ren, L.‑L., Hong, Y., Gourley, J. J., Chen, X., Zhang, Y.‑J., Yang, X.‑L., Zhang, Z.‑X., Wang, W.‑G., 2013: Spatial‑temporal changes of water resources in a semi‑arid basin of North China. Journal of Hydrometeorology, 14 (4), 1009‑1034. doi: <a href="https://doi.org/10.1175/JHM-D-12-0116.1" target="_blank" rel="noopener">10.1175/JHM-D-12-0116.1</a>.</td></tr>
+            <tr><td class="col-id">160</td><td class="col-topic">Hydrology, QPF</td><td>Zahraei, A., Hsu, K.‑L., Sorooshian, S., Gourley, J. J., Hong, Y., Behrangi, A., 2013: Short‑term quantitative precipitation forecasting using an object‑based approach. Journal of Hydrology, 483, 1‑15. doi: <a href="https://doi.org/10.1016/j.jhydrol.2012.09.052" target="_blank" rel="noopener">10.1016/j.jhydrol.2012.09.052</a>.</td></tr>
+            <tr><td class="col-id">159</td><td class="col-topic">Natural Hazards, Flood</td><td>Calianno, M., Ruin, I., Gourley, J. J., 2013: Supplementing flash flood reports with impact classifications. Journal of Hydrology, 477, 1‑16. doi: <a href="https://doi.org/10.1016/j.jhydrol.2012.09.036" target="_blank" rel="noopener">10.1016/j.jhydrol.2012.09.036</a>.</td></tr>
+            <tr><td class="col-id">158</td><td class="col-topic">Remote Sensing, Satellite</td><td>Kirstetter, P.‑E., Hong, Y., Gourley, J. J., Schwaller, M., Petersen, W., Zhang, J., 2013: Comparison of TRMM 2A25 V6 and V7 with NOAA/NSSL QPE. Journal of Hydrometeorology, 14 (2), 661‑669. doi: <a href="https://doi.org/10.1175/JHM-D-12-030.1" target="_blank" rel="noopener">10.1175/JHM-D-12-030.1</a>.</td></tr>
+            <tr><td class="col-id">157</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Maggioni, V., Vergara, H. J., Anagnostou, E. N., Gourley, J. J., Hong, Y., Stampoulis, D., 2013: Investigating error correction ensembles of satellite rainfall products in river flow simulations. Journal of Hydrometeorology, 14 (4), 1194–1211. doi: <a href="https://doi.org/10.1175/JHM-D-12-0074.1" target="_blank" rel="noopener">10.1175/JHM-D-12-0074.1</a>.</td></tr>
+            <tr><td class="col-id">156</td><td class="col-topic">Remote Sensing, Radar</td><td>Chen, S., Gourley, J. J., Hong, Y., Kirstetter, P.‑E., Zhang, J., Howard, K. W., Flamig, Z. L., Hu, J., Qi, Y., 2013: Evaluation and uncertainty estimation of NOAA/NSSL Q2 over CONUS. Journal of Hydrometeorology, 14 (4), 1308–1322. doi: <a href="https://doi.org/10.1175/JHM-D-12-0150.1" target="_blank" rel="noopener">10.1175/JHM-D-12-0150.1</a>.</td></tr>
+            <tr><td class="col-id">155</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Wen, Y., Cao, Q., Kirstetter, P.‑E., Hong, Y., Gourley, J. J., Zhang, J., Zhang, G., Hong, B., 2013: Incorporating NASA spaceborne radar data into NOAA National Mosaic QPE for improved precipitation measurement. Journal of Hydrometeorology, 14 (4), 1293–1307. doi: <a href="https://doi.org/10.1175/JHM-D-12-0106.1" target="_blank" rel="noopener">10.1175/JHM-D-12-0106.1</a>.</td></tr>
+            <tr><td class="col-id">154</td><td class="col-topic">Climate, Hydrology</td><td>Adhikari, P., Hong, Y., 2013: Will Nzoia Basin in Kenya See Water Deficiency in Coming Decades as a Result of Climate Change? BJECC, 3 (1), 67‑85. doi: <a href="https://doi.org/10.9734/BJECC/2013/1614" target="_blank" rel="noopener">10.9734/BJECC/2013/1614</a>.</td></tr>
+            <tr><td class="col-id">153</td><td class="col-topic">Remote Sensing, Satellite</td><td>Cao, Q., Hong, Y., Gourley, J. J., Qi, Y., Zhang, J., Wen, Y., Kirstetter, P.‑E., 2013: Vertical structure of precipitation in US west mountains from TRMM PR. Journal of Applied Meteorology and Climatology, 52 (2), 408‑424. doi: <a href="https://doi.org/10.1175/JAMC-D-12-0095.1" target="_blank" rel="noopener">10.1175/JAMC-D-12-0095.1</a>.</td></tr>
+            <tr><td class="col-id">152</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Chen, S., Hong, Y., Cao, Q., Kirstetter, P.‑E., Gourley, J. J., Qi, Y., Zhang, J., Howard, K., Hu, J., Wang, J., 2013: Performance Evaluation of Radar and Satellite Rainfalls for Typhoon Morakot over Taiwan. Journal of Hydrology. doi: <a href="https://doi.org/10.1016/j.jhydrol.2012.12.026" target="_blank" rel="noopener">10.1016/j.jhydrol.2012.12.026</a>.</td></tr>
+            <tr><td class="col-id">151</td><td class="col-topic">Aquifer Vulnerability</td><td>Meng, X., Hu, H., Xue, X., 2013: Influencing Factors Analysis and Assessment Model of Confined Aquifer Vulnerability in Leakage Area: Jining, China. Journal of Natural Resources, 28 (9), 1615‑1622. doi: 10.11849/zrzyxb.2013.09.016.</td></tr>
+            <tr><td class="col-id">150</td><td class="col-topic">Satellite, Precipitation</td><td>Zhang, M., Chen, S., Qi, Y. C., Yang, Y., 2013: Evaluation of TRMM Summer Precipitation Over Huai‑River Basin In China. Advanced Materials Research, 726, 3401‑3406. doi: <a href="https://doi.org/10.4028/www.scientific.net/AMR.726-731.3401" target="_blank" rel="noopener">10.4028/www.scientific.net/AMR.726-731.3401</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2012</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">149</td><td class="col-topic">Forecasts</td><td>Marsh, P. T., Kain, J. S., Lakshmanan, V., Clark, A. J., Hitchens, N. M., Hardy, J., 2012: A Method for Calibrating Deterministic Forecasts of Rare Events. Weather and Forecasting, 27, 531–538. doi: <a href="https://doi.org/10.1175/WAF-D-11-00074.1" target="_blank" rel="noopener">10.1175/WAF-D-11-00074.1</a>.</td></tr>
+            <tr><td class="col-id">148</td><td class="col-topic">Natural Hazards, Flood</td><td>Gourley, J. J., Flamig, Z. L., Hong, Y., Howard, K. W., 2012: On the accuracy of the past, present, and future tools for flash flood prediction in the USA. IAHS Publication, 351, 435‑440.</td></tr>
+            <tr><td class="col-id">147</td><td class="col-topic">Hydrology</td><td>Flamig, Z. L., Anagnostou, E. N., Gourley, J. J., Hong, Y., 2012: Uncertainty estimation of deterministic river basin response simulations at gauged locations. IAHS Publication, 351, 556‑561.</td></tr>
+            <tr><td class="col-id">146</td><td class="col-topic">Hydrology</td><td>Ruin, I., Lutoff, C., Creton‑Cazanave, L., Anquetin, S., Borga, M., Chardonnel, S., Creutin, J.‑D., Gourley, J., Gruntfest, E., Nobert, S., Thielen, J., 2012: Towards a space‑time framework for integrated water and society studies. Bulletin of the American Meteorological Society, 93, ES89‑ES91. doi: <a href="https://doi.org/10.1175/BAMS-D-11-00226.1" target="_blank" rel="noopener">10.1175/BAMS-D-11-00226.1</a>.</td></tr>
+            <tr><td class="col-id">145</td><td class="col-topic">Agriculture</td><td>Qiu, L., Gan, M., Wang, K., Deng, J., Hong, Y., Xu, J., Zhu, W., 2012: Source identification of soil Cu, Zn, Pb, and Cd from anthropogenic activities by decision tree analysis in Fuyang County, China. Fresenius Environmental Bulletin, 21 (6), 1390‑1398.</td></tr>
+            <tr><td class="col-id">144</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Khan, S. I., Hong, Y., Vergara, H. J., Gourley, J. J., Brakenridge, G. R., De Groeve, T., Flamig, Z. L., Policelli, F. S., Yong, B., 2012: Microwave Satellite Data for Hydrologic Modeling in Ungauged Basins. IEEE Geoscience and Remote Sensing Letters, 9 (4), 663‑667. doi: <a href="https://doi.org/10.1109/LGRS.2011.2177807" target="_blank" rel="noopener">10.1109/LGRS.2011.2177807</a>.</td></tr>
+            <tr><td class="col-id">143</td><td class="col-topic">Climate, Drought</td><td>Liu, L., Hong, Y., Bednarczyk, C., Yong, B., Shafer, M., Riley, R., Hocker, J., 2012: Hydro‑Climatological Drought Analyses and Projections: Blue River Basin, Oklahoma. Water Resources Management, 26 (10), 2761‑2779. doi: <a href="https://doi.org/10.1007/s11269-012-0044-y" target="_blank" rel="noopener">10.1007/s11269-012-0044-y</a>.</td></tr>
+            <tr><td class="col-id">142</td><td class="col-topic">Natural Hazards, Landslide</td><td>Liao, Z., Hong, Y., Kirschbaum, D., Liu, C., 2012: Assessment of shallow landslides from Hurricane Mitch using a physically based model. Environmental Earth Sciences, 66 (6), 1697‑1705. doi: <a href="https://doi.org/10.1007/s12665-011-0997-9" target="_blank" rel="noopener">10.1007/s12665-011-0997-9</a>.</td></tr>
+            <tr><td class="col-id">141</td><td class="col-topic">Natural Hazards, Landslide</td><td>Kirschbaum, D. B., Adler, R., Hong, Y., Kumar, S., Peters‑Lidard, C., Lerner‑Lam, A., 2012: Advances in landslide nowcasting: evaluation of a global and regional modeling approach. Environmental Earth Sciences, 66 (6), 1683‑1696. doi: <a href="https://doi.org/10.1007/s12665-011-0990-3" target="_blank" rel="noopener">10.1007/s12665-011-0990-3</a>.</td></tr>
+            <tr><td class="col-id">140</td><td class="col-topic">Natural Hazards, Winter storm</td><td>Grout, T., Hong, Y., Basara, J., Balasundaram, B., Kong, Z., Bukkapatnam, S. T. S., 2012: Significant Winter Weather Events and Socioeconomic Impacts across Oklahoma: 2000–2010. Weather, Climate, and Society, 4 (1), 48‑58. doi: <a href="https://doi.org/10.1175/wcas-d-11-00057.1" target="_blank" rel="noopener">10.1175/wcas-d-11-00057.1</a>.</td></tr>
+            <tr><td class="col-id">139</td><td class="col-topic">Natural Hazards, Flood</td><td>Gourley, J. J., Erlingis, J. M., Hong, Y., Wells, E. B., 2012: Evaluation of Tools Used for Monitoring and Forecasting Flash Floods in the United States. Weather and Forecasting, 27 (1), 158‑173. doi: <a href="https://doi.org/10.1175/waf-d-10-05043.1" target="_blank" rel="noopener">10.1175/waf-d-10-05043.1</a>.</td></tr>
+            <tr><td class="col-id">138</td><td class="col-topic">Climate</td><td>Liu, L., Hong, Y., Hocker, J. E., Shafer, M. A., Carter, L. M., Gourley, J. J., Bednarczyk, C. N., Yong, B., Adhikari, P., 2012: Projected changes and trends of temperature and precipitation in the southern USA from 16 downscaled GCMs. Theoretical and Applied Climatology, 109 (3‑4), 345‑360. doi: <a href="https://doi.org/10.1007/s00704-011-0567-9" target="_blank" rel="noopener">10.1007/s00704-011-0567-9</a>.</td></tr>
+            <tr><td class="col-id">137</td><td class="col-topic">Remote Sensing, Precipitation</td><td>Kirstetter, P.‑E., Hong, Y., Gourley, J. J., Chen, S., Flamig, Z. L., Zhang, J., Schwaller, M., Petersen, W., Amitai, E., 2012: Toward a Framework for Systematic Error Modeling of Spaceborne Precipitation Radar with NOAA/NSSL QPE. Journal of Hydrometeorology, 13 (4), 1285‑1300. doi: <a href="https://doi.org/10.1175/JHM-D-11-0139.1" target="_blank" rel="noopener">10.1175/JHM-D-11-0139.1</a>.</td></tr>
+            <tr><td class="col-id">136</td><td class="col-topic">Remote Sensing, Flood</td><td>Wu, H., Adler, R. F., Hong, Y., Tian, Y., Policelli, F., 2012: Evaluation of Global Flood Detection Using Satellite‑Based Rainfall and a Hydrologic Model. Journal of Hydrometeorology, 13 (4), 1268–1284. doi: <a href="https://doi.org/10.1175/JHM-D-11-087.1" target="_blank" rel="noopener">10.1175/JHM-D-11-087.1</a>.</td></tr>
+            <tr><td class="col-id">135</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Yong, B., Hong, Y., Ren, L.‑L., Gourley, J. J., Huffman, G. J., Chen, X., Wang, W., Khan, S. I., 2012: Assessment of evolving TRMM‑based real‑time precipitation estimation methods and their impacts on hydrologic prediction in a high latitude basin. Journal of Geophysical Research, 117 (D9), D09108. doi: <a href="https://doi.org/10.1029/2011JD017069" target="_blank" rel="noopener">10.1029/2011JD017069</a>.</td></tr>
+            <tr><td class="col-id">134</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Jiang, S., Ren, L., Hong, Y., Yong, B., Yang, X., Yuan, F., Ma, M., 2012: Comprehensive evaluation of multi‑satellite precipitation products and optimally merging their simulated hydrological flows using BMA. Journal of Hydrology, 452‑453, 213‑225. doi: <a href="https://doi.org/10.1016/j.jhydrol.2012.05.055" target="_blank" rel="noopener">10.1016/j.jhydrol.2012.05.055</a>.</td></tr>
+            <tr><td class="col-id">133</td><td class="col-topic">Nowcasting</td><td>Zahraei, A., Hsu, K.‑L., Sorooshian, S., Gourley, J. J., Lakshmanan, V., Hong, Y., Bellerby, T., 2012: Quantitative Precipitation Nowcasting: A Lagrangian Pixel‑Based Approach. Atmospheric Research, 118, 418–434. doi: <a href="https://doi.org/10.1016/j.atmosres.2012.07.001" target="_blank" rel="noopener">10.1016/j.atmosres.2012.07.001</a>.</td></tr>
+            <tr><td class="col-id">132</td><td class="col-topic">Remote Sensing, Soil Moisture</td><td>Shen, X., Qin, Q., Hong, Y., Zhang, G., 2012: A matrix inversion approach of computing T‑matrix for axially symmetrical particles. Radio Science, 47 (5), RS5005. doi: <a href="https://doi.org/10.1029/2011RS004906" target="_blank" rel="noopener">10.1029/2011RS004906</a>.</td></tr>
+            <tr><td class="col-id">131</td><td class="col-topic">Hydrology</td><td>Yong, B., Ren, L‑L., Hong, Y., Gourley, J. J., Chen, X., Zhang, Y‑J., Yang, X‑L., Zhang, Z‑X., Wang, W‑G., 2012: A novel multiple flow direction algorithm for computing the topographic wetness index. Hydrology Research, 43 (1‑2), 135‑145. doi: <a href="https://doi.org/10.2166/nh.2011.115" target="_blank" rel="noopener">10.2166/nh.2011.115</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2011</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">130</td><td class="col-topic">Hydrometeorology</td><td>Nallapareddy, A., Shapiro, A., Gourley, J. J., 2011: A climatology of nocturnal warming events associated with cold‑frontal passages in Oklahoma. Journal of Applied Meteorology and Climatology, 50, 2042‑2061. doi: <a href="https://doi.org/10.1175/JAMC-D-11-020.1" target="_blank" rel="noopener">10.1175/JAMC-D-11-020.1</a>.</td></tr>
+            <tr><td class="col-id">129</td><td class="col-topic">Hydrology</td><td>Wang, J., Li, L., Zhenchun, H., Gourley, J. J., 2011: Stream guiding algorithm in deriving flow direction from DEM and location of main streams. IAHS Publication, 346, 198‑205.</td></tr>
+            <tr><td class="col-id">128</td><td class="col-topic">Hydrology, Precipitation</td><td>Kitzmiller, D., Van Cooten, S., Ding, F., Howard, K., Langston, C., Zhang, J., Moser, H., Zhang, Y., Gourley, J. J., Kim, D., Riley, D., 2011: Evolving multisensor precipitation estimation methods: Impacts on flow prediction using a distributed hydrologic model. Journal of Hydrometeorology, 12, 1414–1431. doi: <a href="https://doi.org/10.1175/JHM-D-10-05038.1" target="_blank" rel="noopener">10.1175/JHM-D-10-05038.1</a>.</td></tr>
+            <tr><td class="col-id">127</td><td class="col-topic">Precipitation verification</td><td>Zhu, M., Lakshmanan, V., Zhang, P., Hong, Y., Cheng, K., Chen, S., 2011: Spatial verification using a true metric. Atmospheric Research, 102 (4), 408‑419. doi: <a href="https://doi.org/10.1016/j.atmosres.2011.09.004" target="_blank" rel="noopener">10.1016/j.atmosres.2011.09.004</a>.</td></tr>
+            <tr><td class="col-id">126</td><td class="col-topic">Remote Sensing, Soil Moisture</td><td>Shen, X., Hong, Y., Qin, Q., Yuan, W., Chen, S., Zhao, S., Grout, T., 2011: Orientation Angle Calibration for Bare Soil Moisture Estimation Using Fully Polarimetric SAR Data. IEEE Transactions on Geoscience and Remote Sensing, 49 (12), 4987‑4996. doi: <a href="https://doi.org/10.1109/TGRS.2011.2158583" target="_blank" rel="noopener">10.1109/TGRS.2011.2158583</a>.</td></tr>
+            <tr><td class="col-id">125</td><td class="col-topic">Remote Sensing, Radar, QPE</td><td>Wen, Y., Hong, Y., Zhang, G., Schuur, T. J., Gourley, J. J., Flamig, Z., Morris, K. R., Cao, Q., 2011: Cross Validation of Spaceborne Radar and Ground Polarimetric Radar Aided by Hydrometeor Classification. Journal of Applied Meteorology and Climatology, 50 (7), 1389‑1402. doi: <a href="https://doi.org/10.1175/2011JAMC2622.1" target="_blank" rel="noopener">10.1175/2011JAMC2622.1</a>.</td></tr>
+            <tr><td class="col-id">124</td><td class="col-topic">Hydrology</td><td>Wang, J., Hong, Y., Li, L., Gourley, J. J., Khan, S. I., Yilmaz, K. K., Adler, R. F., Policelli, F. S., Habib, S., Irwin, D., Limaye, A. S., Korme, T., Okello, L., 2011: The CREST distributed hydrological model. Hydrological Sciences Journal, 56 (1), 84‑98. doi: <a href="https://doi.org/10.1080/02626667.2010.543087" target="_blank" rel="noopener">10.1080/02626667.2010.543087</a>.</td></tr>
+            <tr><td class="col-id">123</td><td class="col-topic">Storm surge</td><td>Van Cooten, S., Kelleher, K. E., Howard, K., Zhang, J., Gourley, J. J., Kain, J. S., Nemunaitis‑Monroe, K., Flamig, Z., Moser, H., Arthur, A., Langston, C., Kolar, R., Dresback, K., Tromble, E., Vergara, H., Luettich, R. A., Blanton, B., Lander, H., Galluppi, K., ... , 2011: The CI‑FLOW Project: A System for Total Water Level Prediction from the Summit to the Sea. Bulletin of the American Meteorological Society, 92 (11), 1427‑1442. doi: <a href="https://doi.org/10.1175/2011BAMS3150.1" target="_blank" rel="noopener">10.1175/2011BAMS3150.1</a>.</td></tr>
+            <tr><td class="col-id">122</td><td class="col-topic">Hydrology, Ecology</td><td>Shokouhi, A., Hong, Y., 2011: Determining Minimum Ecological Water Requirements in Perennial Rivers Using Morphological Parameters. Journal of Environmental Studies, 37 (58), 117‑128.</td></tr>
+            <tr><td class="col-id">121</td><td class="col-topic">Hydrology, Ecology</td><td>Shokoohi, A., Hong, Y., 2011: Using geometric parameters of perennial rivers to determine minimum water requirements of ecological habitats. Hydrological Processes, 25 (22), 3490‑3498. doi: <a href="https://doi.org/10.1002/hyp.8076" target="_blank" rel="noopener">10.1002/hyp.8076</a>.</td></tr>
+            <tr><td class="col-id">120</td><td class="col-topic">Remote Sensing, Evapotranspiration</td><td>Liu, W., Hong, Y., Khan, S., Huang, M., Grout, T., Adhikari, P., 2011: Evaluation of Global Daily Reference ET Using Oklahoma’s MESONET. Water Resources Management, 25 (6), 1601‑1613. doi: <a href="https://doi.org/10.1007/s11269-010-9763-0" target="_blank" rel="noopener">10.1007/s11269-010-9763-0</a>.</td></tr>
+            <tr><td class="col-id">119</td><td class="col-topic">Natural Hazards, Landslide</td><td>Liao, Z., Hong, Y., Kirschbaum, D., Adler, R., Gourley, J. J., Wooten, R., 2011: Evaluation of TRIGRS’s predictive skill for hurricane‑triggered landslides: case study in Macon County, North Carolina. Natural Hazards, 58 (1), 325‑339. doi: <a href="https://doi.org/10.1007/s11069-010-9670-y" target="_blank" rel="noopener">10.1007/s11069-010-9670-y</a>.</td></tr>
+            <tr><td class="col-id">118</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Khan, S. I., Adhikari, P., Hong, Y., Vergara, H., Adler, R. F., Policelli, F., Irwin, D., Korme, T., Okello, L., 2011: Satellite RS and Hydrologic Modeling for Flood Inundation Mapping in Lake Victoria Basin. IEEE TGRS, 49 (1), 85‑95. doi: <a href="https://doi.org/10.1109/TGRS.2010.2057513" target="_blank" rel="noopener">10.1109/TGRS.2010.2057513</a>.</td></tr>
+            <tr><td class="col-id">117</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Khan, S. I., Adhikari, P., Hong, Y., Vergara, H., Adler, R. F., Policelli, F., Irwin, D., Korme, T., Okello, L., 2011: Hydroclimatology of Lake Victoria region using hydrologic model and satellite remote sensing data. Hydrology and Earth System Sciences, 15 (1), 107‑117. doi: <a href="https://doi.org/10.5194/hess-15-107-2011" target="_blank" rel="noopener">10.5194/hess-15-107-2011</a>.</td></tr>
+            <tr><td class="col-id">116</td><td class="col-topic">Remote Sensing, Hydrology</td><td>Gourley, J. J., Hong, Y., Flamig, Z. L., Wang, J., Vergara, H., Anagnostou, E. N., 2011: Hydrologic Evaluation of Rainfall Estimates from Radar, Satellite, Gauge, and Combinations on Ft. Cobb Basin, OK. Journal of Hydrometeorology, 12 (5), 973‑988. doi: <a href="https://doi.org/10.1175/2011JHM1287.1" target="_blank" rel="noopener">10.1175/2011JHM1287.1</a>.</td></tr>
+            <tr><td class="col-id">115</td><td class="col-topic">Urbanization</td><td>Deng, J. S., Qiu, L. F., Wang, K., Hong, Y., Shi, Y. Y., 2011: Urbanization‑triggered cropland loss trajectory and implications for sustainable land management. Cities, 28 (2), 127‑137. doi: <a href="https://doi.org/10.1016/j.cities.2010.09.005" target="_blank" rel="noopener">10.1016/j.cities.2010.09.005</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2010</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">114</td><td class="col-topic">Hydrology, Precipitation</td><td>Yong, B., Ren, L.‑L., Hong, Y., Wang, J.‑H., Gourley, J. J., Jiang, S.‑H., Chen, X., Wang, W., 2010: Hydrologic evaluation of Multisatellite Precipitation Analysis standard precipitation products in basins beyond its inclined latitude band: A case study in Laohahe basin, China. Water Resources Research, 46 (7), W07542. doi: <a href="https://doi.org/10.1029/2009WR008965" target="_blank" rel="noopener">10.1029/2009WR008965</a>.</td></tr>
+            <tr><td class="col-id">113</td><td class="col-topic">Remote Sensing, Flood</td><td>Yilmaz, K. K., Adler, R. F., Tian, Y., Hong, Y., Pierce, H. F., 2010: Evaluation of a satellite‑based global flood monitoring system. International Journal of Remote Sensing, 31 (14), 3763‑3782. doi: <a href="https://doi.org/10.1080/01431161.2010.483489" target="_blank" rel="noopener">10.1080/01431161.2010.483489</a>.</td></tr>
+            <tr><td class="col-id">112</td><td class="col-topic">Climate, Hydrology</td><td>Wang, J., Hong, Y., Gourley, J., Adhikari, P., Li, L., Su, F., 2010: Quantitative assessment of climate change and human impacts on long‑term hydrologic response: a case study in a sub‑basin of the Yellow River, China. International Journal of Climatology, 30 (14), 2130‑2137. doi: <a href="https://doi.org/10.1002/joc.2023" target="_blank" rel="noopener">10.1002/joc.2023</a>.</td></tr>
+            <tr><td class="col-id">111</td><td class="col-topic">Hydrology, Remote Sensing</td><td>Tang, Q., Durand, M., Lettenmaier, D. P., Hong, Y., 2010: Satellite‑based observations of hydrological processes. International Journal of Remote Sensing, 31 (14), 3661‑3667. doi: <a href="https://doi.org/10.1080/01431161.2010.483496" target="_blank" rel="noopener">10.1080/01431161.2010.483496</a>.</td></tr>
+            <tr><td class="col-id">110</td><td class="col-topic">Remote Sensing, Evapotranspiration</td><td>Liu, W., Hong, Y., Khan, S. I., Huang, M., Vieux, B., Caliskan, S., Grout, T., 2010: Actual evapotranspiration estimation for different land use and land cover in urban regions using Landsat 5 data. Journal of Applied Remote Sensing, 4 (1), 041873. doi: <a href="https://doi.org/10.1117/1.3525566" target="_blank" rel="noopener">10.1117/1.3525566</a>.</td></tr>
+            <tr><td class="col-id">109</td><td class="col-topic">Natural Hazards, Landslide</td><td>Liao, Z., Hong, Y., Wang, J., Fukuoka, H., Sassa, K., Karnawati, D., Fathani, F., 2010: Prototyping an experimental early warning system for rainfall‑induced landslides in Indonesia using satellite remote sensing and geospatial datasets. Landslides, 7 (3), 317‑324. doi: <a href="https://doi.org/10.1007/s10346-010-0219-7" target="_blank" rel="noopener">10.1007/s10346-010-0219-7</a>.</td></tr>
+            <tr><td class="col-id">108</td><td class="col-topic">Natural Hazards, Landslide</td><td>Kirschbaum, D., Adler, R., Hong, Y., Hill, S., Lerner‑Lam, A., 2010: A global landslide catalog for hazard applications: method, results, and limitations. Natural Hazards, 52 (3), 561‑575. doi: <a href="https://doi.org/10.1007/s11069-009-9401-4" target="_blank" rel="noopener">10.1007/s11069-009-9401-4</a>.</td></tr>
+            <tr><td class="col-id">107</td><td class="col-topic">Remote Sensing, Evapotranspiration</td><td>Khan, S. I., Hong, Y., Vieux, B., Liu, W., 2010: Development evaluation of an actual evapotranspiration estimation algorithm using satellite remote sensing and meteorological network in Oklahoma. International Journal of Remote Sensing, 31 (14), 3799‑3819. doi: <a href="https://doi.org/10.1080/01431161.2010.483487" target="_blank" rel="noopener">10.1080/01431161.2010.483487</a>.</td></tr>
+            <tr><td class="col-id">106</td><td class="col-topic">Hydrology, Remote Sensing</td><td>Khan, S. I., Adhikari, P., Hong, Y., Vergara, H., Grout, T., Adler, R. F., Policelli, F., Irwin, D., Korme, T., Okello, L., 2010: Observed and simulated hydroclimatology using distributed model from in‑situ and multi‑satellite datasets in Lake Victoria region. Hydrology and Earth System Sciences Discussions, 7 (4), 4785‑4816. doi: <a href="https://doi.org/10.5194/hessd-7-4785-2010" target="_blank" rel="noopener">10.5194/hessd-7-4785-2010</a>.</td></tr>
+            <tr><td class="col-id">105</td><td class="col-topic">Remote Sensing, Radar, QPE</td><td>Gourley, J. J., Giangrande, S. E., Hong, Y., Flamig, Z. L., Schuur, T., Vrugt, J. A., 2010: Impacts of Polarimetric Radar Observations on Hydrologic Simulation. Journal of Hydrometeorology, 11 (3), 781‑796. doi: <a href="https://doi.org/10.1175/2010JHM1218.1" target="_blank" rel="noopener">10.1175/2010JHM1218.1</a>.</td></tr>
+            <tr><td class="col-id">104</td><td class="col-topic">Natural Hazards, Flood</td><td>Gourley, J. J., Erlingis, J. M., Smith, T. M., Ortega, K. L., Hong, Y., 2010: Remote collection and analysis of witness reports on flash floods. Journal of Hydrology, 394 (1–2), 53‑62. doi: <a href="https://doi.org/10.1016/j.jhydrol.2010.05.042" target="_blank" rel="noopener">10.1016/j.jhydrol.2010.05.042</a>.</td></tr>
+            <tr><td class="col-id">103</td><td class="col-topic">Natural Hazards, Flood</td><td>Adhikari, P., Hong, Y., Douglas, K., Kirschbaum, D., Gourley, J., Adler, R., Brakenridge, G. R., 2010: A digitized global flood inventory (1998–2008): compilation and preliminary results. Natural Hazards, 55 (2), 405‑422. doi: <a href="https://doi.org/10.1007/s11069-010-9537-2" target="_blank" rel="noopener">10.1007/s11069-010-9537-2</a>.</td></tr>
+            <tr><td class="col-id">102</td><td class="col-topic">Precipitation</td><td>Gourley, J. J., Hong, Y., Flamig, Z. L., Li, L., Wang, J., 2010: Intercomparison of Rainfall Estimates from Radar, Satellite, Gauge, and Combinations for a Season of Record Rainfall. Journal of Applied Meteorology and Climatology, 49 (3), 437‑452. doi: <a href="https://doi.org/10.1175/2009JAMC2302.1" target="_blank" rel="noopener">10.1175/2009JAMC2302.1</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2009</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">101</td><td class="col-topic">Remote Sensing, Radar</td><td>Gourley, J. J., Illingworth, A. J., Tabary, P., 2009: Absolute calibration of radar reflectivity using redundancy of polarization observations and constraints on drop shapes. Journal of Atmospheric and Oceanic Technology, 26, 689‑703. doi: <a href="https://doi.org/10.1175/2008JTECHA1152.1" target="_blank" rel="noopener">10.1175/2008JTECHA1152.1</a>.</td></tr>
+            <tr><td class="col-id">100</td><td class="col-topic">Remote Sensing, Radar</td><td>Tabary, P., Vulpiani, G., Gourley, J. J., Illingworth, A. J., Bousquet, O., 2009: Unusually high differential attenuation at C‑band: Results from a two‑year analysis of the French Trappes polarimetric radar. Journal of Applied Meteorology and Climatology, 48, 2037–2053. doi: <a href="https://doi.org/10.1175/2009JAMC2039.1" target="_blank" rel="noopener">10.1175/2009JAMC2039.1</a>.</td></tr>
+            <tr><td class="col-id">99</td><td class="col-topic">Natural Hazards</td><td>Ortega, K. L., Smith, T. M., Manross, K. L., Scharfenberg, K. A., Witt, A., Kolodziej, A. G., Gourley, J. J., 2009: The severe hazards analysis and verification experiment. Bulletin of the American Meteorological Society, 90, 1519‑1530. doi: <a href="https://doi.org/10.1175/2009BAMS2815.1" target="_blank" rel="noopener">10.1175/2009BAMS2815.1</a>.</td></tr>
+            <tr><td class="col-id">98</td><td class="col-topic">Hydrometeorology</td><td>Gourley, J. J., Jorgensen, D. P., Matrosov, S. Y., Flamig, Z. L., 2009: Evaluation of incremental improvements to quantitative precipitation estimates in complex terrain. Journal of Hydrometeorology, 10, 1507‑1520. doi: <a href="https://doi.org/10.1175/2009JHM1125.1" target="_blank" rel="noopener">10.1175/2009JHM1125.1</a>.</td></tr>
+            <tr><td class="col-id">97</td><td class="col-topic">Remote Sensing</td><td>Palmer, R., Biggerstaff, M., Chilson, P., Crain, J., Droegemeier, K., Hong, Y., Ryzhkov, A., Schuur, T., Torres, S., Yeary, M., Yu, T.‑Y., Zhang, G., Zhang, Y., 2009: Weather radar education at the University of Oklahoma: An integrated interdisciplinary approach. Bulletin of the American Meteorological Society, 90 (9), 1127‑1182. doi: <a href="https://doi.org/10.1175/2009BAMS2738.1" target="_blank" rel="noopener">10.1175/2009BAMS2738.1</a>.</td></tr>
+            <tr><td class="col-id">96</td><td class="col-topic">Remote Sensing</td><td>Liu, Y., Xia, J., Shi, C., Hong, Y., 2009: An improved automated cloud classification algorithm for China’s FY‑2C satellite images using ANN. Sensors, 9, 5558‑5579. doi: <a href="https://doi.org/10.3390/s90705558" target="_blank" rel="noopener">10.3390/s90705558</a>.</td></tr>
+            <tr><td class="col-id">95</td><td class="col-topic">Landslides</td><td>Ren, D., Wang, J., Fu, R., Karoly, D., Hong, Y., Leslie, L., Fu, C., Huang, G., 2009: Mudslide‑caused ecosystem degradation following Wenchuan earthquake 2008. Geophysical Research Letters, 36 (5), L05401. doi: <a href="https://doi.org/10.1029/2008GL036702" target="_blank" rel="noopener">10.1029/2008GL036702</a>.</td></tr>
+            <tr><td class="col-id">94</td><td class="col-topic">Climate</td><td>Deng, J. S., Wang, K., Hong, Y., Qi, G. J., 2009: Spatio‑temporal dynamics and evolution of land use change and landscape pattern in response to rapid urbanization. Landscape and Urban Planning, 92 (3‑4), 187‑198. doi: <a href="https://doi.org/10.1016/j.landurbplan.2009.05.001" target="_blank" rel="noopener">10.1016/j.landurbplan.2009.05.001</a>.</td></tr>
+            <tr><td class="col-id">93</td><td class="col-topic">Hydrology</td><td>Li, L., Hong, Y., Wang, J., Adler, R., Policelli, F., Habib, S., Irwn, D., Korme, T., Okello, L., 2009: Evaluation of TRMM‑based multi‑satellite precipitation analysis for an operational flood prediction system in Nzoia Basin, Africa. Natural Hazards, 50 (1), 109‑123. doi: <a href="https://doi.org/10.1007/s11069-008-9324-5" target="_blank" rel="noopener">10.1007/s11069-008-9324-5</a>.</td></tr>
+            <tr><td class="col-id">92</td><td class="col-topic">Landslides</td><td>Kirschbaum, D., Adler, R., Hong, Y., Lerner‑Lam, A., 2009: Evaluation of a preliminary satellite‑based landslide hazard algorithm using global landslide inventories. Natural Hazards and Earth System Sciences, 9 (3), 673–686. doi: <a href="https://doi.org/10.5194/nhess-9-673-2009" target="_blank" rel="noopener">10.5194/nhess-9-673-2009</a>.</td></tr>
+            <tr><td class="col-id">91</td><td class="col-topic">Hydrology</td><td>Lin, D., Huang, M., Hong, Y., 2009: Statistical Assessment of the Impact of Conservation Measures on Streamflow Responses in a Watershed of the Loess Plateau, China. Water Resources Management, 23 (10), 1935‑1949. doi: <a href="https://doi.org/10.1007/s11269-008-9361-6" target="_blank" rel="noopener">10.1007/s11269-008-9361-6</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2008</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">90</td><td class="col-topic">Remote Sensing</td><td>Lyon, S., Dominguez, F., Gochis, D., Kucera, P., Salzmann, N., Schmidli, J., Levis, S., Sealy, A., Brunsell, N., Castro, C., Chow, F., Fuka, D., Hong, Y., ... , 2008: Coupling terrestrial and atmospheric water dynamics to improve prediction in a changing environment. Bulletin of the American Meteorological Society, 89 (9), 1275‑1279. doi: <a href="https://doi.org/10.1175/2008BAMS2547.1" target="_blank" rel="noopener">10.1175/2008BAMS2547.1</a>.</td></tr>
+            <tr><td class="col-id">89</td><td class="col-topic">Landslides</td><td>Hong, Y., Adler, R. F., 2008: Predicting global landslide spatiotemporal distribution: Integrating susceptibility zoning and real‑time satellite rainfall. International Journal of Sediment Research, 23 (3), 249–257. doi: <a href="https://doi.org/10.1016/S1001-6279(08)60022-0" target="_blank" rel="noopener">10.1016/S1001-6279(08)60022-0</a>.</td></tr>
+            <tr><td class="col-id">88</td><td class="col-topic">Remote Sensing</td><td>Su, F. G., Hong, Y., Lettenmaier, D. P., 2008: Evaluation of TRMM TMPA and its utility in hydrologic prediction in La Plata Basin. Journal of Hydrometeorology, 9 (4), 622‑640. doi: <a href="https://doi.org/10.1175/2007JHM944.1" target="_blank" rel="noopener">10.1175/2007JHM944.1</a>.</td></tr>
+            <tr><td class="col-id">87</td><td class="col-topic">Hydrology</td><td>Hong, Y., Adler, R. F., 2008: Estimation of global SCS curve numbers using satellite remote sensing and geospatial data. International Journal of Remote Sensing, 29 (2), 471‑477. doi: <a href="https://doi.org/10.1080/01431160701264292" target="_blank" rel="noopener">10.1080/01431160701264292</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2007</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">86</td><td class="col-topic">Remote Sensing</td><td>Huffman, G. J., Adler, R. F., Bolvin, D. T., Gu, G., Nelkin, E. J., Bowman, K. P., Hong, Y., Stocker, E. F., Wolff, D. B., 2007: The TRMM multi‑satellite precipitation analysis: Quasi‑global, multi‑year, fine‑scale estimates. Journal of Hydrometeorology, 8 (1), 38‑55. doi: <a href="https://doi.org/10.1175/JHM560.1" target="_blank" rel="noopener">10.1175/JHM560.1</a>.</td></tr>
+            <tr><td class="col-id">85</td><td class="col-topic">Landslides</td><td>Hong, Y., Adler, R., Huffman, G., 2007: An Experimental Global Prediction System for Rainfall‑triggered Landslides using Satellite Remote Sensing and Geospatial Datasets. IEEE TGRS, 45 (6), 1671‑1680. doi: <a href="https://doi.org/10.1109/TGRS.2006.888436" target="_blank" rel="noopener">10.1109/TGRS.2006.888436</a>.</td></tr>
+            <tr><td class="col-id">84</td><td class="col-topic">Remote Sensing</td><td>Hong, Y., Adler, R., Verdin, J., 2007: Use of 21st century satellite remote sensing technology in natural hazard analysis. Natural Hazards, 43 (2), 165‑166. doi: <a href="https://doi.org/10.1007/s11069-007-9133-2" target="_blank" rel="noopener">10.1007/s11069-007-9133-2</a>.</td></tr>
+            <tr><td class="col-id">83</td><td class="col-topic">Hydrology</td><td>Hong, Y., Adler, R. F., Negri, A., Huffman, G. J., 2007: Flood and landslide applications of near real‑time satellite rainfall estimation. Natural Hazards, 43 (2), 285‑294. doi: <a href="https://doi.org/10.1007/s11069-006-9106-x" target="_blank" rel="noopener">10.1007/s11069-006-9106-x</a>.</td></tr>
+            <tr><td class="col-id">82</td><td class="col-topic">Hydrology</td><td>Hong, Y., Adler, R. F., Hossain, F., Curtis, S., Huffman, G. J., 2007: A first approach to global runoff simulation using satellite rainfall estimation. Water Resources Research, 43 (8), W08502. doi: <a href="https://doi.org/10.1029/2006WR005739" target="_blank" rel="noopener">10.1029/2006WR005739</a>.</td></tr>
+            <tr><td class="col-id">81</td><td class="col-topic">Remote Sensing</td><td>Hossain, F., Hong, Y., Wolf, A., 2007: The emerging role of satellite rainfall data in improving hydropolitical situation of flood monitoring in under‑developed regions. Natural Hazards, 43 (2), 199‑210. doi: <a href="https://doi.org/10.1007/s11069-006-9094-x" target="_blank" rel="noopener">10.1007/s11069-006-9094-x</a>.</td></tr>
+            <tr><td class="col-id">80</td><td class="col-topic">Hydrology</td><td>Yen‑Ming, C., Hsu, K.‑L., Chang, F.‑J., Hong, Y., Sorooshian, S., 2007: Merging multiple precipitation sources for flash flood forecasting. Journal of Hydrology, 340, 183‑196. doi: <a href="https://doi.org/10.1016/j.jhydrol.2007.04.007" target="_blank" rel="noopener">10.1016/j.jhydrol.2007.04.007</a>.</td></tr>
+            <tr><td class="col-id">79</td><td class="col-topic">Remote Sensing</td><td>Hong, Y., Gochis, D., Chen, J. T., Hsu, K.‑L., Sorooshian, S., 2007: Evaluation of PERSIANN‑CCS Rainfall Measurement Using the NAME gauge network. Journal of Hydrometeorology, 8 (3), 469‑482. doi: <a href="https://doi.org/10.1175/JHM574.1" target="_blank" rel="noopener">10.1175/JHM574.1</a>.</td></tr>
+            <tr><td class="col-id">78</td><td class="col-topic">Remote Sensing</td><td>Friedrich, K., Germann, U., Gourley, J., Tabary, P., 2007: Effects of radar beam shielding on rainfall estimation for polarimetric C‑band radar. Journal of Atmospheric and Oceanic Technology, 24, 1839–1859. doi: <a href="https://doi.org/10.1175/JTECH2085.1" target="_blank" rel="noopener">10.1175/JTECH2085.1</a>.</td></tr>
+            <tr><td class="col-id">77</td><td class="col-topic">Remote Sensing</td><td>Gourley, J. J., Tabary, P., Parent‑du‑Châtelet, J., 2007: A fuzzy logic algorithm for separating precipitating from non‑precipitating echoes using polarimetric radar. Journal of Atmospheric and Oceanic Technology, 24, 1439–1451. doi: <a href="https://doi.org/10.1175/JTECH2035.1" target="_blank" rel="noopener">10.1175/JTECH2035.1</a>.</td></tr>
+            <tr><td class="col-id">76</td><td class="col-topic">Remote Sensing</td><td>Gourley, J. J., Tabary, P., Parent‑du‑Châtelet, J., 2007: Empirical estimation of attenuation from differential propagation phase at C‑band. Journal of Applied Meteorology and Climatology, 46, 306–317. doi: <a href="https://doi.org/10.1175/JAM2464.1" target="_blank" rel="noopener">10.1175/JAM2464.1</a>.</td></tr>
+            <tr><td class="col-id">75</td><td class="col-topic">Remote Sensing</td><td>Curtis, S., Salahuddin, A., Adler, R. F., Huffman, G. J., Gu, G., Hong, Y., 2007: Precipitation extremes estimated by GPCP and TRMM: ENSO relationships. Journal of Hydrometeorology, 8, 678‑689. doi: <a href="https://doi.org/10.1175/JHM601.1" target="_blank" rel="noopener">10.1175/JHM601.1</a>.</td></tr>
+            <tr><td class="col-id">74</td><td class="col-topic">Landslides</td><td>Hong, Y., Adler, R. F., 2007: Towards an early‑warning system for global landslides triggered by rainfall and earthquake. International Journal of Remote Sensing, 28 (16), 3713–3719. doi: <a href="https://doi.org/10.1080/01431160701311242" target="_blank" rel="noopener">10.1080/01431160701311242</a>.</td></tr>
+            <tr><td class="col-id">73</td><td class="col-topic">Landslides</td><td>Bach, D., Adler, R. F., Hong, Y., 2007: Potential of rainfall products for use in landslide hazard assessment in the Caribbean Region. GEWEX News, 17 (3), 5‑6.</td></tr>
+            <tr><td class="col-id">72</td><td class="col-topic">Landslides</td><td>Hong, Y., Adler, R., Huffman, G. J., 2007: Satellite remote sensing for global landslide monitoring. EOS, Transactions American Geophysical Union, 88 (37), 357‑358. doi: <a href="https://doi.org/10.1029/2007EO370001" target="_blank" rel="noopener">10.1029/2007EO370001</a>.</td></tr>
+            <tr><td class="col-id">71</td><td class="col-topic">Landslides</td><td>Hong, Y., Adler, R., Huffman, G. J., Negri, A., 2007: Use of satellite remote sensing data in mapping of global shallow landslides susceptibility. Natural Hazards, 43 (2), 245‑256. doi: <a href="https://doi.org/10.1007/s11069-006-9104-z" target="_blank" rel="noopener">10.1007/s11069-006-9104-z</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2006</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">70</td><td class="col-topic">Hydrology</td><td>Hong, Y., Hsu, K.‑L., Moradkhani, H., Sorooshian, S., 2006: Uncertainty quantification of satellite precipitation estimation and Monte Carlo assessment of error propagation into hydrologic response. Water Resources Research, 42 (8), W08421. doi: <a href="https://doi.org/10.1029/2005WR004398" target="_blank" rel="noopener">10.1029/2005WR004398</a>.</td></tr>
+            <tr><td class="col-id">69</td><td class="col-topic">Remote Sensing</td><td>Hong, Y., Chiang, Y., Liu, Y., Hsu, K.‑L., Sorooshian, S., 2006: Satellite‑based precipitation estimation using watershed segmentation and GHSOM techniques. International Journal of Remote Sensing, 27 (23), 5165–5184. doi: <a href="https://doi.org/10.1080/01431160600763428" target="_blank" rel="noopener">10.1080/01431160600763428</a>.</td></tr>
+            <tr><td class="col-id">68</td><td class="col-topic">Hydrology</td><td>Moradkhani, H., Hsu, K., Hong, Y., Sorooshian, S., 2006: Impact of remotely sensed precipitation and model uncertainties on ensemble streamflow forecasting. Geophysical Research Letters, 33 (12), L12107. doi: <a href="https://doi.org/10.1029/2006GL026855" target="_blank" rel="noopener">10.1029/2006GL026855</a>.</td></tr>
+            <tr><td class="col-id">67</td><td class="col-topic">Landslides</td><td>Hong, Y., Adler, R., Huffman, G. J., 2006: Evaluation of NASA multi‑satellite precipitation analysis in global landslide hazard assessment. Geophysical Research Letters, 33, L22402. doi: <a href="https://doi.org/10.1029/2006GL028010" target="_blank" rel="noopener">10.1029/2006GL028010</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2005</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">66</td><td class="col-topic">Remote Sensing</td><td>Hong, Y., Hsu, K.‑L., Sorooshian, S., Gao, X., 2005: Self‑organizing nonlinear output (SONO): A neural network suitable for cloud‑patch‑based rainfall estimation from satellite imagery. Water Resources Research, 41, W03008. doi: <a href="https://doi.org/10.1029/2004WR003142" target="_blank" rel="noopener">10.1029/2004WR003142</a>.</td></tr>
+            <tr><td class="col-id">65</td><td class="col-topic">Remote Sensing</td><td>Hong, Y., Hsu, K.‑L., Sorooshian, S., Gao, X., 2005: Improved representation of diurnal variability of rainfall retrieved from TRMM TMI adjusted PERSIANN system. Journal of Geophysical Research: Atmospheres, 110, D06102. doi: <a href="https://doi.org/10.1029/2004JD005301" target="_blank" rel="noopener">10.1029/2004JD005301</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2004</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">64</td><td class="col-topic">Remote Sensing</td><td>Hong, Y., Hsu, K.‑L., Gao, X., Sorooshian, S., 2004: Precipitation estimation from remotely sensed imagery using Artificial Neural Network – Cloud Classification System (PERSIANN‑CCS). Journal of Applied Meteorology, 43 (12), 1834‑1853. doi: <a href="https://doi.org/10.1175/JAM2173.1" target="_blank" rel="noopener">10.1175/JAM2173.1</a>.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2002</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">63</td><td class="col-topic">Climate</td><td>Sorooshian, S., Gao, X., Hsu, K.‑L., Maddox, R. A., Hong, Y., Gupta, H. V., Imam, B., 2002: Diurnal Variability of Tropical Rainfall Retrieved from Combined GOES and TRMM Information. Journal of Climate, 15 (9), 983–1001. doi: 10.1175/1520‑0442(2002)015&lt;0983:DVOTRR&gt;2.0.CO;2.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">2000</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">62</td><td class="col-topic">Water Resources</td><td>Hong, Y., Cao, J., 2000: Integrated urban water resources assessment using Quantitative Index Approach. Journal of Shanghai Environmental Sciences, 19 (6), 269‑272.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">1999</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">61</td><td class="col-topic">Environmental Assessment</td><td>Hong, Y., Luan, S. J., 1999: Environmental impact assessment in China: Key elements and procedures. Journal of Inner Mongolia Environmental Sciences, 11 (1), 33‑37.</td></tr>
+            <tr><td class="col-id">60</td><td class="col-topic">Environmental Assessment</td><td>Hong, Y., Luan, S. J., 1999: Public participation for comprehensive environmental impact assessment in China. Journal of Chongqing Environmental Sciences, 21 (1), 27‑31.</td></tr>
+            <tr><td class="col-id">59</td><td class="col-topic">Numerical Modeling</td><td>Hong, Y., Luan, S. J., 1999: Numerical modeling of Kuznets relationship between environmental quality change and economic growth. Journal of Shanghai Environmental Sciences, 18 (3), 112‑115.</td></tr>
+            <tr><td class="col-id">58</td><td class="col-topic">Water Management</td><td>Hong, Y., 1999: China’s water management and planning: The past, the present, and the future. Journal of Environment Protection, 4, 29‑32.</td></tr>
+            <tr><td class="col-id">57</td><td class="col-topic">Water Resources</td><td>Hong, Y., Luan, S. J., 1999: Water resources demand management in 21st Century. Journal of Global Environment, 1, 21‑23.</td></tr>
+            <tr><td class="col-id">56</td><td class="col-topic">Global Environment</td><td>Hong, Y., Luan, S. J., 1999: The current state of global environment and its outlook. Journal of Global Environment, 3, 11‑21.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+
+      <div class="pub-year-toggle" onclick="toggleYear(this)">
+        <div class="pub-year-badge">1998</div>
+        <span class="pub-year-icon">▼</span>
+      </div>
+      <div class="pub-year-content">
+        <div class="pub-table-wrap">
+        <table class="pub-table">
+          <thead>
+            <tr>
+              <th class="col-id">ID</th>
+              <th class="col-topic">Topic</th>
+              <th>Citation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="col-id">55</td><td class="col-topic">Water Security</td><td>Hong, Y., Luan, S. J., 1998: China’s water security in 21st century. Journal of China Environmental Management, 4, 3‑8.</td></tr>
+            <tr><td class="col-id">54</td><td class="col-topic">Economy, Sustainable Development</td><td>Hong, Y., 1998: Transformation of the natural resource‑based economy growth to human capital‑based sustainable development. Journal of Future and Development, 2, 7‑11.</td></tr>
+            <tr><td class="col-id">53</td><td class="col-topic">Environmental Analysis</td><td>Hong, Y., Ye, W. H., 1998: Theoretical analysis of sustainable environmental carrying capacity: Calibration and application on regional environmental planning. China Population, Resources and Environment, 8 (3), 54‑59.</td></tr>
+            <tr><td class="col-id">52</td><td class="col-topic">Economical Analysis, Environmental</td><td>Hong, Y., 1998: Economical analysis of environmental change along with different consumption styles. Journal of Shanghai Environmental Sciences, 7 (11), 11‑14.</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleYear(toggle) {
+      const icon = toggle.querySelector('.pub-year-icon');
+      const content = toggle.nextElementSibling;
+      
+      icon.classList.toggle('collapsed');
+      content.classList.toggle('collapsed');
+    }
+  </script>
 
   <footer>
     <div class="container center">
