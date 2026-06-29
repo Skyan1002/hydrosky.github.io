@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The CREST Distributed Hydrological Model Family (2011–2026)</title>
+<meta name="description" content="An animated overview of the Coupled Routing and Excess STorage (CREST) distributed hydrological model family — Hydrometeorology and Remote Sensing Laboratory, University of Oklahoma.">
+<link rel="stylesheet" href="vendor/reveal.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ============ 1. TITLE ============ -->
+<section data-autoslide="14000" class="title-slide">
+  <div class="rain-bg" id="heroRain"></div>
+  <div class="hero">
+    <div class="hero-acronym">
+      <span class="hl">C</span>oupled <span class="hl">R</span>outing and <span class="hl">E</span>xcess <span class="hl">ST</span>orage
+    </div>
+    <h1>The <span class="grad">CREST</span> Model Family</h1>
+    <p class="subtitle">A remote-sensing–native distributed hydrological model &mdash; from sensor to society</p>
+    <div class="hero-meta">
+      <span>2011 &ndash; 2026</span><span class="dot">&bull;</span>
+      <span>Hydrometeorology &amp; Remote Sensing Laboratory</span><span class="dot">&bull;</span>
+      <span>University of Oklahoma</span>
+    </div>
+    <div class="hero-hint">press <kbd>&rarr;</kbd> or wait &mdash; it auto-plays &nbsp;|&nbsp; press <kbd>Esc</kbd> for overview</div>
+  </div>
+</section>
+
+<!-- ============ 2. WHAT IS CREST / I-O ============ -->
+<section data-autoslide="16000">
+  <h2 class="section-h">What is CREST?</h2>
+  <p class="lede">A <b>distributed hydrologic model</b> designed to exploit 4-D remote-sensing data &mdash; deployable at <b>global, regional, or basin</b> scale. It fully couples runoff <b>generation</b> with cell-to-cell <b>routing</b> on a regular grid, simulating water and energy fluxes and storage.</p>
+
+  <div class="io-diagram">
+    <div class="io-col io-in">
+      <div class="io-title">2 Forcings</div>
+      <div class="io-chip"><span class="ic">&#127783;</span> Precipitation</div>
+      <div class="io-chip"><span class="ic">&#9728;</span> Potential ET</div>
+    </div>
+
+    <div class="io-arrow">&#10230;</div>
+
+    <div class="io-engine">
+      <div class="engine-grid">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="engine-label">CREST<br><small>17 parameters &middot; 3 soil layers</small></div>
+    </div>
+
+    <div class="io-arrow">&#10230;</div>
+
+    <div class="io-col io-out">
+      <div class="io-title">9 Outputs</div>
+      <div class="io-chip">Streamflow</div>
+      <div class="io-chip">Soil moisture</div>
+      <div class="io-chip">Surface runoff</div>
+      <div class="io-chip">Unit streamflow</div>
+      <div class="io-chip out-more">+ ET, storage, &hellip;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. MODEL SCHEMATIC (recreated) ============ -->
+<section data-autoslide="20000">
+  <h2 class="section-h">Inside the model: coupled runoff &amp; routing</h2>
+  <div class="schematic-wrap">
+    <svg viewBox="0 0 1000 632" class="schematic" xmlns="http://www.w3.org/2000/svg" aria-label="CREST model schematic">
+      <defs>
+        <linearGradient id="soil1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a5b3a"/><stop offset="1" stop-color="#5e442a"/></linearGradient>
+        <linearGradient id="soil2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5e442a"/><stop offset="1" stop-color="#4a3621"/></linearGradient>
+        <linearGradient id="soil3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3621"/><stop offset="1" stop-color="#382819"/></linearGradient>
+        <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ab0ff"/><stop offset="1" stop-color="#2a7fd6"/></linearGradient>
+        <marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#1773d1"/></marker>
+        <marker id="arrG" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#c77f00"/></marker>
+        <marker id="flow" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L6,3 L0,6 Z" fill="#0b66c2"/></marker>
+      </defs>
+
+      <!-- sky -->
+      <rect x="0" y="0" width="1000" height="150" fill="rgba(54,197,240,.05)"/>
+
+      <!-- clouds + rain -->
+      <g class="rainfall">
+        <ellipse cx="250" cy="55" rx="80" ry="26" fill="#9fbedd" opacity=".95"/>
+        <ellipse cx="200" cy="62" rx="46" ry="20" fill="#b3cde6" opacity=".9"/>
+        <ellipse cx="310" cy="64" rx="44" ry="18" fill="#b3cde6" opacity=".9"/>
+        <g stroke="#5ab0ff" stroke-width="3" stroke-linecap="round" class="rain-lines">
+          <line x1="190" y1="90" x2="184" y2="120"/><line x1="225" y1="90" x2="219" y2="120"/>
+          <line x1="260" y1="90" x2="254" y2="120"/><line x1="295" y1="90" x2="289" y2="120"/>
+          <line x1="320" y1="90" x2="314" y2="120"/>
+        </g>
+      </g>
+      <text x="250" y="20" class="lab" text-anchor="middle">Precipitation</text>
+
+      <!-- PET / ET arrow up -->
+      <line x1="560" y1="170" x2="560" y2="40" stroke="#c77f00" stroke-width="4" marker-end="url(#arrG)" stroke-dasharray="8 6" class="et-flow"/>
+      <circle cx="660" cy="70" r="26" fill="#f2a93b" opacity=".95"/>
+      <g stroke="#e0930f" stroke-width="3" stroke-linecap="round">
+        <line x1="660" y1="28" x2="660" y2="40"/><line x1="660" y1="100" x2="660" y2="112"/>
+        <line x1="618" y1="70" x2="630" y2="70"/><line x1="690" y1="70" x2="702" y2="70"/>
+      </g>
+      <text x="560" y="150" class="lab" text-anchor="middle" fill="#a96b00">Evapotranspiration</text>
+
+      <!-- ground surface -->
+      <rect x="120" y="150" width="760" height="14" fill="#3a4a5a"/>
+
+      <!-- Sub-grid variable soil-moisture-capacity curve (the CREST core) -->
+      <g transform="translate(150,185)">
+        <rect x="0" y="0" width="230" height="150" rx="8" fill="rgba(15,125,107,.07)" stroke="#0f7d6b" stroke-width="1.5"/>
+        <text x="115" y="-10" class="lab" text-anchor="middle">Variable Infiltration Curve</text>
+        <!-- axes -->
+        <line x1="22" y1="130" x2="214" y2="130" stroke="#7f93a6" stroke-width="1.5"/>
+        <line x1="22" y1="130" x2="22" y2="14" stroke="#7f93a6" stroke-width="1.5"/>
+        <!-- maximum infiltration capacity i_m -->
+        <line x1="22" y1="18" x2="212" y2="18" stroke="#9fb0bd" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="215" y="21" class="tiny" text-anchor="start">i&#8344;</text>
+        <!-- saturated fraction (generates runoff) -->
+        <path class="sat-fill" d="M22,130 L41,101 L60,80 L79,62 L98,49 L98,130 Z" fill="url(#water)" opacity=".55"/>
+        <!-- current level i0 and saturated fraction A_s -->
+        <line x1="22" y1="49" x2="98" y2="49" stroke="#c2562f" stroke-width="1.3" stroke-dasharray="4 3"/>
+        <line x1="98" y1="130" x2="98" y2="49" stroke="#c2562f" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <!-- VIC curve: i = i_m[1-(1-A)^b] -->
+        <path d="M22,130 L41,101 L60,80 L79,62 L98,49 L117,34 L136,27 L155,23 L174,20 L193,19 L212,18" fill="none" stroke="#0f7d6b" stroke-width="3"/>
+        <text x="55" y="98" class="vic-r" text-anchor="middle">runoff</text>
+        <text x="152" y="60" class="vic-eq" text-anchor="middle">i = i&#8344;[1&minus;(1&minus;A)&#7495;]</text>
+        <text x="120" y="147" class="tiny" text-anchor="middle">fractional area A</text>
+        <text transform="translate(11,74) rotate(-90)" class="tiny" text-anchor="middle">infiltration capacity</text>
+      </g>
+
+      <!-- excess -> surface runoff -->
+      <path d="M380,235 C440,235 470,250 520,260" fill="none" stroke="#1773d1" stroke-width="4" marker-end="url(#arr)" class="flow-path"/>
+      <text x="455" y="232" class="tiny" fill="#1773d1" text-anchor="middle">overland flow</text>
+
+      <!-- three soil layers stack -->
+      <g transform="translate(560,185)">
+        <text x="160" y="-10" class="lab" text-anchor="middle">Three-layer soil column</text>
+        <rect x="0" y="0"  width="320" height="44" fill="url(#soil1)" stroke="#222" /><text x="10" y="28" class="layer">Layer 1 &mdash; upper soil</text>
+        <rect x="0" y="44" width="320" height="46" fill="url(#soil2)" stroke="#222"/><text x="10" y="74" class="layer">Layer 2 &mdash; middle soil</text>
+        <rect x="0" y="90" width="320" height="60" fill="url(#soil3)" stroke="#222"/><text x="10" y="125" class="layer">Layer 3 &mdash; lower soil</text>
+        <!-- water filling each layer -->
+        <rect class="fill1" x="0" y="0"  width="320" height="44" fill="url(#water)" opacity=".5"/>
+        <rect class="fill2" x="0" y="44" width="320" height="46" fill="url(#water)" opacity=".4"/>
+        <!-- interflow arrow -->
+        <path d="M0,116 C-30,116 -40,150 -10,175" fill="none" stroke="#0d9488" stroke-width="4" marker-end="url(#arr)"/>
+        <text x="-60" y="150" class="tiny" fill="#0d9488" text-anchor="middle">interflow</text>
+      </g>
+
+      <!-- cell-to-cell routing on an elevation grid (built by app.js) -->
+      <g transform="translate(120,372)">
+        <text x="0" y="12" class="lab">Cell-to-cell flow routing &mdash; water follows elevation (high &#8594; low)</text>
+        <g class="routing-grid"></g>
+        <!-- outlet hydrograph -->
+        <g transform="translate(560,46)">
+          <rect x="0" y="10" width="120" height="110" rx="8" fill="rgba(23,115,209,.05)" stroke="#1773d1" stroke-width="1.5"/>
+          <path class="hydro" d="M10,110 L30,108 L48,70 L62,40 L80,72 L100,98 L110,108" fill="none" stroke="#0d9488" stroke-width="3"/>
+          <text x="60" y="135" class="tiny" text-anchor="middle">streamflow at outlet</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <p class="caption">Runoff generation (variable infiltration + 3 soil layers) is <b>fully coupled</b> with cell-to-cell routing — the defining idea of CREST since v1.0 (Wang &amp; Hong et&nbsp;al., 2011).</p>
+</section>
+
+<!-- ============ 3b. GLOBAL REACH (world choropleth, recreated) ============ -->
+<section data-autoslide="20000" class="worldmap-slide">
+  <h2 class="section-h">Global reach &mdash; CREST publications by country</h2>
+  <div class="worldmap-wrap">
+    <svg class="worldmap" id="worldmap" viewBox="0 0 1000 470" xmlns="http://www.w3.org/2000/svg" aria-label="world map of CREST publications by country"></svg>
+  </div>
+  <p class="caption">Recreated from the lab&rsquo;s &ldquo;global users, publications &amp; citations&rdquo; map (2011&ndash;2021): <b>100+ publications</b> and <b>5,072 citations</b> across <b>30+ countries</b> &mdash; led by the USA &amp; China, with strong East-African (Kenya, Uganda, Ethiopia) and Latin-American (Peru, Colombia, Brazil) engagement, supported by <b>30+ workshops</b> training <b>1,000+</b> people.</p>
+</section>
+
+<!-- ============ 4. IMPACT COUNTERS ============ -->
+<section data-autoslide="13000" class="impact-slide">
+  <h2 class="section-h">Global impact</h2>
+  <div class="counters">
+    <div class="counter"><div class="num" data-target="5072">0</div><div class="lbl">citations<br><small>2011&ndash;2021</small></div></div>
+    <div class="counter"><div class="num" data-target="100" data-suffix="+">0</div><div class="lbl">publications</div></div>
+    <div class="counter"><div class="num" data-target="30" data-suffix="+">0</div><div class="lbl">training<br>workshops</div></div>
+    <div class="counter"><div class="num" data-target="1000" data-suffix="+">0</div><div class="lbl">trainees</div></div>
+    <div class="counter"><div class="num" data-target="15">0</div><div class="lbl">years of<br>development</div></div>
+    <div class="counter"><div class="num" data-target="6">0</div><div class="lbl">continents<br>deployed</div></div>
+  </div>
+  <p class="caption">An open, remote-sensing–native framework adopted by researchers, hazard-warning agencies, and operational services worldwide.</p>
+</section>
+
+<!-- ============ 5. FAMILY TREE (grows over time) ============ -->
+<section data-autoslide="28000" class="famtree-slide">
+  <h2 class="section-h">The CREST model family tree</h2>
+  <div class="famtree-wrap">
+    <svg class="famtree" id="famtree" viewBox="0 0 1340 920" xmlns="http://www.w3.org/2000/svg" aria-label="CREST model family tree growing over time"></svg>
+    <button class="ft-replay" id="ftReplay" title="Replay the growth animation">&#8635; replay</button>
+  </div>
+  <p class="caption">Adapted from the original &ldquo;Model Development of the CREST family&rdquo; chart &mdash; the core CREST line (centre) sprouts upward (hazard coupling, 2-D hydraulics, AI) and downward (snow, vector routing, EF5, groundwater) branches as each year arrives. <i>Scroll / drag within the frame to pan the full chart.</i></p>
+</section>
+
+<!-- ============ 5b. MILESTONES & KEY PUBLICATIONS ============ -->
+<section data-autoslide="26000" class="ms-slide">
+  <h2 class="section-h">Milestones &amp; key publications</h2>
+  <p class="ms-hint">Click a milestone to see a key figure &mdash; then click the figure to open the paper <span>&#8599;</span></p>
+  <div class="ms-scroll">
+    <div class="ms-grid">
+      <div class="ms-card" data-doi="https://doi.org/10.1029/2006WR005739" data-fig="figs/ms_hong2007.png" data-cap="First satellite-driven global runoff simulation &mdash; Hong et al., Water Resour. Res. (2007)">
+        <span class="ms-year">2007</span><div class="ms-body"><b>Global satellite runoff</b><p>First satellite-driven global runoff simulation framework</p><span class="ms-cite">Hong et al. &middot; Water Resour. Res.</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1007/s11069-006-9106-x" data-fig="figs/ms_hong2006.png" data-cap="Near-real-time satellite flood &amp; landslide applications &mdash; Hong, Adler, Negri &amp; Huffman, Natural Hazards (2007)">
+        <span class="ms-year">2007</span><div class="ms-body"><b>Satellite flood &amp; landslide</b><p>Near-real-time satellite rainfall for global flood &amp; landslide hazard</p><span class="ms-cite">Hong, Adler, Negri &amp; Huffman &middot; Nat. Hazards</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1080/02626667.2010.543087" data-fig="figs/ms_v10.png" data-cap="Core CREST structure: runoff generation, variable infiltration curve &amp; cell routing &mdash; Wang, Hong et al., HSJ (2011)">
+        <span class="ms-year">2011</span><div class="ms-body"><b>CREST v1.0</b><p>Coupled routing + excess storage; sub-grid soil-moisture variability</p><span class="ms-cite">Wang, Hong et al. &middot; Hydrol. Sci. J.</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1016/j.jhydrol.2013.06.042" data-fig="figs/ms_v20.jpeg" data-cap="CREST v2.0 modular architecture &amp; processes &mdash; Xue et al., J. Hydrology (2013)">
+        <span class="ms-year">2013</span><div class="ms-body"><b>CREST v2.0</b><p>Distributed parameters, SCE-UA auto-calibration, parallel computing</p><span class="ms-cite">Xue et al. &middot; J. Hydrology</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.5194/hess-20-5035-2016" data-fig="figs/ms_icreslide.png" data-cap="Coupled flood&ndash;landslide forecasting (iCRESLIDE) &mdash; Albert Pike case &mdash; He et al. 2016; Zhang et al., HESS (2016)">
+        <span class="ms-year">2016</span><div class="ms-body"><b>iCRESLIDE / iCRESTRIGRS</b><p>Cascading flood&ndash;landslide hazard forecasting (CREST + SLIDE)</p><span class="ms-cite">He et al. 2016; Zhang et al. &middot; HESS</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1061/(ASCE)HE.1943-5584.0001442">
+        <span class="ms-year">2017</span><div class="ms-body"><b>CREST v2.1</b><p>Refined distributed linear-reservoir routing scheme</p><span class="ms-cite">Shen et al. &middot; J. Hydrol. Eng. &#8599;</span></div></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1175/BAMS-D-15-00247.1" data-fig="figs/ms_ef5.png" data-cap="EF5 / FLASH operational flash-flood system &mdash; Gourley et al., BAMS (2017)">
+        <span class="ms-year">2017</span><div class="ms-body"><b>EF5 / FLASH</b><p>Operational ensemble flash-flood system for the U.S. (NOAA/NSSL)</p><span class="ms-cite">Gourley et al. &middot; BAMS</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1175/JHM-D-20-0218.1" data-fig="figs/ms_imap.png" data-cap="CREST-iMAP flood inundation mapping for Hurricane Harvey, Harris County &mdash; Chen et al., J. Hydrometeorol. (2021)">
+        <span class="ms-year">2021</span><div class="ms-body"><b>CREST-iMAP v1.0</b><p>Fully coupled hydrologic&ndash;hydraulic 2-D inundation mapping</p><span class="ms-cite">Chen et al. &middot; J. Hydrometeorol.</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.5194/gmd-15-6181-2022" data-fig="figs/ms_vec.jpeg" data-cap="CREST-VEC vector-based routing across scales &mdash; Li et al., Geosci. Model Dev. (2022)">
+        <span class="ms-year">2022</span><div class="ms-body"><b>CREST-VEC</b><p>Vector-based routing (MizuRoute) + lake module; continental scale</p><span class="ms-cite">Li et al. &middot; Geosci. Model Dev.</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.1016/j.jhydrol.2023.130333" data-fig="figs/ms_v30.png" data-cap="CREST v3.0 CONUS-wide calibration &amp; validation &mdash; Chen et al., J. Hydrology (2023)">
+        <span class="ms-year">2023</span><div class="ms-body"><b>CREST v3.0</b><p>Groundwater module; CONUS-wide calibration &amp; validation</p><span class="ms-cite">Chen et al. &middot; J. Hydrology</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://doi.org/10.48550/ARXIV.2508.02936" data-fig="figs/ms_ai.png" data-cap="AQUAH &mdash; an LLM agent for hydrologic modeling &mdash; Yan et al., arXiv (2025)">
+        <span class="ms-year">2025</span><div class="ms-body"><b>CREST-AI (AQUAH)</b><p>LLM agent to operate &amp; auto-calibrate CREST in plain language</p><span class="ms-cite">Yan et al. &middot; arXiv</span></div><span class="ms-fig-badge">&#128202;</span></div>
+      <div class="ms-card" data-doi="https://hydro.ou.edu">
+        <span class="ms-year">2025</span><div class="ms-body"><b>CREST v4.x</b><p>Lake module + elevation-based temperature resampling</p><span class="ms-cite">HyDROS Lab &middot; hydro.ou.edu &#8599;</span></div></div>
+    </div>
+  </div>
+  <div class="ms-balloon" id="msBalloon" hidden>
+    <div class="ms-balloon-inner" id="msBalloonInner">
+      <button class="ms-balloon-x" id="msBalloonX" aria-label="close">&times;</button>
+      <img id="msBalloonImg" src="" alt="publication figure">
+      <div class="ms-balloon-cap" id="msBalloonCap"></div>
+      <div class="ms-balloon-hint">click the figure to open the paper &#8599;</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. APPLICATIONS ============ -->
+<section data-autoslide="18000">
+  <h2 class="section-h">One core, many applications</h2>
+  <div class="app-grid">
+    <div class="app-card"><div class="app-ic flood">&#127754;</div><b>EF5 / FLASH</b><p>Operational flash-flood early warning for the U.S. National Weather Service (NOAA/NSSL).</p><span class="cite">Gourley et al. 2017 &middot; Flamig et al. 2020</span></div>
+    <div class="app-card"><div class="app-ic slide">&#9968;</div><b>iCRESLIDE / iCRESTRIGRS</b><p>Cascading flood-and-landslide hazard forecasting (CREST + SLIDE slope stability).</p><span class="cite">He et al. 2016 &middot; Zhang et al. 2016</span></div>
+    <div class="app-card"><div class="app-ic map">&#128506;</div><b>CREST-iMAP</b><p>Fully coupled hydrologic–hydraulic 2-D inundation mapping &amp; prediction.</p><span class="cite">Li et al. 2021 &middot; Chen et al. 2021/2022</span></div>
+    <div class="app-card"><div class="app-ic vec">&#127760;</div><b>CREST-VEC</b><p>Vector routing + lakes for efficient continental-to-global simulation.</p><span class="cite">Li et al. 2022, GMD</span></div>
+    <div class="app-card"><div class="app-ic conus">&#128167;</div><b>CREST v3.0</b><p>Groundwater module with CONUS-wide calibration &amp; validation.</p><span class="cite">Chen et al. 2023, J. Hydrol.</span></div>
+    <div class="app-card"><div class="app-ic ai">&#129302;</div><b>CREST-AI (AQUAH)</b><p>LLM agent — operate &amp; auto-calibrate CREST in plain language.</p><span class="cite">Yan et al. 2025/2026</span></div>
+  </div>
+</section>
+
+<!-- ============ 8. FUTURE ============ -->
+<section data-autoslide="15000">
+  <h2 class="section-h">Future opportunities</h2>
+  <div class="future-grid">
+    <div class="f-card"><span class="f-ic">&#129518;</span><b>Data fusion</b><p>Real-time coupling of physical models with multi-source observations.</p></div>
+    <div class="f-card"><span class="f-ic">&#129504;</span><b>Physics-informed AI</b><p>Explainable, physics-constrained ML hydrology &amp; the CREST-AI agent.</p></div>
+    <div class="f-card"><span class="f-ic">&#128205;</span><b>Ungauged basins</b><p>Robust prediction where no streamflow records exist.</p></div>
+    <div class="f-card"><span class="f-ic">&#127783;</span><b>Probabilistic warnings</b><p>Ensemble, uncertainty-aware flood forecasts.</p></div>
+    <div class="f-card"><span class="f-ic">&#127786;</span><b>WRF + CREST coupling</b><p>Seamless atmosphere-to-streamflow prediction.</p></div>
+    <div class="f-card"><span class="f-ic">&#128202;</span><b>Open benchmark</b><p>Community datasets &amp; reproducible evaluation.</p></div>
+  </div>
+</section>
+
+<!-- ============ 9. CLOSING ============ -->
+<section data-autoslide="20000" class="closing">
+  <div class="rain-bg" id="closeRain"></div>
+  <h1 class="grad">Thank you</h1>
+  <p class="subtitle">HyDROS Lab &mdash; Hydrometeorology &amp; Remote Sensing Laboratory</p>
+  <div class="contact">
+    <div>&#9993; <a href="mailto:hydros@ou.edu">hydros@ou.edu</a></div>
+    <div>&#127760; <a href="https://hydro.ou.edu">hydro.ou.edu</a></div>
+    <div>&#128205; National Weather Center, 120 David L. Boren Blvd, Suite 4610, Norman, OK 73072</div>
+  </div>
+  <details class="refs">
+    <summary>Selected key references</summary>
+    <ol>
+      <li>Wang, Hong et al. (2011). The Coupled Routing and Excess Storage (CREST) distributed hydrological model. <i>Hydrological Sciences Journal</i> 56, 84&ndash;98.</li>
+      <li>Xue et al. (2013). TRMM-based evaluation over the Wangchu Basin (CREST v2.0). <i>J. Hydrology</i> 499, 91&ndash;99.</li>
+      <li>Shen et al. (2017). Refining a distributed linear-reservoir routing method for CREST (v2.1). <i>J. Hydrol. Eng.</i> 22.</li>
+      <li>He et al. (2016) / Zhang et al. (2016). Coupled flood&ndash;landslide forecasting (iCRESLIDE / iCRESTRIGRS). <i>J. Hydrology</i> / <i>HESS</i>.</li>
+      <li>Gourley et al. (2017). The FLASH Project (EF5). <i>BAMS</i> 98, 361&ndash;372.</li>
+      <li>Li et al. (2021). CREST-iMAP v1.0. <i>Environ. Modelling &amp; Software</i> 141, 105051.</li>
+      <li>Li et al. (2022). CREST-VEC. <i>Geosci. Model Dev.</i> 15, 6181&ndash;6196.</li>
+      <li>Chen et al. (2023). CONUS-wide calibration for CREST v3.0. <i>J. Hydrology</i> 626, 130333.</li>
+      <li>Yan et al. (2025). AQUAH: Automatic Quantification and Unified Agent in Hydrology. <i>arXiv:2508.02936</i>.</li>
+    </ol>
+  </details>
+</section>
+
+</div>
+</div>
+
+<script src="vendor/world-geo.js"></script>
+<script src="vendor/reveal.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

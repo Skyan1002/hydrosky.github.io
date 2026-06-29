@@ -19,30 +19,30 @@
 
   <style>
     :root{
-      --bg:#050816;
-      --panel:rgba(255,255,255,0.08);
-      --border:rgba(255,255,255,0.12);
-      --txt:#e6f4ff;
-      --muted:#a9c0d6;
-      --accent1:#22d3ee; /* cyan */
-      --accent2:#7c3aed; /* violet */
-      --accent3:#0ea5e9; /* sky */
+      --bg:#f3f1ea;
+      --panel:#ffffff;
+      --border:rgba(36,48,56,0.14);
+      --txt:#243038;
+      --muted:#5f6e74;
+      --accent1:#0f7d6b; /* teal */
+      --accent2:#c2562f; /* terracotta */
+      --accent3:#c79633; /* gold */
       --shine:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3));
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
+    html,body{margin:0;padding:0;background:linear-gradient(160deg,#f7f4ee,#efe8dc 55%,#e6dac8) fixed;color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
 
     /* ======= Fancy animated background ======= */
-    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(60px);opacity:.5}
-    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:screen}
-    .b1{width:40vmax;height:40vmax;background:#0ea5e9;left:8%;top:5%;animation:float 10s ease-in-out infinite}
-    .b2{width:45vmax;height:45vmax;background:#7c3aed;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
-    .b3{width:35vmax;height:35vmax;background:#22d3ee;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
+    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(70px);opacity:.20}
+    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:multiply}
+    .b1{width:40vmax;height:40vmax;background:#0f7d6b;left:8%;top:5%;animation:float 10s ease-in-out infinite}
+    .b2{width:45vmax;height:45vmax;background:#c2562f;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
+    .b3{width:35vmax;height:35vmax;background:#c79633;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
     @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-4%) scale(1.03)}100%{transform:translateY(0)}}
 
     /* ======= Layout ======= */
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;background:rgba(5,8,22,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    header{position:sticky;top:0;background:rgba(247,244,238,.80);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
     nav{display:flex;align-items:center;justify-content:space-between;height:80px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
     .logo{width:36px;height:36px;border-radius:10px;background:var(--shine);border:1px solid var(--border);box-shadow:0 10px 30px rgba(34,211,238,.2)}
@@ -88,8 +88,8 @@
     .alumni-name{font-weight:600;color:var(--txt)}
     .alumni-affil{color:var(--muted);font-size:13px;margin-left:8px}
 
-    footer{padding:36px 0;color:#b8c9da}
-    footer a{color:#cfe7ff;text-decoration:none}
+    footer{padding:36px 0;color:#5f6e74}
+    footer a{color:#0f7d6b;text-decoration:none}
 
     /* Utilities */
     .row{display:flex;gap:14px;flex-wrap:wrap}
@@ -147,6 +147,7 @@
             <a href="photos.html" class="nav-external">Photos</a>
             <a href="research.html" class="nav-external">Research</a>
             <a href="publication.html" class="nav-external">Publication</a>
+            <a href="crest/index.html" class="nav-external">CREST Model</a>
           </div>
         </div>
       </nav>
