@@ -156,6 +156,26 @@
     .embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
     @media (max-width:640px){ .embed-frame{aspect-ratio:4/3} }
     .card-ic{font-size:26px;width:52px;height:52px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(15,125,107,.10);margin-bottom:8px}
+
+    /* ===== News (OpenAI-style: 4 featured + 6 grid) ===== */
+    #news .sub a{color:var(--accent1);text-decoration:none;font-weight:600}
+    .news-featured{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:18px}
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .news-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--panel);box-shadow:0 6px 20px rgba(45,60,55,.08);transition:transform .15s,box-shadow .15s}
+    .news-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(45,60,55,.16)}
+    .news-media{aspect-ratio:16/10;overflow:hidden;background:#e9e2d5}
+    .news-media img{width:100%;height:100%;object-fit:cover;display:block}
+    .news-media.tile{display:flex;align-items:center;justify-content:center;font-size:46px}
+    .news-media.t1{background:linear-gradient(135deg,#0f7d6b,#0b5f52)}
+    .news-media.t2{background:linear-gradient(135deg,#c2562f,#96401f)}
+    .news-media.t3{background:linear-gradient(135deg,#c79633,#a2761f)}
+    .news-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+    .news-tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent1);background:rgba(15,125,107,.1);padding:3px 8px;border-radius:6px}
+    .news-card h3{margin:0;font-size:15px;line-height:1.32}
+    .news-featured .news-card h3{font-size:16px}
+    .news-date{font-size:12px;color:var(--muted);margin-top:auto;padding-top:4px}
+    @media (max-width:1000px){ .news-featured{grid-template-columns:repeat(2,1fr)} .news-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){ .news-featured,.news-grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -180,6 +200,7 @@
           <div class="nav-row">
             <a href="index.html">Home</a>
             <a href="#history">History</a>
+            <a href="#news">News</a>
             <a href="#solutions">Solutions</a>
             <a href="#tech">Technology</a>
             <a href="#cases">Case Studies</a>
@@ -204,7 +225,7 @@
   <section class="hero crest-hero">
     <div class="container hero-center">
       <span class="kicker">Remote‑sensing–native distributed hydrology</span>
-      <h1 class="crest-title"><span>CREST-AI</span></h1>
+      <h1 class="crest-title"><span>CREST-AI</span></h1>
 
       <!-- DEMO placeholder (first, center) -->
       <div class="demo-card">
@@ -325,6 +346,60 @@
             <p>HUC8 contribution tree reveals upstream drivers of compound events and flash‑to‑flood transition windows.</p>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news">
+    <div class="container">
+      <h2>News</h2>
+      <p class="sub">Highlights from the HyDROS Lab. <a href="https://www.ou.edu/coe/labs/hydros/news" target="_blank" rel="noopener">See all news ↗</a></p>
+
+      <div class="news-featured">
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/hydros-announces-aquah" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/aquah.png" alt="AQUAH AI agent" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">AI · AQUAH</span><h3>HyDROS announces AQUAH: AI agents for hydrologic modeling</h3><span class="news-date">Oct 24, 2025</span></div>
+        </a>
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-named-george-lynn-cross-professorship" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/hong_cross.jpg" alt="Yang Hong" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Award</span><h3>Yang Hong named George Lynn Cross Distinguished Professor</h3><span class="news-date">Apr 17, 2026</span></div>
+        </a>
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-featured-ieee-grssp-member-spotlight" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/hong.png" alt="Yang Hong" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Recognition</span><h3>Yang Hong featured in the IEEE GRSS Professional Member Spotlight</h3><span class="news-date">May 19, 2026</span></div>
+        </a>
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/jonathan-gourley-inducted-into-CEES-science-academy" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/gourley.jpg" alt="JJ Gourley" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Award</span><h3>JJ Gourley inducted into OU CEES Science Academy</h3><span class="news-date">May 12, 2026</span></div>
+        </a>
+      </div>
+
+      <div class="news-grid">
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/abbey-snooks-selected-as-ureca-fellow" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/snooks.jpg" alt="Abbey Snooks" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Students</span><h3>Abbey Snooks selected as a 2026 Provost’s UReCA Summer Fellow</h3><span class="news-date">Apr 24, 2026</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/ou-news-highlights-hydros-study-geostationary-satellite" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/satellite.jpg" alt="Geostationary satellite view of Earth" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Research</span><h3>OU News highlights HyDROS study on geostationary-satellite precipitation estimation</h3><span class="news-date">Apr 24, 2026</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-among-top-ranked" target="_blank" rel="noopener">
+          <div class="news-media tile t3">🏅</div>
+          <div class="news-body"><span class="news-tag">Recognition</span><h3>Yang Hong among the top-ranked scientists globally in hydrology</h3><span class="news-date">Feb 6, 2026</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-2024-top-cited" target="_blank" rel="noopener">
+          <div class="news-media tile t1">📈</div>
+          <div class="news-body"><span class="news-tag">Recognition</span><h3>Prof. Yang Hong included in the 2024 Top-Cited Global Researcher list</h3><span class="news-date">Dec 1, 2025</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/congratulations-wen-and-li" target="_blank" rel="noopener">
+          <div class="news-media tile t2">🎓</div>
+          <div class="news-body"><span class="news-tag">Alumni</span><h3>Congratulations to alumni Dr. Yixin Wen and Dr. Zhi “Allen” Li</h3><span class="news-date">Oct 24, 2025</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/new-research-suggests-flashier-floods-in-the-continental-united-states" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/floods.jpg" alt="US flood map" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Research</span><h3>New research suggests “flashier” floods in the continental U.S.</h3><span class="news-date">Jun 6, 2022</span></div>
+        </a>
       </div>
     </div>
   </section>
