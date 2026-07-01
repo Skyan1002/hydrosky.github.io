@@ -87,7 +87,8 @@
     .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
     .case{border-radius:8px;border:1px solid var(--border);overflow:hidden;background:#fff;box-shadow:0 6px 20px rgba(45,60,55,.08)}
     .case .top{height:180px;background:conic-gradient(from 180deg, var(--accent2), var(--accent3), var(--accent1));filter:saturate(130%);position:relative}
-    .case .top:after{content:'';position:absolute;inset:0;background:radial-gradient(400px 120px at 70% 30%,rgba(255,255,255,.25),transparent 60%)}
+    .case .top:after{content:'';position:absolute;inset:0;background:radial-gradient(400px 120px at 70% 30%,rgba(255,255,255,.25),transparent 60%);pointer-events:none}
+    .case .top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
     .case .body{padding:18px}
     .case h4{margin:0}
     .case p{color:var(--muted)}
@@ -324,28 +325,21 @@
   <section id="cases">
     <div class="container">
       <h2>Case Studies</h2>
-      <p class="sub">Illustrative results. Replace with your own projects and images when ready.</p>
+      <p class="sub">CREST in action on recent high‑impact flood events.</p>
 
       <div class="cases">
         <article class="case reveal">
-          <div class="top"></div>
+          <div class="top"><img src="cases/img/texas2025.png" alt="2025 Texas flash flood — CREST hydrograph and high-water-mark map" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
-            <h4>Texas Hill Country Flood</h4>
-            <p>Displacement‑corrected rainfall improved peak timing by 6–8 hours and RMSE by 23% across 4 gauges.</p>
+            <h4>2025 Texas Flash Flood</h4>
+            <p>CREST reproduced the observed USGS discharge hydrograph for the July 2025 Texas flash flood and mapped peak water depths against 101 high‑water marks across the basin.</p>
           </div>
         </article>
         <article class="case reveal">
-          <div class="top" style="filter:hue-rotate(50deg)"></div>
+          <div class="top"><img src="cases/img/harvey2017.gif" alt="2017 Hurricane Harvey flooding (Google Earth)" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
-            <h4>Altiplano Drought Assessment</h4>
-            <p>Combined snowmelt diagnostics and runoff thresholds to quantify reservoir drawdown risks under El Niño.</p>
-          </div>
-        </article>
-        <article class="case reveal">
-          <div class="top" style="filter:hue-rotate(100deg)"></div>
-          <div class="body">
-            <h4>Mississippi Basin Extremes</h4>
-            <p>HUC8 contribution tree reveals upstream drivers of compound events and flash‑to‑flood transition windows.</p>
+            <h4>2017 Hurricane Harvey</h4>
+            <p>CREST‑iMAP mapped the catastrophic flood inundation across the Houston area during Hurricane Harvey — shown here against Google Earth imagery of the inundated corridor.</p>
           </div>
         </article>
       </div>
