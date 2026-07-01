@@ -169,6 +169,8 @@
     .news-media.t1{background:linear-gradient(135deg,#0f7d6b,#0b5f52)}
     .news-media.t2{background:linear-gradient(135deg,#c2562f,#96401f)}
     .news-media.t3{background:linear-gradient(135deg,#c79633,#a2761f)}
+    .news-media.split{display:flex;gap:10px;align-items:center;justify-content:center;padding:10px;background:linear-gradient(135deg,#c2562f,#96401f)}
+    .news-media.split img{width:44%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);background:#eee}
     .news-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
     .news-tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent1);background:rgba(15,125,107,.1);padding:3px 8px;border-radius:6px}
     .news-card h3{margin:0;font-size:15px;line-height:1.32}
@@ -393,7 +395,10 @@
           <div class="news-body"><span class="news-tag">Recognition</span><h3>Prof. Yang Hong included in the 2024 Top-Cited Global Researcher list</h3><span class="news-date">Dec 1, 2025</span></div>
         </a>
         <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/congratulations-wen-and-li" target="_blank" rel="noopener">
-          <div class="news-media tile t2">🎓</div>
+          <div class="news-media split">
+            <img src="news/img/wen.jpg" alt="Dr. Yixin Wen" loading="lazy" onerror="this.style.display='none'">
+            <img src="news/img/li.jpg" alt="Dr. Zhi Li" loading="lazy" onerror="this.style.display='none'">
+          </div>
           <div class="news-body"><span class="news-tag">Alumni</span><h3>Congratulations to alumni Dr. Yixin Wen and Dr. Zhi “Allen” Li</h3><span class="news-date">Oct 24, 2025</span></div>
         </a>
         <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/new-research-suggests-flashier-floods-in-the-continental-united-states" target="_blank" rel="noopener">
