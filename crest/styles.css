@@ -251,7 +251,7 @@ kbd{ background:#eaf1f9; border:1px solid var(--line); border-radius:5px; paddin
 .ms-balloon[hidden]{ display:none; }
 .ms-balloon{ position:fixed; inset:0; z-index:2000; background:rgba(24,30,28,.55);
   display:flex; align-items:center; justify-content:center; padding:4vh 4vw; animation:fadeUp .25s ease; }
-.ms-balloon-inner{ position:relative; background:#fff; border:1px solid var(--line); border-radius:10px;
+.ms-balloon-inner{ position:relative; background:#fff; border:1px solid var(--line); border-radius:8px;
   box-shadow:0 24px 70px rgba(0,0,0,.45); max-width:84vw; max-height:90vh; padding:14px 14px 10px;
   display:flex; flex-direction:column; gap:8px; cursor:pointer; }
 .ms-balloon-inner::after{ content:''; position:absolute; left:36px; bottom:-13px; width:24px; height:24px;
