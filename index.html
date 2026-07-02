@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HydroSky — AI‑Powered Flood & Drought Modeling</title>
+  <title>CREST Model — Coupled Routing and Excess STorage | HydroSky</title>
   <meta name="description" content="HydroSky delivers AI‑powered flood and drought modeling, early warning dashboards, and custom hydrologic analytics for governments, utilities, and enterprises." />
   <meta property="og:title" content="HydroSky — AI‑Powered Flood & Drought Modeling" />
   <meta property="og:description" content="AI‑powered hydrologic modeling, flood & drought analytics, and rapid early‑warning dashboards." />
@@ -19,30 +19,30 @@
 
   <style>
     :root{
-      --bg:#050816;
-      --panel:rgba(255,255,255,0.08);
-      --border:rgba(255,255,255,0.12);
-      --txt:#e6f4ff;
-      --muted:#a9c0d6;
-      --accent1:#22d3ee; /* cyan */
-      --accent2:#7c3aed; /* violet */
-      --accent3:#0ea5e9; /* sky */
+      --bg:#f3f1ea;
+      --panel:#ffffff;
+      --border:rgba(36,48,56,0.14);
+      --txt:#243038;
+      --muted:#5f6e74;
+      --accent1:#0f7d6b; /* teal */
+      --accent2:#c2562f; /* terracotta */
+      --accent3:#c79633; /* gold */
       --shine:linear-gradient(135deg,var(--accent1),var(--accent2),var(--accent3));
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
+    html,body{margin:0;padding:0;background:linear-gradient(160deg,#f7f4ee,#efe8dc 55%,#e6dac8) fixed;color:var(--txt);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto;scroll-behavior:smooth}
 
     /* ======= Fancy animated background ======= */
-    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(60px);opacity:.5}
-    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:screen}
-    .b1{width:40vmax;height:40vmax;background:#0ea5e9;left:8%;top:5%;animation:float 10s ease-in-out infinite}
-    .b2{width:45vmax;height:45vmax;background:#7c3aed;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
-    .b3{width:35vmax;height:35vmax;background:#22d3ee;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
+    .bg-wrap{position:fixed;inset:-10vmax;z-index:-2;filter: blur(70px);opacity:.20}
+    .blob{position:absolute;inset:auto;border-radius:50%;mix-blend-mode:multiply}
+    .b1{width:40vmax;height:40vmax;background:#0f7d6b;left:8%;top:5%;animation:float 10s ease-in-out infinite}
+    .b2{width:45vmax;height:45vmax;background:#c2562f;right:5%;top:20%;animation:float 14s ease-in-out infinite reverse}
+    .b3{width:35vmax;height:35vmax;background:#c79633;left:30%;bottom:-5%;animation:float 18s ease-in-out infinite}
     @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-4%) scale(1.03)}100%{transform:translateY(0)}}
 
     /* ======= Layout ======= */
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
-    header{position:sticky;top:0;background:rgba(5,8,22,.6);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
+    header{position:sticky;top:0;background:rgba(247,244,238,.80);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:50}
     nav{display:flex;align-items:center;justify-content:space-between;height:80px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
     .logo{width:36px;height:36px;border-radius:10px;background:var(--shine);border:1px solid var(--border);box-shadow:0 10px 30px rgba(34,211,238,.2)}
@@ -54,21 +54,21 @@
     .nav-external{color:var(--accent1) !important;opacity:1 !important;font-weight:600}
     .nav-external:hover{color:var(--accent3) !important}
 
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:var(--panel);border:1px solid var(--border);color:var(--txt);text-decoration:none}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:8px;background:var(--panel);border:1px solid var(--border);color:var(--txt);text-decoration:none}
     .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(34,211,238,.15)}
     .btn.primary{background:var(--shine);border:0;color:white}
 
     /* ======= Hero ======= */
     .hero{position:relative;padding:96px 0 56px;border-bottom:1px solid var(--border)}
     .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.05;margin:0;background:var(--shine);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.3);color:#b3ecff;font-size:13px}
+    .kicker{display:inline-block;padding:6px 12px;border-radius:999px;background:rgba(15,125,107,.12);border:1px solid rgba(15,125,107,.32);color:#0f7d6b;font-size:13px}
     .hero p{color:var(--muted);max-width:820px;font-size:18px}
     .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    .badge{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.06);font-size:12px;color:#cfe7ff}
+    .badge{padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(15,125,107,.08);font-size:12px;color:#0f7d6b}
 
-    .hero-visual{position:relative;margin-top:36px;border-radius:24px;border:1px solid var(--border);background:radial-gradient(1200px 400px at 50% -30%, rgba(34,211,238,.25), transparent 60%), rgba(255,255,255,.03);overflow:hidden}
+    .hero-visual{position:relative;margin-top:36px;border-radius:24px;border:1px solid var(--border);background:radial-gradient(1200px 400px at 50% -30%, rgba(15,125,107,.16), transparent 60%), rgba(255,255,255,.55);overflow:hidden}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-    .stat{grid-column:span 3;min-height:140px;border-radius:20px;background:var(--panel);border:1px solid var(--border);padding:18px}
+    .stat{grid-column:span 3;min-height:140px;border-radius:8px;background:var(--panel);border:1px solid var(--border);padding:18px;box-shadow:0 6px 20px rgba(45,60,55,.09)}
     .stat h3{margin:0;font-size:36px}
     .stat p{margin:6px 0 0;color:var(--muted);font-size:14px}
 
@@ -78,36 +78,37 @@
     .sub{color:var(--muted);margin:0 0 26px}
 
     .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-    .card{border-radius:20px;background:var(--panel);border:1px solid var(--border);padding:20px;position:relative;overflow:hidden}
+    .card{border-radius:8px;background:var(--panel);border:1px solid var(--border);padding:20px;position:relative;overflow:hidden;box-shadow:0 6px 20px rgba(45,60,55,.09)}
     .card:before{content:"";position:absolute;inset:-1px -1px auto -1px;height:4px;background:var(--shine);opacity:.6}
     .card h3{margin:8px 0}
     .card p{color:var(--muted)}
 
     /* Case studies */
     .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-    .case{border-radius:22px;border:1px solid var(--border);overflow:hidden;background:rgba(255,255,255,.04)}
+    .case{border-radius:8px;border:1px solid var(--border);overflow:hidden;background:#fff;box-shadow:0 6px 20px rgba(45,60,55,.08)}
     .case .top{height:180px;background:conic-gradient(from 180deg, var(--accent2), var(--accent3), var(--accent1));filter:saturate(130%);position:relative}
-    .case .top:after{content:'';position:absolute;inset:0;background:radial-gradient(400px 120px at 70% 30%,rgba(255,255,255,.25),transparent 60%)}
+    .case .top:after{content:'';position:absolute;inset:0;background:radial-gradient(400px 120px at 70% 30%,rgba(255,255,255,.25),transparent 60%);pointer-events:none}
+    .case .top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1}
     .case .body{padding:18px}
     .case h4{margin:0}
     .case p{color:var(--muted)}
 
     /* Steps */
     .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;counter-reset:step}
-    .step{border:1px dashed rgba(255,255,255,.18);border-radius:18px;padding:18px;background:rgba(255,255,255,.03);position:relative}
+    .step{border:1px dashed var(--border);border-radius:8px;padding:18px;background:#fff;position:relative;box-shadow:0 6px 20px rgba(45,60,55,.08)}
     .step:before{counter-increment:step;content:counter(step);position:absolute;top:-14px;left:-14px;width:40px;height:40px;border-radius:12px;background:var(--shine);display:grid;place-items:center;color:white;font-weight:800;border:1px solid var(--border)}
 
     /* CTA */
     .cta{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
-    .cta .panel{border:1px solid var(--border);border-radius:22px;padding:22px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02))}
+    .cta .panel{border:1px solid var(--border);border-radius:8px;padding:22px;background:#ffffff;box-shadow:0 6px 22px rgba(45,60,55,.10)}
     .cta .panel h3{margin:0 0 8px}
-    .cta input,.cta textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:12px;color:var(--txt);padding:12px;font:inherit;outline:none}
+    .cta input,.cta textarea{width:100%;background:#ffffff;border:1px solid var(--border);border-radius:12px;color:var(--txt);padding:12px;font:inherit;outline:none}
     .cta textarea{min-height:120px;resize:vertical}
 
 
 
-    footer{padding:36px 0;color:#b8c9da}
-    footer a{color:#cfe7ff;text-decoration:none}
+    footer{padding:36px 0;color:#5f6e74}
+    footer a{color:#0f7d6b;text-decoration:none}
 
     /* Utilities */
     .row{display:flex;gap:14px;flex-wrap:wrap}
@@ -129,6 +130,55 @@
     /* Reveal animations */
     .reveal{opacity:0;transform:translateY(16px);transition:all .7s ease}
     .reveal.show{opacity:1;transform:none}
+
+    /* ===== CREST-prioritized hero + demo + embedded history ===== */
+    .hero-center{text-align:center}
+    .crest-hero{padding:64px 0 44px}
+    .crest-title{font-size:clamp(46px,8vw,92px);line-height:1.02;margin:8px 0 0;background:var(--shine);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .crest-lede{color:var(--muted);max-width:720px;margin:16px auto 0;font-size:clamp(16px,2vw,20px)}
+    .hero-center-row{justify-content:center;margin-top:20px}
+    .hero-badges{justify-content:center;margin-top:22px}
+    .demo-card{position:relative;max-width:820px;margin:34px auto 0;border:1px solid var(--border);border-radius:10px;padding:44px 26px 32px;overflow:hidden;
+      background:radial-gradient(720px 240px at 50% -20%, rgba(15,125,107,.16), transparent 62%), #ffffff;
+      box-shadow:0 24px 64px rgba(45,60,55,.14)}
+    .demo-card:before{content:"";position:absolute;inset:-1px -1px auto -1px;height:5px;background:var(--shine)}
+    .demo-badge{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(15,125,107,.10);color:var(--accent1);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .demo-title{font-size:clamp(30px,4.5vw,46px);font-weight:800;margin:14px 0 8px;display:flex;align-items:center;justify-content:center;gap:12px}
+    .demo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent2);animation:demopulse 1.8s infinite}
+    @keyframes demopulse{0%{box-shadow:0 0 0 0 rgba(194,86,47,.45)}70%{box-shadow:0 0 0 12px rgba(194,86,47,0)}100%{box-shadow:0 0 0 0 rgba(194,86,47,0)}}
+    .demo-sub{color:var(--muted);max-width:540px;margin:0 auto 20px}
+    .demo-btn{opacity:.55;cursor:not-allowed;pointer-events:none}
+    .demo-note{margin-top:14px;font-size:13px;color:var(--muted)}
+    .demo-note a{color:var(--accent1)}
+    #history{padding-top:56px}
+    .hist-h{text-align:center}
+    .hist-sub{text-align:center;margin-left:auto;margin-right:auto;max-width:660px}
+    .embed-frame{position:relative;width:100%;max-width:1120px;margin:22px auto 0;aspect-ratio:16/9;border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 24px 64px rgba(45,60,55,.16);background:#fff}
+    .embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    @media (max-width:640px){ .embed-frame{aspect-ratio:4/3} }
+    .card-ic{font-size:26px;width:52px;height:52px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(15,125,107,.10);margin-bottom:8px}
+
+    /* ===== News (OpenAI-style: 4 featured + 6 grid) ===== */
+    #news .sub a{color:var(--accent1);text-decoration:none;font-weight:600}
+    .news-featured{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:18px}
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .news-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--panel);box-shadow:0 6px 20px rgba(45,60,55,.08);transition:transform .15s,box-shadow .15s}
+    .news-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(45,60,55,.16)}
+    .news-media{aspect-ratio:16/10;overflow:hidden;background:#e9e2d5}
+    .news-media img{width:100%;height:100%;object-fit:cover;display:block}
+    .news-media.tile{display:flex;align-items:center;justify-content:center;font-size:46px}
+    .news-media.t1{background:linear-gradient(135deg,#0f7d6b,#0b5f52)}
+    .news-media.t2{background:linear-gradient(135deg,#c2562f,#96401f)}
+    .news-media.t3{background:linear-gradient(135deg,#c79633,#a2761f)}
+    .news-media.split{display:flex;gap:10px;align-items:center;justify-content:center;padding:10px;background:linear-gradient(135deg,#c2562f,#96401f)}
+    .news-media.split img{width:44%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:3px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);background:#eee}
+    .news-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:7px;flex:1}
+    .news-tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent1);background:rgba(15,125,107,.1);padding:3px 8px;border-radius:6px}
+    .news-card h3{margin:0;font-size:15px;line-height:1.32}
+    .news-featured .news-card h3{font-size:16px}
+    .news-date{font-size:12px;color:var(--muted);margin-top:auto;padding-top:4px}
+    @media (max-width:1000px){ .news-featured{grid-template-columns:repeat(2,1fr)} .news-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:600px){ .news-featured,.news-grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -152,6 +202,8 @@
         <div class="nav-links">
           <div class="nav-row">
             <a href="index.html">Home</a>
+            <a href="#history">History</a>
+            <a href="#news">News</a>
             <a href="#solutions">Solutions</a>
             <a href="#tech">Technology</a>
             <a href="#cases">Case Studies</a>
@@ -165,50 +217,52 @@
             <a href="photos.html" class="nav-external">Photos</a>
             <a href="research.html" class="nav-external">Research</a>
             <a href="publication.html" class="nav-external">Publication</a>
+            <a href="crest/index.html" class="nav-external">CREST Model</a>
           </div>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <span class="kicker">AI‑Powered Hydrologic Intelligence</span>
-      <h1>Transfer the Cutting Edge Hydrometeorological Technology</h1>
-      <p>HydroSky transfers cutting-edge hydrometeorological technology to support climate change resilience for future hydrological extremes and water resources sustainability. We bridge advanced research and practical applications, delivering <b>innovative</b> solutions for <b>climate resilience</b> and <b>water security</b>.</p>
+  <!-- Hero: CREST model, prioritized -->
+  <section class="hero crest-hero">
+    <div class="container hero-center">
+      <span class="kicker">Remote‑sensing–native distributed hydrology</span>
+      <h1 class="crest-title"><span>CREST-AI</span></h1>
 
-      <div class="badges">
+      <!-- DEMO placeholder (first, center) -->
+      <div class="demo-card">
+        <span class="demo-badge">Interactive demo</span>
+        <div class="demo-title">Coming soon <span class="demo-dot"></span></div>
+        <p class="demo-sub">A live, in‑browser CREST simulation is on the way — run the model, explore floods and droughts, and see results in real time.</p>
+        <button class="btn primary demo-btn" disabled>🚀&nbsp; Launch demo</button>
+        <div class="demo-note">Want early access? <a href="#contact">Get in touch</a></div>
+      </div>
+
+      <div class="row hero-center-row">
+        <a class="btn" href="#history">Explore the model ↓</a>
+        <a class="btn" href="publication.html">Publications</a>
+      </div>
+
+      <div class="badges hero-badges">
         <span class="badge">CREST • EF5</span>
-        <span class="badge">GraphCast • HRRR • MRMS</span>
-        <span class="badge">PyTorch • TensorFlow</span>
-        <span class="badge">CI/CD • GitHub Pages</span>
+        <span class="badge">Flood &amp; drought</span>
+        <span class="badge">Satellite‑driven</span>
+        <span class="badge">Open &amp; operational</span>
       </div>
+    </div>
+  </section>
 
-      <div class="hero-visual container" style="margin-top:28px">
-        <div class="grid" style="padding:20px">
-          <div class="stat reveal">
-            <h3><span data-count="25">0</span>+</h3>
-            <p>Basins Modeled (HUC8)</p>
-          </div>
-          <div class="stat reveal">
-            <h3><span data-count="92">0</span>%</h3>
-            <p>Event Match for Top‑3 Peaks</p>
-          </div>
-          <div class="stat reveal">
-            <h3><span data-count="48">0</span>h</h3>
-            <p>Lead Time for Early Warning</p>
-          </div>
-          <div class="stat reveal">
-            <h3><span data-count="7">0</span>x</h3>
-            <p>Faster Scenario Exploration</p>
-          </div>
-        </div>
+  <!-- History: the interactive CREST presentation, right below the demo -->
+  <section id="history">
+    <div class="container">
+      <h2 class="hist-h">The CREST model family — two decades of development</h2>
+      <p class="sub hist-sub">An interactive history: model structure, milestones, global reach, and the model family tree. Auto‑plays — use the arrows to navigate.</p>
+      <div class="embed-frame">
+        <iframe src="crest/index.html" title="CREST model history presentation" loading="lazy" allowfullscreen></iframe>
       </div>
-
-      <div class="row" style="margin-top:18px">
-        <a class="btn primary" href="#contact">Get a Quote</a>
-        <a class="btn" href="#tech">See How It Works</a>
+      <div class="row hero-center-row">
+        <a class="btn primary" href="crest/index.html" target="_blank" rel="noopener">Open full presentation ↗</a>
       </div>
     </div>
   </section>
@@ -220,19 +274,19 @@
       <p class="sub">From real‑time warnings to long‑term planning, HydroSky adapts to your data and decisions.</p>
 
       <div class="cards">
-        <div class="card reveal">
+        <div class="card reveal"><div class="card-ic">&#127754;</div>
           <h3>Flood Early‑Warning</h3>
           <p>High‑resolution rainfall ingestion (MRMS/HRRR), hydrologic routing with CREST/EF5, probabilistic peaks, and push alerts with explainable drivers.</p>
         </div>
-        <div class="card reveal">
+        <div class="card reveal"><div class="card-ic">&#127964;</div>
           <h3>Drought Intelligence</h3>
           <p>Soil‑moisture deficits, runoff efficiency, and snowmelt diagnostics for seasonal allocation, resilience, and supply risk planning.</p>
         </div>
-        <div class="card reveal">
+        <div class="card reveal"><div class="card-ic">&#128300;</div>
           <h3>Scenario Lab</h3>
           <p>What‑if storm tracks, displacement correction, reservoir rules, and land‑use change—compare impacts in minutes, not weeks.</p>
         </div>
-        <div class="card reveal">
+        <div class="card reveal"><div class="card-ic">&#128202;</div>
           <h3>Custom Dashboards</h3>
           <p>Map tiles, time‑series, exceedance curves, and API endpoints for enterprise integration.</p>
         </div>
@@ -244,24 +298,24 @@
   <section id="tech">
     <div class="container">
       <h2>Technology</h2>
-      <p class="sub">Hybrid physics‑ML stack: physical consistency meets data‑driven speed.</p>
+      <p class="sub">Two decades of CREST development — a remote‑sensing–native distributed hydrology stack, now with an AI agent.</p>
 
       <div class="cards">
-        <div class="card reveal">
-          <h3>Data Pipeline</h3>
-          <p>HRRR/MRMS/GraphCast/GFS ingestion, bias & displacement correction, and automated basin tiling.</p>
+        <div class="card reveal"><div class="card-ic">&#128167;</div>
+          <h3>Distributed CREST core</h3>
+          <p>Coupled runoff generation — a variable infiltration curve over three soil layers — with cell‑to‑cell flow routing on a grid. Two forcings (precipitation, PET), 17 parameters, 9 outputs; runs at global, regional, or basin scale.</p>
         </div>
-        <div class="card reveal">
-          <h3>Model Core</h3>
-          <p>CREST/EF5 routing with calibrated parameters; AI‑assisted guidance for robust generalization.</p>
+        <div class="card reveal"><div class="card-ic">&#127754;</div>
+          <h3>Hazards &amp; operations</h3>
+          <p>EF5 / FLASH ensemble flash‑flood forecasting, operational at NOAA/NSSL; iCRESLIDE cascading flood–landslide prediction; and CREST‑iMAP, a fully coupled 2‑D hydrologic–hydraulic model for flood inundation mapping (e.g. Hurricane Harvey).</p>
         </div>
-        <div class="card reveal">
-          <h3>Explainability</h3>
-          <p>Attribution of peaks to upstream basins, snowmelt vs. rainfall shares, and sensitivity to storm shifts.</p>
+        <div class="card reveal"><div class="card-ic">&#127760;</div>
+          <h3>Scales &amp; coupling</h3>
+          <p>CREST‑VEC vector routing with a lake module for continental‑to‑global runs; a groundwater module (v3.0, CONUS‑wide calibration); and WRF atmosphere coupling toward seamless sensor‑to‑streamflow prediction.</p>
         </div>
-        <div class="card reveal">
-          <h3>Delivery</h3>
-          <p>Zero‑ops static frontends (GitHub Pages) plus optional cloud backends for on‑demand heavy runs.</p>
+        <div class="card reveal"><div class="card-ic">&#129302;</div>
+          <h3>CREST‑AI &middot; AQUAH</h3>
+          <p>An LLM agent that operates and auto‑calibrates CREST from plain‑language prompts — automating model setup, calibration, and analysis across versions (AQUAH; Yan et al., 2025).</p>
         </div>
       </div>
     </div>
@@ -271,172 +325,80 @@
   <section id="cases">
     <div class="container">
       <h2>Case Studies</h2>
-      <p class="sub">Illustrative results. Replace with your own projects and images when ready.</p>
+      <p class="sub">CREST in action on recent high‑impact flood events.</p>
 
       <div class="cases">
         <article class="case reveal">
-          <div class="top"></div>
+          <div class="top"><img src="cases/img/texas2025.png" alt="2025 Texas flash flood — CREST hydrograph and high-water-mark map" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
-            <h4>Texas Hill Country Flood</h4>
-            <p>Displacement‑corrected rainfall improved peak timing by 6–8 hours and RMSE by 23% across 4 gauges.</p>
+            <h4>2025 Texas Flash Flood</h4>
+            <p>CREST reproduced the observed USGS discharge hydrograph for the July 2025 Texas flash flood and mapped peak water depths against 101 high‑water marks across the basin.</p>
           </div>
         </article>
         <article class="case reveal">
-          <div class="top" style="filter:hue-rotate(50deg)"></div>
+          <div class="top"><img src="cases/img/harvey2017.gif" alt="2017 Hurricane Harvey flooding (Google Earth)" loading="lazy" onerror="this.remove()"></div>
           <div class="body">
-            <h4>Altiplano Drought Assessment</h4>
-            <p>Combined snowmelt diagnostics and runoff thresholds to quantify reservoir drawdown risks under El Niño.</p>
-          </div>
-        </article>
-        <article class="case reveal">
-          <div class="top" style="filter:hue-rotate(100deg)"></div>
-          <div class="body">
-            <h4>Mississippi Basin Extremes</h4>
-            <p>HUC8 contribution tree reveals upstream drivers of compound events and flash‑to‑flood transition windows.</p>
+            <h4>2017 Hurricane Harvey</h4>
+            <p>CREST‑iMAP mapped the catastrophic flood inundation across the Houston area during Hurricane Harvey — shown here against Google Earth imagery of the inundated corridor.</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section id="process">
+  <!-- News -->
+  <section id="news">
     <div class="container">
-      <h2>How We Work</h2>
-      <p class="sub">Clear steps, measurable outcomes.</p>
-      <div class="steps">
-        <div class="step reveal">
-          <h3>Discovery</h3>
-          <p>Use cases, basins, data access, KPIs. We align on scope and timeline.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Prototype</h3>
-          <p>Spin up a pilot basin with baseline datasets and dashboards.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Calibration</h3>
-          <p>Hybrid guidance + targeted runs for robust generalization—not just a single “best fit”.</p>
-        </div>
-        <div class="step reveal">
-          <h3>Deploy</h3>
-          <p>Web delivery, training, and integration. Optional SLA for ops and updates.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <h2>News</h2>
+      <p class="sub">Highlights from the HyDROS Lab. <a href="https://www.ou.edu/coe/labs/hydros/news" target="_blank" rel="noopener">See all news ↗</a></p>
 
-
-
-  <!-- Team Section -->
-  <section id="people">
-    <div class="container">
-      <h2>Our Team</h2>
-      <p class="sub">Meet the researchers, scientists, and collaborators driving innovation in hydrological remote sensing.</p>
-
-      <h3 style="color:var(--accent1);margin:30px 0 20px;font-size:24px">Faculty and Scientists</h3>
-      <div class="cards">
-        <div class="card reveal">
-          <h3>Yang Hong</h3>
-          <p>Professor, CEES / SoM</p>
-          <p style="font-size:13px;color:var(--muted)">yanghong@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>JJ Gourley</h3>
-          <p>Adj. Associate Professor, SoM / NOAA NSSL</p>
-          <p style="font-size:13px;color:var(--muted)">jj.gourley@noaa.gov</p>
-        </div>
-        <div class="card reveal">
-          <h3>Pierre Kirstetter</h3>
-          <p>Research Scientist, Adj. Faculty, ARRC / CEES</p>
-          <p style="font-size:13px;color:var(--muted)">pierre.kirstetter@noaa.gov</p>
-        </div>
-        <div class="card reveal">
-          <h3>Ke Zhang</h3>
-          <p>Research Scientist</p>
-          <p style="font-size:13px;color:var(--muted)">kezhang@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Humberto Vergara</h3>
-          <p>Research Scientist, CIMMS</p>
-          <p style="font-size:13px;color:var(--muted)">humber@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Tiantian Yang</h3>
-          <p>Assistant Professor</p>
-          <p style="font-size:13px;color:var(--muted)">tiantian.yang@ou.edu</p>
-        </div>
+      <div class="news-featured">
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/hydros-announces-aquah" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/aquah.png" alt="AQUAH AI agent" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">AI · AQUAH</span><h3>HyDROS announces AQUAH: AI agents for hydrologic modeling</h3><span class="news-date">Oct 24, 2025</span></div>
+        </a>
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-named-george-lynn-cross-professorship" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/hong_cross.jpg" alt="Yang Hong" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Award</span><h3>Yang Hong named George Lynn Cross Distinguished Professor</h3><span class="news-date">Apr 17, 2026</span></div>
+        </a>
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-featured-ieee-grssp-member-spotlight" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/hong.png" alt="Yang Hong" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Recognition</span><h3>Yang Hong featured in the IEEE GRSS Professional Member Spotlight</h3><span class="news-date">May 19, 2026</span></div>
+        </a>
+        <a class="news-card feat" href="https://www.ou.edu/coe/labs/hydros/news/jonathan-gourley-inducted-into-CEES-science-academy" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/gourley.jpg" alt="JJ Gourley" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Award</span><h3>JJ Gourley inducted into OU CEES Science Academy</h3><span class="news-date">May 12, 2026</span></div>
+        </a>
       </div>
 
-      <h3 style="color:var(--accent1);margin:40px 0 20px;font-size:24px">Graduate Students & Postdoctoral Fellows</h3>
-      <div class="cards">
-        <div class="card reveal">
-          <h3>Mengye Chen</h3>
-          <p>CEES Graduate Student</p>
-          <p style="font-size:13px;color:var(--muted)">mchen15@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Zhi Li</h3>
-          <p>COE/CEES</p>
-          <p style="font-size:13px;color:var(--muted)">li1995@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Zhen Hong</h3>
-          <p>Geoinformatics</p>
-          <p style="font-size:13px;color:var(--muted)">Zhen.Hong-1@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Xiangyu Luo</h3>
-          <p>Post-doc, COE/CEES</p>
-          <p style="font-size:13px;color:var(--muted)">xyluo@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Liang Gao</h3>
-          <p>Post-doc, CEES</p>
-          <p style="font-size:13px;color:var(--muted)">Liang.Gao-1@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Jiaqi Zhang</h3>
-          <p>Post-doc, CEES</p>
-          <p style="font-size:13px;color:var(--muted)">jiaqi.zhang@ou.edu</p>
-        </div>
-      </div>
-
-      <h3 style="color:var(--accent1);margin:40px 0 20px;font-size:24px">Key Collaborators</h3>
-      <div class="cards">
-        <div class="card reveal">
-          <h3>Liangzhi You</h3>
-          <p>Senior Research Fellow, IFPRI</p>
-          <p style="font-size:13px;color:var(--muted)">l.you@cgiar.org</p>
-        </div>
-        <div class="card reveal">
-          <h3>Naiyu Wang</h3>
-          <p>Assistant Professor, CEES</p>
-          <p style="font-size:13px;color:var(--muted)">naiyu.wang@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Emmanouil Anagnostou</h3>
-          <p>Professor, University of Connecticut</p>
-          <p style="font-size:13px;color:var(--muted)">manos@engr.uconn.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Robert Adler</h3>
-          <p>Senior Research Scientist, University of Maryland</p>
-          <p style="font-size:13px;color:var(--muted)">radler@umd.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Sadiq Khan</h3>
-          <p>Research Scientist, National Water Center</p>
-          <p style="font-size:13px;color:var(--muted)">sadiq@ou.edu</p>
-        </div>
-        <div class="card reveal">
-          <h3>Sheng Chen</h3>
-          <p>Postdoc Research Fellow, CEES</p>
-          <p style="font-size:13px;color:var(--muted)">chenshengou@ou.edu</p>
-        </div>
-      </div>
-
-      <div class="row" style="margin-top:30px;justify-content:center">
-        <a class="btn" href="team.html">View Full Team Directory</a>
+      <div class="news-grid">
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/abbey-snooks-selected-as-ureca-fellow" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/snooks.jpg" alt="Abbey Snooks" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Students</span><h3>Abbey Snooks selected as a 2026 Provost’s UReCA Summer Fellow</h3><span class="news-date">Apr 24, 2026</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/ou-news-highlights-hydros-study-geostationary-satellite" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/satellite.jpg" alt="Geostationary satellite view of Earth" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Research</span><h3>OU News highlights HyDROS study on geostationary-satellite precipitation estimation</h3><span class="news-date">Apr 24, 2026</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-among-top-ranked" target="_blank" rel="noopener">
+          <div class="news-media tile t3">🏅</div>
+          <div class="news-body"><span class="news-tag">Recognition</span><h3>Yang Hong among the top-ranked scientists globally in hydrology</h3><span class="news-date">Feb 6, 2026</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/yang-hong-2024-top-cited" target="_blank" rel="noopener">
+          <div class="news-media tile t1">📈</div>
+          <div class="news-body"><span class="news-tag">Recognition</span><h3>Prof. Yang Hong included in the 2024 Top-Cited Global Researcher list</h3><span class="news-date">Dec 1, 2025</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/congratulations-wen-and-li" target="_blank" rel="noopener">
+          <div class="news-media split">
+            <img src="news/img/wen.jpg" alt="Dr. Yixin Wen" loading="lazy" onerror="this.style.display='none'">
+            <img src="news/img/li.jpg" alt="Dr. Zhi Li" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="news-body"><span class="news-tag">Alumni</span><h3>Congratulations to alumni Dr. Yixin Wen and Dr. Zhi “Allen” Li</h3><span class="news-date">Oct 24, 2025</span></div>
+        </a>
+        <a class="news-card" href="https://www.ou.edu/coe/labs/hydros/news/new-research-suggests-flashier-floods-in-the-continental-united-states" target="_blank" rel="noopener">
+          <div class="news-media"><img src="news/img/floods.jpg" alt="US flood map" loading="lazy"></div>
+          <div class="news-body"><span class="news-tag">Research</span><h3>New research suggests “flashier” floods in the continental U.S.</h3><span class="news-date">Jun 6, 2022</span></div>
+        </a>
       </div>
     </div>
   </section>
@@ -445,15 +407,14 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p class="sub">Tell us about your basins and decisions. We’ll tailor a demo to your data.</p>
+      <p class="sub">Questions about CREST, collaborations, training, or early access to the demo? Get in touch.</p>
 
       <div class="cta">
         <div class="panel reveal">
-          <h3>Request a Demo</h3>
-          <p style="color:var(--muted);margin-top:0">GitHub Pages is static—use the email link below or connect a form service later.</p>
+          <h3>Contact</h3>
+          <p style="color:var(--muted);margin-top:0">This site is static — use the email link below or connect a form service later.</p>
           <div class="row">
-            <a class="btn primary" href="mailto:hello@hydrosky.org?subject=Demo%20Request%20-%20HydroSky&body=Hi%20HydroSky%2C%0AWe'd%20like%20a%20demo%20for%20...">Email: hello@hydrosky.org</a>
-            <a class="btn" href="#">Download One‑Pager (PDF)</a>
+            <a class="btn primary" href="mailto:hello@hydrosky.org?subject=Contact%20-%20HydroSky%2FCREST&body=Hi%20HydroSky%2C%0A">Email: hello@hydrosky.org</a>
           </div>
         </div>
         <div class="panel reveal">
