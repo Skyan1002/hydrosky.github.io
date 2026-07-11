@@ -71,6 +71,8 @@
     .video-info{text-align:left;max-width:800px;margin:0 auto}
     .video-info h2{margin:0 0 15px;font-size:28px;color:var(--txt)}
     .video-info p{color:var(--muted);line-height:1.6;margin-bottom:20px}
+    .video-info a{color:var(--accent1)}
+    .video-container + .video-container{margin-top:70px;padding-top:60px;border-top:1px solid var(--border)}
     .video-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
     .meta-item{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px}
     .meta-item svg{width:16px;height:16px;fill:currentColor}
@@ -157,6 +159,36 @@
   <!-- Video Content -->
   <section class="video-section">
     <div class="container">
+      <div class="video-container reveal">
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gCdl8V-qpU0?si=EOjSRLCzN42_76t6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h2>Introducing CREST-AI: An Agentic Flood Dashboard</h2>
+          <p>An introduction to CREST-AI — describe a flood in plain language or pick USGS gauges on the map, and watch the CREST/EF5 model simulate it live with 2-D streamflow animation, streaming hydrographs, and AI-assisted calibration. Try it yourself in the <a href="index.html#demo">live demo</a>.</p>
+          <div class="video-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>CREST-AI</span>
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>Live Demo</span>
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>Flood Modeling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="video-container reveal">
         <div class="video-wrapper">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/uJNpz13SwGw?si=vRGAPAFAqZqvsX_5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -144,12 +144,23 @@
     .demo-card:before{content:"";position:absolute;inset:-1px -1px auto -1px;height:5px;background:var(--shine)}
     .demo-badge{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(15,125,107,.10);color:var(--accent1);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
     .demo-title{font-size:clamp(30px,4.5vw,46px);font-weight:800;margin:14px 0 8px;display:flex;align-items:center;justify-content:center;gap:12px}
-    .demo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent2);animation:demopulse 1.8s infinite}
-    @keyframes demopulse{0%{box-shadow:0 0 0 0 rgba(194,86,47,.45)}70%{box-shadow:0 0 0 12px rgba(194,86,47,0)}100%{box-shadow:0 0 0 0 rgba(194,86,47,0)}}
+    .demo-dot{width:12px;height:12px;border-radius:50%;background:var(--accent1);animation:demopulse 1.8s infinite}
+    @keyframes demopulse{0%{box-shadow:0 0 0 0 rgba(15,125,107,.45)}70%{box-shadow:0 0 0 12px rgba(15,125,107,0)}100%{box-shadow:0 0 0 0 rgba(15,125,107,0)}}
     .demo-sub{color:var(--muted);max-width:540px;margin:0 auto 20px}
-    .demo-btn{opacity:.55;cursor:not-allowed;pointer-events:none}
     .demo-note{margin-top:14px;font-size:13px;color:var(--muted)}
     .demo-note a{color:var(--accent1)}
+
+    /* ===== Live demo embed (inside the hero card) + intro video ===== */
+    .demo-card.live{max-width:1120px;padding:38px 26px 28px}
+    .demo-embed{position:relative;width:100%;height:780px;margin:22px auto 0;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 18px 48px rgba(45,60,55,.14)}
+    .demo-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .demo-actions{justify-content:center;margin-top:18px}
+    .video-intro{max-width:860px;margin:46px auto 0}
+    .video-intro h3{font-size:clamp(20px,2.6vw,26px);margin:0 0 6px}
+    .video-intro .video-sub{color:var(--muted);max-width:640px;margin:0 auto 16px}
+    .video-frame{position:relative;aspect-ratio:16/9;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#000;box-shadow:0 18px 48px rgba(45,60,55,.16)}
+    .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    @media (max-width:640px){ .demo-embed{height:1000px} }
     #history{padding-top:56px}
     .hist-h{text-align:center}
     .hist-sub{text-align:center;margin-left:auto;margin-right:auto;max-width:660px}
@@ -202,6 +213,7 @@
         <div class="nav-links">
           <div class="nav-row">
             <a href="index.html">Home</a>
+            <a href="#demo">Demo</a>
             <a href="#history">History</a>
             <a href="#news">News</a>
             <a href="#solutions">Solutions</a>
@@ -230,13 +242,28 @@
       <span class="kicker">Remote‑sensing–native distributed hydrology</span>
       <h1 class="crest-title"><span>CREST-AI</span></h1>
 
-      <!-- DEMO placeholder (first, center) -->
-      <div class="demo-card">
+      <!-- DEMO: live CREST-AI flood dashboard, embedded (first, center) -->
+      <div class="demo-card live" id="demo">
         <span class="demo-badge">Interactive demo</span>
-        <div class="demo-title">Coming soon <span class="demo-dot"></span></div>
-        <p class="demo-sub">A live, in‑browser CREST simulation is on the way — run the model, explore floods and droughts, and see results in real time.</p>
-        <button class="btn primary demo-btn" disabled>🚀&nbsp; Launch demo</button>
-        <div class="demo-note">Want early access? <a href="#contact">Get in touch</a></div>
+        <div class="demo-title">Live now <span class="demo-dot"></span></div>
+        <p class="demo-sub">Describe a flood in plain language — <em>“flood in Kerrville, Texas, July 2025”</em> — or pick USGS gauges on the map, and watch the CREST/EF5 model simulate it in real time: 2‑D streamflow, live hydrographs, and AI calibration.</p>
+        <div class="demo-embed">
+          <iframe src="https://vincewin-crest-demo.hf.space" title="CREST-AI flood dashboard — interactive demo" allow="clipboard-write; fullscreen; geolocation" loading="lazy"></iframe>
+        </div>
+        <div class="row demo-actions">
+          <a class="btn primary" href="https://vincewin-crest-demo.hf.space" target="_blank" rel="noopener">Open full screen ↗</a>
+          <a class="btn" href="https://huggingface.co/spaces/vincewin/CREST_demo" target="_blank" rel="noopener">🤗&nbsp; Hugging Face Space</a>
+        </div>
+        <div class="demo-note">Runs free on Hugging Face — the Space may take a moment to wake after idle, and a first simulation typically runs 2–4 minutes. If the embed doesn’t load, <a href="https://vincewin-crest-demo.hf.space" target="_blank" rel="noopener">open it in a new tab</a>.</div>
+      </div>
+
+      <!-- Intro video, right below the live demo -->
+      <div class="video-intro" id="demo-video">
+        <h3>Watch the intro</h3>
+        <p class="video-sub">New to CREST‑AI? A quick introduction to the agentic flood dashboard.</p>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/gCdl8V-qpU0?si=EOjSRLCzN42_76t6" title="Introducing CREST-AI — video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
       </div>
 
       <div class="row hero-center-row">
@@ -407,7 +434,7 @@
   <section id="contact">
     <div class="container">
       <h2>Contact</h2>
-      <p class="sub">Questions about CREST, collaborations, training, or early access to the demo? Get in touch.</p>
+      <p class="sub">Questions about CREST, collaborations, training, or the CREST‑AI demo? Get in touch.</p>
 
       <div class="cta">
         <div class="panel reveal">
